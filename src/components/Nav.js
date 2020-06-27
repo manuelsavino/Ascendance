@@ -66,9 +66,9 @@ export default function Nav() {
             <a href="#">Contact Us</a>
           </li>
         </ul>
-        <div>
+        {/* <div>
           <p>305-666-7777</p>
-        </div>
+        </div> */}
       </nav>
     </div>
   )
