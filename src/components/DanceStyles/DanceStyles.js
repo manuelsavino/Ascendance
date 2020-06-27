@@ -1,17 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-import Dancer from "../images/jump1.png"
-import Ballet from "../images/ballet.png"
-import HipHop from "../images/hiphop.png"
-import Tech from "../images/tech.png"
-import Jazz from "../images/jazz.png"
-import JazzFunk from "../images/jazzfunk.png"
-import Flamenco from "../images/flamenco.png"
-import Belly from "../images/belly.png"
+import Dancer from "../../images/jump1.png"
+import Ballet from "../../images/ballet.png"
+import HipHop from "../../images/hiphop.png"
+import Tech from "../../images/tech.png"
+import Jazz from "../../images/jazz.png"
+import JazzFunk from "../../images/jazzfunk.png"
+import Flamenco from "../../images/flamenco.png"
+import Belly from "../../images/belly.png"
 
 const OuterContainer = styled.div`
   width: 100%;
-  background-color: #ebefef;
+  background-color: #f8f8f8;
+  background-image: radial-gradient(#0000000d 1px, #0000 0),
+    radial-gradient(#0000000d 1px, #0000 0);
+  background-size: 40px 40px, 40px 40px;
+  background-position: 0 0, 20px 20px;
   padding: 30px 50px;
 `
 const StylesHeadline = styled.h2`
@@ -30,23 +34,36 @@ const StylesSubHeadline = styled.p`
 
 const CardContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  /* flex-flow: row wrap; */
   /* justify-content: space-between; */
   align-content: flex-start;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   margin-top: 3em;
   align-content: flex-start;
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const OuterCard = styled.div`
-  width: 30%;
+  /* min-width: 25%; */
   margin: 0 1.5% 1.555em 1.555%;
   position: relative;
   background: #fff;
   border-radius: 4px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.03);
+    transform: rotate(1deg);
+  }
 `
 
 const DancerIcon = styled.img`
@@ -57,6 +74,9 @@ const DancerIcon = styled.img`
   transition: all 0.5s ease;
   &:hover {
     transform: rotate(2deg);
+  }
+  @media (max-width: 1400px) {
+    height: 175px;
   }
 `
 
@@ -85,14 +105,18 @@ const Description = styled.p`
 `
 
 export default function DanceStyles() {
+  // const ballet = useRef() as React.MutableRefObject<HTMLInputElement>;
+
   const styles = [
     {
+      refv: "ballet",
       title: "BALLET",
       description:
         "Ballet is the foundation of all other dances and is based on stylized movement.This is a form of dance that is performed to instrumental music using precise and highly formalized steps.Ballet will help students with better posture, strength, balance, musicality, grace and flexibility. We highly recommend for all students to take at least one hour of ballet a week.",
       icon: Ballet,
     },
     {
+      refv: "tap",
       title: "TAP",
       description:
         "This style of dance is performed by using shoes with metal taps.Tap is characterized by using the sound of one's tap shoes hitting the floor as a percussive instrument.Tap is extremely good for the development of good coordination, musicality, rhythm, strength and endurance.",
