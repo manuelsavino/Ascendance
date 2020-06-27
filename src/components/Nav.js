@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Logo from "../images/logo.png"
-import LogoWhite from "../images/logowhite.png"
+import LogoWhite from "../images/logoWhite.png"
 
 // import { Link } from "gatsby"
 
