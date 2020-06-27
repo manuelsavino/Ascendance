@@ -17,9 +17,9 @@ const Schedule = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero>
+      {/* <Hero>
         <h1>Try a class for Free</h1>
-      </Hero>
+      </Hero> */}
       <ScheduleViewer />
       {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
     </Layout>
