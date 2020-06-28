@@ -7,7 +7,15 @@ export const ScheduleDay = styled.h2`
   font-weight: 300;
   padding: 10px;
   text-align: "center";
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed";
+`
+
+export const DayContainer = styled.div`
+  display: flex;
+  margin: auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const DanceClassBlock = styled.div`
@@ -27,7 +35,7 @@ export const DanceClassDetail = styled.p`
   font-weight: 300;
 `
 
-export const DanceClassTime = styled.p`
-  font-size: 0.8rem;
-  font-weight: 300;
+export const DanceClassTime = styled(DanceClassDetail)`
+  font-family: "Poppins";
+  font-weight: 400;
 `

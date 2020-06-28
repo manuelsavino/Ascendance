@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import Logo from "../images/logo.png"
 import LogoWhite from "../images/logoWhite.png"
 
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 export default function Nav() {
   const [navOpen, setNavOpen] = useState(false)
@@ -35,10 +35,13 @@ export default function Nav() {
       }`}
     >
       <nav className="navbar">
-        <img src={`${isTops ? LogoWhite : Logo}`} alt="Company Logo" />
+        <img
+          src={`${navOpen || !isTops ? Logo : LogoWhite}`}
+          alt="Company Logo"
+        />
         <div
           onClick={handleClick}
-          className={`menu-toggle ${isTops ? "" : "barScroll"}`}
+          className={`menu-toggle ${navOpen || !isTops ? "barScroll" : ""}`}
           id="mobile-menu"
         >
           <span className="bar"></span>
@@ -46,15 +49,15 @@ export default function Nav() {
           <span className="bar"></span>
         </div>
         <ul
-          className={`nav ${navOpen ? "mobile-nav" : ""}${
+          className={`nav ${navOpen ? "mobile-nav scrollNavLinks" : ""}${
             isTops ? "" : " scrollNavLinks"
           }`}
         >
           <li className="nav-item">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <a href="#">Schedule</a>
+            <Link to="/schedule">Schedule</Link>
           </li>
           <li className="nav-item">
             <a href="#">Classes</a>

@@ -5,10 +5,6 @@
   font-family: "Lato", "Arial", sans-serif;
 }
 
-body {
-  background: #fff;
-}
-
 /* BASIC SETUP */
 
 .page-wrapper {
@@ -18,13 +14,11 @@ body {
 
 .nav-wrapper {
   width: 100%;
-  /* position: -webkit-sticky; /* Safari */
   position: -webkit-sticky;
   position: sticky;
   position: fixed;
   z-index: 3;
   top: 0;
-  /* background-color: #fff; */
 }
 
 .scrollNav {
@@ -54,7 +48,8 @@ body {
 .navbar ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 20px;
   justify-self: end;
   padding-right: 20px;
 }
@@ -64,12 +59,12 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.3s ease-out;
+  transition: color 0.2s ease-out;
   text-transform: uppercase;
 }
 
 .nav-item a:hover {
-  color: #3498db;
+  color: #ea3ba1;
 }
 
 .menu-toggle .bar {
@@ -115,7 +110,7 @@ body {
     position: fixed;
     justify-content: start;
     top: 85px;
-    background-color: #00000080;
+    background-color: #fff;
     width: 100%;
     height: calc(100vh - 55px);
     transform: translate(-101%);

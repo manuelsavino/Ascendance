@@ -5,6 +5,7 @@ import {
   DanceClassBlock,
   DanceClassDetail,
   DanceClassTime,
+  DayContainer,
 } from "./styled"
 
 export default function ScheduleViewer() {
@@ -123,13 +124,7 @@ export default function ScheduleViewer() {
     <div style={{ margin: "100px auto", width: "90%" }}>
       <h2>Schedule</h2>
       <div style={{ display: "flex" }}>
-        <div
-          style={{
-            display: "flex",
-            margin: "auto",
-            flexDirection: "column",
-          }}
-        >
+        <div>
           {Object.keys(typeFilters).map(typeFilter => {
             return (
               <label key={uuidv4()}>
