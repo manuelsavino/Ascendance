@@ -1,10 +1,17 @@
 import React, { useEffect, useState, useRef } from "react"
 import { v4 as uuidv4 } from "uuid"
+import {
+  ScheduleDay,
+  DanceClassBlock,
+  DanceClassDetail,
+  DanceClassTime,
+} from "./styled"
 
 export default function ScheduleViewer() {
   const didMountRef = useRef(false)
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
+  const [loading, setLoading] = useState(true)
   const [typeFilters, setTypeFilters] = useState({
     Ballet: false,
     Tap: false,
@@ -46,6 +53,7 @@ export default function ScheduleViewer() {
     filterDay(data.records)
     setData(data.records)
     setDisplayData(data.records)
+    setLoading(false)
   }
   useEffect(() => {
     fetchSchedule()
@@ -86,6 +94,7 @@ export default function ScheduleViewer() {
           typeFiltered.includes(danceClass.fields.Type)
         )
       }
+
       if (ageFiltered.length) {
         if (!filtereddata.length) {
           filtereddata = data.filter(danceClass =>
@@ -105,105 +114,93 @@ export default function ScheduleViewer() {
     }
   }
 
-  if (!displayData) {
+  if (loading) {
+    console.log("loading....")
     return <div>Loading...</div>
   }
-  return (
-    <div style={{ margin: "100px auto" }}>
-      <h2>Schedule</h2>
 
-      <div style={{ display: "flex", width: "90%", margin: "auto" }}>
-        <label>
-          <input
-            type="checkbox"
-            name="Ballet"
-            onChange={handleTypeFilterChage}
-            checked={typeFilters.ballet}
-          />
-          <span>Ballet</span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="Tap"
-            onChange={handleTypeFilterChage}
-            checked={typeFilters.tap}
-          />
-          <span>Tap</span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="HipHop"
-            onChange={handleTypeFilterChage}
-            checked={typeFilters.HipHop}
-          />
-          <span>Hip-Hop</span>
-        </label>
+  return (
+    <div style={{ margin: "100px auto", width: "90%" }}>
+      <h2>Schedule</h2>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            margin: "auto",
+            flexDirection: "column",
+          }}
+        >
+          {Object.keys(typeFilters).map(typeFilter => {
+            return (
+              <label key={uuidv4()}>
+                <input
+                  type="checkbox"
+                  name={typeFilter}
+                  onChange={handleTypeFilterChage}
+                  checked={typeFilters[typeFilter]}
+                />
+                <span>{typeFilter}</span>
+              </label>
+            )
+          })}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            margin: "auto",
+            flexDirection: "column",
+          }}
+        >
+          {Object.keys(ageFilters).map(ageFilter => {
+            return (
+              <label key={uuidv4()}>
+                <input
+                  type="checkbox"
+                  name={ageFilter}
+                  onChange={handleAgeFilterChage}
+                  checked={ageFilters[ageFilter]}
+                />
+                <span>{ageFilter}</span>
+              </label>
+            )
+          })}
+        </div>
       </div>
-      <div style={{ display: "flex", width: "90%", margin: "auto" }}>
-        <label>
-          <input
-            type="checkbox"
-            name="3-6"
-            onChange={handleAgeFilterChage}
-            checked={ageFilters["3-6"]}
-          />
-          <span>3-6</span>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="7-9"
-            onChange={handleAgeFilterChage}
-            checked={ageFilters["7-9"]}
-          />
-          <span>7-9</span>
-        </label>
-      </div>
-      <div style={{ display: "flex", width: "90%", margin: "auto" }}>
-        {days.map(day => {
-          return (
-            <div key={uuidv4()} style={{ margin: "2px", flex: "1" }}>
-              <h2
-                style={{
-                  background: "#3E424D",
-                  color: "#fff",
-                  fontSize: "1rem",
-                  fontWeight: "300",
-                  padding: "10px",
-                  textAlign: "center",
-                }}
-              >
-                {daysDic[day]}
-              </h2>
-              {displayData
-                .filter(danceC => danceC.fields.Day === day)
-                .map(danceClass => {
-                  return (
-                    <div
-                      key={uuidv4()}
-                      style={{
-                        padding: "10px",
-                        margin: "5px 0",
-                        background: "#EA3BA1",
-                        color: "#FFF",
-                        minHeight: "100px",
-                      }}
-                    >
-                      <p style={{ fontSize: ".8rem" }}>
-                        {danceClass.fields.Name}
-                      </p>
-                      <div>{danceClass.fields.Time}</div>
-                      <div>Ages: {danceClass.fields.Age}</div>
-                      <div>{danceClass.fields.Instructor}</div>
-                    </div>
-                  )
-                })}
-            </div>
-          )
-        })}
-      </div>
+
+      {displayData.length ? (
+        <div style={{ display: "flex", margin: "auto" }}>
+          {days.map((day, i) => {
+            return (
+              <div key={uuidv4()} style={{ margin: "2px", flex: "1" }}>
+                <ScheduleDay>{daysDic[day]}</ScheduleDay>
+                {displayData
+                  .filter(danceC => danceC.fields.Day === day)
+                  .map(danceClass => {
+                    return (
+                      <DanceClassBlock i={i} key={uuidv4()}>
+                        <div>
+                          <DanceClassDetail>
+                            {danceClass.fields.Name}
+                          </DanceClassDetail>
+                          <DanceClassTime>
+                            {danceClass.fields.Time}
+                          </DanceClassTime>
+                        </div>
+                        <DanceClassDetail>
+                          Instructor: {danceClass.fields.Instructor}
+                        </DanceClassDetail>
+                      </DanceClassBlock>
+                    )
+                  })}
+              </div>
+            )
+          })}
+        </div>
+      ) : (
+        <div style={{ display: "flex", width: "90%", margin: "auto" }}>
+          <h2>No Results...</h2>
+        </div>
+      )}
     </div>
   )
 }
