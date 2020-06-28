@@ -163,7 +163,7 @@ export default function ScheduleViewer() {
       </div>
 
       {displayData.length ? (
-        <div style={{ display: "flex", margin: "auto" }}>
+        <DayContainer>
           {days.map((day, i) => {
             return (
               <div key={uuidv4()} style={{ margin: "2px", flex: "1" }}>
@@ -190,7 +190,7 @@ export default function ScheduleViewer() {
               </div>
             )
           })}
-        </div>
+        </DayContainer>
       ) : (
         <div style={{ display: "flex", width: "90%", margin: "auto" }}>
           <h2>No Results...</h2>
