@@ -12,7 +12,11 @@ const PaperForm = () => {
   return (
     <Layout>
       <Helmet>
-        <script src={"https://paperform.co/__embed"} type="text/javascript" />
+        <script
+          async={false}
+          src="https://paperform.co/__embed"
+          type="text/javascript"
+        />
       </Helmet>
       <SEO title="Home" />
       <Hero></Hero>
