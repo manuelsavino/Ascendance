@@ -25,6 +25,12 @@ export default function Nav() {
     }
   }, [])
 
+  const closeMobileMenu = () => {
+    if (navOpen) {
+      setNavOpen(false)
+    }
+  }
+
   const handleClick = () => {
     setNavOpen(!navOpen)
   }
@@ -53,19 +59,19 @@ export default function Nav() {
             isTops ? "" : " scrollNavLinks"
           }`}
         >
-          <li className="nav-item">
+          <li className="nav-item" onClick={closeMobileMenu}>
             <Link to="/">Home</Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={closeMobileMenu}>
             <Link to="/schedule">Schedule</Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={closeMobileMenu}>
             <a href="#">Classes</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={closeMobileMenu}>
             <a href="#">Summer</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={closeMobileMenu}>
             <a href="#">Contact Us</a>
           </li>
         </ul>
