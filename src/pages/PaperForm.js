@@ -11,6 +11,9 @@ import Helmet from "react-helmet"
 const PaperForm = () => {
   return (
     <Layout>
+      <SEO title="Home" />
+      <Hero></Hero>
+      <div data-prefill-inherit="1" data-paperform-id="vnhsjqfa"></div>
       <Helmet>
         <script
           async={false}
@@ -18,9 +21,6 @@ const PaperForm = () => {
           type="text/javascript"
         />
       </Helmet>
-      <SEO title="Home" />
-      <Hero></Hero>
-      <div data-prefill-inherit="1" data-paperform-id="vnhsjqfa"></div>
     </Layout>
   )
 }
