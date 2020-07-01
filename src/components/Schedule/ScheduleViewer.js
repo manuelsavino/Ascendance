@@ -6,6 +6,7 @@ import {
   DanceClassDetail,
   DanceClassTime,
   DayContainer,
+  TryButton,
 } from "./styled"
 
 export default function ScheduleViewer() {
@@ -180,6 +181,12 @@ export default function ScheduleViewer() {
                           <DanceClassTime>
                             {danceClass.fields.Time}
                           </DanceClassTime>
+                          <TryButton
+                            i={i}
+                            to={`/PaperForm?class=${danceClass.fields.classId}`}
+                          >
+                            Try Class
+                          </TryButton>
                         </div>
                         <DanceClassDetail>
                           Instructor: {danceClass.fields.Instructor}

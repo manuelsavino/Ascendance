@@ -1,10 +1,11 @@
 import React, { useEffect } from "react"
+import PropTypes from "prop-types"
+import withLocation from "../components/withLocation"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Hero } from "../styled/Hero"
-import Helmet from "react-helmet"
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -13,7 +14,12 @@ const addScript = url => {
   document.body.appendChild(script)
 }
 
-const PaperForm = () => {
+const classDict = {}
+
+const PaperForm = ({ search }) => {
+  const { formId } = search
+  // const { className } = search
+  const className = "Thursday - 5:00PM - 3-6 Hip Hop"
   useEffect(() => {
     addScript("https://paperform.co/__embed")
   }, [])
@@ -21,16 +27,13 @@ const PaperForm = () => {
     <Layout>
       <SEO title="Home" />
       <Hero></Hero>
-      <div data-paperform-id="vnhsjqfa"></div>
-      {/* <Helmet>
-        <script
-          async={false}
-          src="https://paperform.co/__embed"
-          type="text/javascript"
-        />
-      </Helmet> */}
+      <div data-prefill={`88mik=--1--`} data-paperform-id="vnhsjqfa"></div>
     </Layout>
   )
 }
 
-export default PaperForm
+PaperForm.propTypes = {
+  search: PropTypes.object,
+}
+
+export default withLocation(PaperForm)
