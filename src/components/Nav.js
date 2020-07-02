@@ -41,6 +41,21 @@ export default function Nav() {
       }`}
     >
       <nav className="navbar">
+        <ul
+          className={`nav ${navOpen ? "mobile-nav scrollNavLinks" : ""}${
+            isTops ? "" : " scrollNavLinks"
+          }`}
+        >
+          <li className="nav-item" onClick={closeMobileMenu}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-item" onClick={closeMobileMenu}>
+            <Link to="/schedule">Schedule</Link>
+          </li>
+          <li className="nav-item" onClick={closeMobileMenu}>
+            <a href="#">Classes</a>
+          </li>
+        </ul>
         <img
           src={`${navOpen || !isTops ? Logo : LogoWhite}`}
           alt="Company Logo"
@@ -60,13 +75,7 @@ export default function Nav() {
           }`}
         >
           <li className="nav-item" onClick={closeMobileMenu}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className="nav-item" onClick={closeMobileMenu}>
-            <Link to="/schedule">Schedule</Link>
-          </li>
-          <li className="nav-item" onClick={closeMobileMenu}>
-            <a href="#">Classes</a>
+            <a href="#">Other</a>
           </li>
           <li className="nav-item" onClick={closeMobileMenu}>
             <a href="#">Summer</a>
@@ -75,9 +84,6 @@ export default function Nav() {
             <a href="#">Contact Us</a>
           </li>
         </ul>
-        {/* <div>
-          <p>305-666-7777</p>
-        </div> */}
       </nav>
     </div>
   )
