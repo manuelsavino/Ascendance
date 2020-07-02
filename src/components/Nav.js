@@ -42,7 +42,7 @@ export default function Nav() {
     >
       <nav className="navbar">
         <ul
-          className={`nav ${navOpen ? "mobile-nav scrollNavLinks" : ""}${
+          className={`nav d-only ${navOpen ? "mobile-nav scrollNavLinks" : ""}${
             isTops ? "" : " scrollNavLinks"
           }`}
         >
@@ -59,10 +59,13 @@ export default function Nav() {
         <img
           src={`${navOpen || !isTops ? Logo : LogoWhite}`}
           alt="Company Logo"
+          className={`${!isTops ? "shrink" : ""}`}
         />
         <div
           onClick={handleClick}
-          className={`menu-toggle ${navOpen || !isTops ? "barScroll" : ""}`}
+          className={`menu-toggle ${navOpen || !isTops ? "barScroll" : ""} ${
+            navOpen ? "is-active" : ""
+          }`}
           id="mobile-menu"
         >
           <span className="bar"></span>
@@ -74,6 +77,15 @@ export default function Nav() {
             isTops ? "" : " scrollNavLinks"
           }`}
         >
+          <li className="nav-item m-only" onClick={closeMobileMenu}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-item m-only" onClick={closeMobileMenu}>
+            <Link to="/schedule">Schedule</Link>
+          </li>
+          <li className="nav-item m-only" onClick={closeMobileMenu}>
+            <a href="#">Classes</a>
+          </li>
           <li className="nav-item" onClick={closeMobileMenu}>
             <a href="#">Other</a>
           </li>
