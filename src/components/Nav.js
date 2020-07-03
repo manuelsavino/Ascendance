@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import Logo from "../images/logo.png"
-import LogoWhite from "../images/logoWhite.png"
+import Logo from "../images/logoColor.svg"
+import LogoWhite from "../images/logoWhite.svg"
 
 import { Link } from "gatsby"
 
@@ -59,7 +59,7 @@ export default function Nav() {
         <img
           src={`${navOpen || !isTops ? Logo : LogoWhite}`}
           alt="Company Logo"
-          className={`${!isTops ? "shrink" : ""}`}
+          className={`${!isTops ? "shrinkLog0" : "bigLogo"}`}
         />
         <div
           onClick={handleClick}

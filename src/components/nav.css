@@ -34,8 +34,12 @@
   width: 250px;
 }
 
-.shrink {
+.shrinkLog0 {
   width: 200px !important;
+}
+
+.bigLogo {
+  padding-top: 15px;
 }
 
 .navbar ul {
