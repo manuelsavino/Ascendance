@@ -14,6 +14,7 @@ export const Hero = styled.div`
   background-position: center;
   position: relative;
   z-index: 1;
+  padding-top: 200px;
   &::before {
     content: "";
     z-index: -1;

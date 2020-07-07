@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
 // import { Link } from "gatsby"
+import { Modal } from "../components/Modal/Modal"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,17 +19,42 @@ const classDict = {}
 
 const PaperForm = ({ search }) => {
   const { formId } = search
+
   // const { className } = search
   const className = "Thursday - 5:00PM - 3-6 Hip Hop"
   useEffect(() => {
     addScript("https://paperform.co/__embed")
   }, [])
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
+  const [showModal, setShowModal] = useState(false)
   return (
-    <Layout>
-      <SEO title="Home" />
-      <Hero></Hero>
-      <div data-prefill={`88mik=--1--`} data-paperform-id="vnhsjqfa"></div>
-    </Layout>
+    <>
+      <Layout>
+        {console.log(showModal)}
+        <SEO title="Home" />
+        <Hero>
+          <button
+            onClick={() => {
+              setShowModal(true)
+            }}
+          >
+            Show Modal
+          </button>
+        </Hero>
+        {showModal && (
+          <Modal close={closeModal}>
+            <div
+              style={{ marginTop: "30px" }}
+              data-prefill={`88mik=--1--`}
+              data-paperform-id="vnhsjqfa"
+            ></div>
+          </Modal>
+        )}
+      </Layout>
+    </>
   )
 }
 
