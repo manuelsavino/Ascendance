@@ -159,6 +159,7 @@
   .navbar {
     justify-content: space-between;
     height: 85px;
+    margin-top: 0;
   }
 
   .scrollNavTall {
