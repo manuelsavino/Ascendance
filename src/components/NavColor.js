@@ -57,7 +57,10 @@ export default function NavColor({ hero }) {
                 icon={faMapMarkerAlt}
                 style={{ marginRight: "5px" }}
               />
-              10466 NW 31st Terrace, Doral, FL, 33172
+              <span itemprop="streetAddress">10466 NW 31st Terrace</span>,
+              <span itemprop="addressLocality">Doral</span>,
+              <span itemprop="addressRegion">FL</span>
+              <span itemprop="postalCode">33172</span>
             </span>
           </div>
         </div>
