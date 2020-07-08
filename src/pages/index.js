@@ -8,7 +8,7 @@ import DanceStyles from "../components/DanceStyles/DanceStyles"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout hero={true}>
       <SEO title="Home" />
       <Hero>
         <h1>Try a class for Free</h1>

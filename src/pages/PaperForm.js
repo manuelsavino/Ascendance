@@ -32,10 +32,10 @@ const PaperForm = ({ search }) => {
   const [showModal, setShowModal] = useState(false)
   return (
     <>
-      <Layout>
+      <Layout hero={false}>
         {console.log(showModal)}
         <SEO title="Home" />
-        <Hero>
+        {/* <Hero>
           <button
             onClick={() => {
               setShowModal(true)
@@ -43,16 +43,13 @@ const PaperForm = ({ search }) => {
           >
             Show Modal
           </button>
-        </Hero>
-        {showModal && (
-          <Modal close={closeModal}>
-            <div
-              style={{ marginTop: "30px" }}
-              data-prefill={`88mik=--1--`}
-              data-paperform-id="vnhsjqfa"
-            ></div>
-          </Modal>
-        )}
+        </Hero> */}
+        <div
+          style={{ marginTop: "30px" }}
+          data-prefill={`88mik=--1--`}
+          data-paperform-id="vnhsjqfa"
+        ></div>
+        {showModal && <Modal close={closeModal}></Modal>}
       </Layout>
     </>
   )

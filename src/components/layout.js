@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, hero }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,10 +26,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header hero={hero} siteTitle={data.site.siteMetadata.title} />
       <Global />
       <div>
-        <main>{children}</main>
+        <main class={!hero ? "mainMargin" : ""}>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

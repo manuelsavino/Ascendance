@@ -4,7 +4,7 @@ import LogoWhite from "../images/logoWhite.svg"
 
 import { Link } from "gatsby"
 
-export default function Nav({ hero }) {
+export default function NavColor({ hero }) {
   const [navOpen, setNavOpen] = useState(false)
   const [isTops, setIsTop] = useState(true)
 
@@ -36,16 +36,12 @@ export default function Nav({ hero }) {
   }
   return (
     <div
-      className={`nav-wrapper ${isTops ? "" : "scrollNav"} ${
-        !hero || navOpen ? "scrollNav" : ""
+      className={`nav-wrapper  ${isTops ? "scrollNavTall" : "scrollNavColor"} ${
+        !hero || navOpen ? "scrollNavColor" : ""
       }`}
     >
       <nav className="navbar">
-        <ul
-          className={`nav d-only ${
-            !hero || navOpen ? "mobile-nav scrollNavLinks" : ""
-          }${isTops ? "" : " scrollNavLinks"}`}
-        >
+        <ul className="nav d-only">
           <li className="nav-item" onClick={closeMobileMenu}>
             <Link to="/">Home</Link>
           </li>
@@ -57,9 +53,9 @@ export default function Nav({ hero }) {
           </li>
         </ul>
         <img
-          src={`${!hero || navOpen || !isTops ? Logo : LogoWhite}`}
+          src={LogoWhite}
           alt="Company Logo"
-          className={`${!isTops ? "shrinkLog0" : "bigLogo"}`}
+          className={`${!isTops ? "shrinkLogo" : "bigLogo"}`}
         />
         <div
           onClick={handleClick}
@@ -72,11 +68,7 @@ export default function Nav({ hero }) {
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
-        <ul
-          className={`nav ${
-            !hero || navOpen ? "mobile-nav scrollNavLinks" : ""
-          }${isTops ? "" : " scrollNavLinks"}`}
-        >
+        <ul className={`nav ${navOpen ? "mobile-nav scrollNavLinks" : ""}`}>
           <li className="nav-item m-only" onClick={closeMobileMenu}>
             <Link to="/">Home</Link>
           </li>
@@ -101,6 +93,6 @@ export default function Nav({ hero }) {
   )
 }
 
-Nav.defaultProps = {
+NavColor.defaultProps = {
   hero: false,
 }

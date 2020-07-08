@@ -5,10 +5,23 @@
   position: fixed;
   z-index: 3;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  transition: all 0.3s ease;
 }
 
 .scrollNav {
   background-color: #fff;
+}
+
+.scrollNavColor {
+  background-color: #ea3ba1;
+}
+
+.scrollNavTall {
+  height: 100px;
 }
 
 .scrollNavLinks > li > a {
@@ -34,12 +47,12 @@
   width: 250px;
 }
 
-.shrinkLog0 {
-  width: 200px !important;
+.shrinkLogo {
+  width: 150px !important;
 }
 
 .bigLogo {
-  padding-top: 15px;
+  width: 200px !important;
 }
 
 .navbar ul {
@@ -60,7 +73,7 @@
 }
 
 .nav-item a:hover {
-  color: #ea3ba1;
+  color: #1c2230;
 }
 
 .m-only {
@@ -73,10 +86,6 @@
   background-color: #fff;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-}
-
-.barScroll .bar {
-  background-color: #000;
 }
 
 .menu-toggle {
@@ -101,6 +110,9 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.mainMargin {
+  margin-top: 100px;
+}
 /* Mobile Devices - Phones/Tablets */
 
 @media only screen and (max-width: 720px) {
@@ -121,6 +133,10 @@
 
   .navbar {
     justify-content: space-between;
+  }
+
+  .scrollNavTall {
+    height: 85px;
   }
 
   .navbar li {
@@ -153,5 +169,13 @@
 
   .mobile-nav {
     transform: translate(0%) !important;
+  }
+
+  .nav-wrapper {
+    display: block;
+  }
+
+  .mainMargin {
+    margin-top: 85px;
   }
 }
