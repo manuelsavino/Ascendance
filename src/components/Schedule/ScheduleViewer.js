@@ -124,7 +124,7 @@ export default function ScheduleViewer() {
   }
 
   return (
-    <div style={{ margin: "120px auto", width: "90%" }}>
+    <div style={{ margin: "85px auto", width: "90%" }}>
       <ScheduleTitle>Schedule</ScheduleTitle>
       <div style={{ display: "flex" }}>
         <div>

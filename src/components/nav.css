@@ -8,8 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85px;
+  height: 110px;
   transition: all 0.3s ease;
+  flex-direction: column;
 }
 
 .scrollNav {
@@ -30,12 +31,28 @@
 
 /* NAVIGATION */
 
+.contactBar {
+  background: #ea3ba1;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.contactBarInner {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85px;
+  height: 120px;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .navbar img {
@@ -44,7 +61,7 @@
   margin-left: 20px;
   margin-right: 20px;
   transition: width 0.3s ease;
-  width: 250px;
+  width: 200px;
 }
 
 .shrinkLogo {
@@ -59,7 +76,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 20px;
+  grid-gap: 17px;
   justify-self: end;
 }
 
@@ -73,7 +90,7 @@
 }
 
 .nav-item a:hover {
-  color: #1c2230;
+  color: #ea3ba1;
 }
 
 .m-only {
@@ -84,6 +101,14 @@
   width: 25px;
   height: 3px;
   background-color: #fff;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.scrollBar .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #1c2230;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
 }
@@ -111,7 +136,7 @@
 }
 
 .mainMargin {
-  margin-top: 100px;
+  margin-top: 110px;
 }
 /* Mobile Devices - Phones/Tablets */
 
@@ -133,6 +158,7 @@
 
   .navbar {
     justify-content: space-between;
+    height: 85px;
   }
 
   .scrollNavTall {
@@ -143,7 +169,7 @@
     padding: 15px;
   }
   .scrollNavLinks > li > a {
-    color: #000;
+    color: #1c2230;
   }
 
   .navbar li:first-child {
@@ -173,9 +199,14 @@
 
   .nav-wrapper {
     display: block;
+    height: 85px;
   }
 
   .mainMargin {
     margin-top: 85px;
+  }
+
+  .contactBar {
+    display: none;
   }
 }

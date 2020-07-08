@@ -3,3 +3,11 @@
   --color-background: lightgray;
   --color-primary: #ea3ba1;
 }
+
+main {
+  background-color: #f8f8f8;
+  background-image: radial-gradient(#0000000d 1px, #0000 0),
+    radial-gradient(#0000000d 1px, #0000 0);
+  background-size: 40px 40px, 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
