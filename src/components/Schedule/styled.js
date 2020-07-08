@@ -53,3 +53,14 @@ export const DanceClassTime = styled(DanceClassDetail)`
   font-weight: 400;
   margin-bottom: 5px;
 `
+export const ScheduleTitle = styled.h2`
+  font-size: 3.5rem;
+  font-family: "Open Sans Condensed";
+  font-weight: 300;
+`
+
+export const FilterCat = styled.h4`
+  font-size: 2rem;
+  font-family: "Open Sans Condensed";
+  font-weight: 300;
+`

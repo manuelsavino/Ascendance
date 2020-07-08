@@ -7,7 +7,10 @@ import {
   DanceClassTime,
   DayContainer,
   TryButton,
+  ScheduleTitle,
+  FilterCat,
 } from "./styled"
+import "./styledChecks.css"
 
 export default function ScheduleViewer() {
   const didMountRef = useRef(false)
@@ -117,49 +120,50 @@ export default function ScheduleViewer() {
   }
 
   if (loading) {
-    console.log("loading....")
     return <div>Loading...</div>
   }
 
   return (
-    <div style={{ margin: "100px auto", width: "90%" }}>
-      <h2>Schedule</h2>
+    <div style={{ margin: "120px auto", width: "90%" }}>
+      <ScheduleTitle>Schedule</ScheduleTitle>
       <div style={{ display: "flex" }}>
         <div>
-          {Object.keys(typeFilters).map(typeFilter => {
-            return (
-              <label key={uuidv4()}>
-                <input
-                  type="checkbox"
-                  name={typeFilter}
-                  onChange={handleTypeFilterChage}
-                  checked={typeFilters[typeFilter]}
-                />
-                <span>{typeFilter}</span>
-              </label>
-            )
-          })}
+          <FilterCat>Styles</FilterCat>
+          <ul className="ks-cboxtags">
+            {Object.keys(typeFilters).map(typeFilter => {
+              return (
+                <li key={uuidv4()}>
+                  <input
+                    type="checkbox"
+                    id={typeFilter}
+                    name={typeFilter}
+                    onChange={handleTypeFilterChage}
+                    checked={typeFilters[typeFilter]}
+                  />
+                  <label for={typeFilter}>{typeFilter}</label>
+                </li>
+              )
+            })}
+          </ul>
         </div>
-        <div
-          style={{
-            display: "flex",
-            margin: "auto",
-            flexDirection: "column",
-          }}
-        >
-          {Object.keys(ageFilters).map(ageFilter => {
-            return (
-              <label key={uuidv4()}>
-                <input
-                  type="checkbox"
-                  name={ageFilter}
-                  onChange={handleAgeFilterChage}
-                  checked={ageFilters[ageFilter]}
-                />
-                <span>{ageFilter}</span>
-              </label>
-            )
-          })}
+        <div style={{ marginLeft: "20px" }}>
+          <FilterCat>Ages</FilterCat>
+          <ul className="ks-cboxtags">
+            {Object.keys(ageFilters).map(ageFilter => {
+              return (
+                <li key={uuidv4()}>
+                  <input
+                    type="checkbox"
+                    id={ageFilter}
+                    name={ageFilter}
+                    onChange={handleAgeFilterChage}
+                    checked={ageFilters[ageFilter]}
+                  />
+                  <label for={ageFilter}>{ageFilter}</label>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </div>
 
