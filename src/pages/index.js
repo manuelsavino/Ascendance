@@ -15,8 +15,12 @@ const IndexPage = () => {
         script={[
           {
             type: "application/ld+json",
-            innerHTML: `"@context": "https://schema.org",
-        "@type": "Restaurant",
+            innerHTML: `{"@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Ascendance Studio",
+        "telephone":"+7865717778",
+        "image": [
+          "https://www.dancedoral.com/wp-content/uploads/2017/03/Ascendance-Studio-logo1.png"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "10466 NW 31ST TERRACE",
@@ -24,7 +28,7 @@ const IndexPage = () => {
           "addressRegion": "FL",
           "postalCode": "33172",
           "addressCountry": "US"
-        },`,
+        }},`,
           },
         ]}
       />
