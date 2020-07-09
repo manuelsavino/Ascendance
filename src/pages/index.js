@@ -16,7 +16,7 @@ const IndexPage = () => {
           {
             type: "application/ld+json",
             innerHTML: `{"@context": "https://schema.org",
-        "@type": "SportsActivityLocation",
+        "@type": "LocalBusiness",
         "name": "Ascendance Studio",
         "telephone":"+7865717778",
         "image": [

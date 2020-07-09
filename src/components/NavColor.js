@@ -58,7 +58,7 @@ export default function NavColor({ hero }) {
                 style={{ marginRight: "5px" }}
               />
               <span itemprop="streetAddress">10466 NW 31st Terrace</span>,
-              <span itemprop="addressLocality">Doral</span>,
+              <span itemprop="addressLocality">Doral </span>
               <span itemprop="addressRegion">FL</span>
               <span itemprop="postalCode">33172</span>
             </span>
