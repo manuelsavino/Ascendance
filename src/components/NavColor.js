@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Logo from "../images/logoColor.svg"
+import Logo from "../images/aslogocolor.svg"
 import LogoWhite from "../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"

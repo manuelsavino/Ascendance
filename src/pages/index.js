@@ -11,7 +11,7 @@ const IndexPage = () => {
   return (
     <Layout hero={true}>
       <SEO title="Home" />
-      <Helmet
+      {/* <Helmet
         script={[
           {
             type: "application/ld+json",
@@ -31,7 +31,7 @@ const IndexPage = () => {
         }},`,
           },
         ]}
-      />
+      /> */}
       <Hero>
         <h1>Try a class for Free</h1>
       </Hero>
