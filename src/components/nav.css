@@ -39,11 +39,62 @@
   justify-content: center;
 }
 .contactBarInner {
-  width: 70%;
+  width: 60%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   color: white;
   align-items: center;
+}
+
+.socialMedia {
+  color: white;
+}
+.facebookIcon,
+.isntagramIcon,
+.youtubeIcon {
+  /* padding: 6px 5px 6px 10px; */
+  padding: 6px 11px;
+  z-index: 0;
+  position: relative;
+}
+
+.youtubeIcon::before,
+.facebookIcon::before,
+.isntagramIcon::before {
+  content: "";
+  width: 33px;
+  height: 29px;
+  position: absolute;
+  z-index: -1;
+  top: -100%;
+  left: 3px;
+  transition: all 0.2s ease;
+}
+
+.youtubeIcon::before {
+  content: "";
+  background: red;
+}
+
+.isntagramIcon::before {
+  content: "";
+  background: #ffc838;
+}
+
+.facebookIcon::before {
+  content: "";
+  background: #3b5998;
+}
+
+.youtubeIcon:hover::before,
+.isntagramIcon:hover::before,
+.facebookIcon:hover::before {
+  top: 0;
+}
+
+.phoneNumber {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar {
@@ -146,7 +197,7 @@
     flex-direction: column;
     position: fixed;
     justify-content: start;
-    top: 85px;
+    top: 110px;
     background-color: #fff;
     width: 100%;
     height: calc(100vh - 55px);
@@ -200,7 +251,7 @@
 
   .nav-wrapper {
     display: block;
-    height: 85px;
+    height: 110px;
   }
 
   .mainMargin {
@@ -208,6 +259,10 @@
   }
 
   .contactBar {
-    display: none;
+    height: 29px;
+  }
+
+  .contactBarInner {
+    width: 90%;
   }
 }

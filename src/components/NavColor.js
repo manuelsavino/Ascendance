@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react"
 import Logo from "../images/aslogocolor.svg"
 import LogoWhite from "../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhoneAlt, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
+import {
+  faFacebook,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
 
 import { Link } from "gatsby"
 
@@ -45,22 +50,32 @@ export default function NavColor({ hero }) {
       >
         <div className="contactBar">
           <div className="contactBarInner">
-            <span>
+            <a class="phoneNumber" href="tel:786-571-7778">
               <FontAwesomeIcon
                 icon={faPhoneAlt}
                 style={{ marginRight: "5px" }}
               />
-              (786)571-7778
-            </span>
-            <span style={{ marginLeft: "10px" }}>
-              <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                style={{ marginRight: "5px" }}
-              />
-              <span itemprop="streetAddress">10466 NW 31st Terrace</span>,
-              <span itemprop="addressLocality">Doral </span>
-              <span itemprop="addressRegion">FL</span>
-              <span itemprop="postalCode">33172</span>
+              (786) 571-7778
+            </a>
+            <span>
+              <a
+                className="socialMedia facebookIcon"
+                href="https://www.facebook.com"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                className="socialMedia isntagramIcon"
+                href="https://www.instagram.com"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                className="socialMedia youtubeIcon"
+                href="https://www.youtube.com"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
             </span>
           </div>
         </div>
