@@ -60,19 +60,22 @@ export default function NavColor({ hero }) {
             <span className="sociaMediaIcons">
               <a
                 className="socialMedia facebookIcon"
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/ascendanceMiami"
+                target="_blank"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
                 className="socialMedia isntagramIcon"
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/ascendanceMiami"
+                target="_blank"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
                 className="socialMedia youtubeIcon"
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/c/AscendanceStudio/"
+                target="_blank"
               >
                 <FontAwesomeIcon icon={faYoutube} />
               </a>

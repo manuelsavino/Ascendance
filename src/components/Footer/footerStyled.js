@@ -22,4 +22,5 @@ export const StyledBottomFooter = styled.div`
   background: #ea3ba1;
   width: 100vw;
   height: 200px;
+  margin-top: -1px;
 `
