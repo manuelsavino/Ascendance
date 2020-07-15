@@ -58,15 +58,19 @@
   position: relative;
 }
 
+.isntagramIcon {
+  padding: 6px 12px 6px 12px;
+}
+
 .youtubeIcon::before,
 .facebookIcon::before,
 .isntagramIcon::before {
   content: "";
   width: 33px;
-  height: 29px;
+  height: 32px;
   position: absolute;
   z-index: -1;
-  top: -100%;
+  top: -113%;
   left: 3px;
   transition: all 0.2s ease;
 }
@@ -78,18 +82,18 @@
 
 .isntagramIcon::before {
   content: "";
-  background: #ffc838;
+  background: #661b77;
 }
 
 .facebookIcon::before {
   content: "";
-  background: #3b5998;
+  background: #4267b2;
 }
 
 .youtubeIcon:hover::before,
 .isntagramIcon:hover::before,
 .facebookIcon:hover::before {
-  top: 0;
+  top: -1px;
 }
 
 .phoneNumber {
@@ -103,7 +107,6 @@
   align-items: center;
   height: 120px;
   overflow: hidden;
-  margin-top: 10px;
 }
 
 .navbar img {
