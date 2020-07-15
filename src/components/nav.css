@@ -45,6 +45,9 @@
   color: white;
   align-items: center;
 }
+.sociaMediaIcons {
+  display: flex;
+}
 
 .socialMedia {
   color: white;

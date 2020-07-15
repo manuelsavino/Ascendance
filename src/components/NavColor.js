@@ -57,7 +57,7 @@ export default function NavColor({ hero }) {
               />
               (786) 571-7778
             </a>
-            <span>
+            <span className="sociaMediaIcons">
               <a
                 className="socialMedia facebookIcon"
                 href="https://www.facebook.com"
