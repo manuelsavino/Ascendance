@@ -30,11 +30,7 @@ const Layout = ({ children, hero }) => {
       <Header hero={hero} siteTitle={data.site.siteMetadata.title} />
       <Global />
       <main class={!hero ? "mainMargin" : ""}>{children}</main>
-      <Footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </Footer>
+      <Footer />
     </>
   )
 }

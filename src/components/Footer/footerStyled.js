@@ -21,6 +21,30 @@ export const StyledTopFooter = styled.div`
 export const StyledBottomFooter = styled.div`
   background: #ea3ba1;
   width: 100vw;
-  height: 200px;
+  height: max-content;
   margin-top: -1px;
+`
+
+export const StyledInnerFooter = styled.div`
+  width: 75%;
+  margin: auto;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+`
+
+export const FooterArea = styled.ul`
+  list-style: none;
+  color: white;
+`
+export const ListItemTitle = styled.li`
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-bottom: 8px;
+`
+
+export const ListItem = styled.li`
+  font-weight: 300;
+  padding-bottom: 5px;
 `

@@ -96,10 +96,12 @@ export default function NavColor({ hero }) {
               <a href="#">Classes</a>
             </li>
           </ul>
-          <img
-            src={`${!hero || navOpen || !isTops ? Logo : LogoWhite}`}
-            alt="Company Logo"
-          />
+          <Link to="/">
+            <img
+              src={`${!hero || navOpen || !isTops ? Logo : LogoWhite}`}
+              alt="Company Logo"
+            />
+          </Link>
           <div
             onClick={handleClick}
             className={`menu-toggle ${
