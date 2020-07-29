@@ -10,7 +10,7 @@ export const StyledOuterFooter = styled.div`
 `
 
 export const StyledTopFooter = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100px;
   background-size: cover;
   height: 110px;
@@ -20,9 +20,10 @@ export const StyledTopFooter = styled.div`
 `
 export const StyledBottomFooter = styled.div`
   background: #ea3ba1;
-  width: 100vw;
+  width: 100%;
   height: max-content;
   margin-top: -1px;
+  padding-top: 15px;
 `
 
 export const StyledInnerFooter = styled.div`
@@ -30,7 +31,7 @@ export const StyledInnerFooter = styled.div`
   margin: auto;
   height: max-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${props => props.justify};
   padding-bottom: 20px;
 `
 
@@ -47,4 +48,25 @@ export const ListItemTitle = styled.li`
 export const ListItem = styled.li`
   font-weight: 300;
   padding-bottom: 5px;
+  font-size: 0.8rem;
+`
+export const Separator = styled.div`
+  width: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  width: 75%;
+  margin: auto;
+  padding-bottom: 15px;
+`
+export const LogoImage = styled.img`
+  width: 200px;
+`
+export const Social = styled.div`
+  & > a {
+    color: white;
+    padding-right: 10px;
+  }
+`
+
+export const Copy = styled.p`
+  color: white;
 `
