@@ -50,7 +50,7 @@ export default function NavColor({ hero }) {
       >
         <div className="contactBar">
           <div className="contactBarInner">
-            <a class="phoneNumber" href="tel:786-571-7778">
+            <a className="phoneNumber" href="tel:786-571-7778">
               <FontAwesomeIcon
                 icon={faPhoneAlt}
                 style={{ marginRight: "5px" }}

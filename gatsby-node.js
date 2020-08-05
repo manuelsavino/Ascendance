@@ -20,7 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: node.frontmatter.slug,
           component: path.resolve("./src/components/danceStylePage.js"),
-          content: {
+          context: {
             slug: node.frontmatter.slug,
           },
         })

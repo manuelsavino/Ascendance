@@ -3,12 +3,22 @@ import { graphql } from "gatsby"
 import Layout from "./layout"
 
 export default function danceStylePage(props) {
-  //   const { markdownRemark } = props.data
+  const { markdownRemark } = props.data
   return (
     <Layout>
-      {console.log(props)}
-      {/* <h1>{markdownRemark.frontmatter.title}</h1> */}
-      <h1>Hi</h1>
+      {console.log(markdownRemark)}
+      <h1>{markdownRemark.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      {markdownRemark.youtube && (
+        <iframe
+          width="560"
+          height="315"
+          src={markdownRemark.youtube}
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      )}
     </Layout>
   )
 }
@@ -19,6 +29,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        youtube
       }
     }
   }

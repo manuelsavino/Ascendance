@@ -29,7 +29,7 @@ const Layout = ({ children, hero }) => {
     <>
       <Header hero={hero} siteTitle={data.site.siteMetadata.title} />
       <Global />
-      <main class={!hero ? "mainMargin" : ""}>{children}</main>
+      <main className={!hero ? "mainMargin" : ""}>{children}</main>
       <Footer />
     </>
   )

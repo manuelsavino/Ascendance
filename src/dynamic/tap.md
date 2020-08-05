@@ -1,6 +1,10 @@
 ---
-slug: "/tap"
+slug: "/dancestyles/tap"
 title: "Tap"
+youtube: "http://www.youtube.com/watch?v=rUaQyBrPXt8"
 ---
 
-#Hello
+#This is the page for Tap
+this is the description
+
+this is another description
