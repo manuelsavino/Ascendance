@@ -49,7 +49,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/dynamic`,
+        path: `${__dirname}/src/blog`,
         name: `pages`,
       },
     },

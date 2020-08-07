@@ -1,9 +1,6 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
-
 const headingFontFam = '"Open Sans Condensed"'
 const paragraphFontFam = "sans-serif"
-
 export const SubHeading = styled.h4`
   font-size: 2rem;
   font-family: ${headingFontFam};

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import Logo from "../images/aslogocolor.svg"
-import LogoWhite from "../images/logoWhite.svg"
+import Logo from "../../images/aslogocolor.svg"
+import LogoWhite from "../../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
 import {

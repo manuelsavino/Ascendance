@@ -44,7 +44,8 @@ export default function Footer({ children }) {
           <FooterArea>
             <ListItemTitle>Classes by Style</ListItemTitle>
             <ListItem>
-              <Link to="">Ballet</Link>
+              Ballet
+              {/* <Link to="">Ballet</Link> */}
             </ListItem>
             <ListItem>Tap</ListItem>
             <ListItem>Flamenco</ListItem>
