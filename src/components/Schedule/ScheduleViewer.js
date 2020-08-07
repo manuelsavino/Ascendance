@@ -10,7 +10,6 @@ import {
 } from "./styled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
-import styled from "styled-components"
 
 export default function ScheduleViewer({ style, heading }) {
   const didMountRef = useRef(false)
@@ -56,13 +55,17 @@ export default function ScheduleViewer({ style, heading }) {
     const res = await fetch("/.netlify/functions/getSchedule")
     const data = await res.json()
     filterDay(data.records)
-    setData(data.records)
-    // if (style) {
-    //   data.records.filter(danceClass => {
-    //     danceClass.fields.type === style
-    //   })
-    // }
-    setDisplayData(data.records)
+
+    if (style) {
+      const preFiltered = data.records.filter(
+        danceClass => danceClass.fields.Type === style
+      )
+      setDisplayData(preFiltered)
+      setData(preFiltered)
+    } else {
+      setData(data.records)
+      setDisplayData(data.records)
+    }
     setLoading(false)
   }
   useEffect(() => {
@@ -145,7 +148,7 @@ export default function ScheduleViewer({ style, heading }) {
                     onChange={handleAgeFilterChage}
                     checked={ageFilters[ageFilter]}
                   />
-                  <label for={ageFilter}>{ageFilter}</label>
+                  <label htmlFor={ageFilter}>{ageFilter}</label>
                 </li>
               )
             })}

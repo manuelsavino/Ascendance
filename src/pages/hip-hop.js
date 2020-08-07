@@ -110,7 +110,7 @@ const HipHop = () => {
           definitely seen hip-hop in action!
         </Paragraph>
       </div>
-      <ScheduleViewer style="hiphop" heading="Hip-Hop Schedule" />
+      <ScheduleViewer style="HipHop" heading="Hip-Hop Schedule" />
     </Layout>
   )
 }
