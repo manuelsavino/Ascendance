@@ -11,8 +11,7 @@ const IndexPage = () => {
       <Hero>
         <h1>Try a class for Free</h1>
       </Hero>
-      <DanceStyles />
-      {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
+      {/* <DanceStyles /> */}
     </Layout>
   )
 }
