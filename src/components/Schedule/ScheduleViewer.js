@@ -7,12 +7,12 @@ import {
   DanceClassTime,
   DayContainer,
   TryButton,
-  ScheduleTitle,
-  FilterCat,
 } from "./styled"
+import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
+import styled from "styled-components"
 
-export default function ScheduleViewer() {
+export default function ScheduleViewer({ style, heading }) {
   const didMountRef = useRef(false)
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
@@ -57,6 +57,11 @@ export default function ScheduleViewer() {
     const data = await res.json()
     filterDay(data.records)
     setData(data.records)
+    // if (style) {
+    //   data.records.filter(danceClass => {
+    //     danceClass.fields.type === style
+    //   })
+    // }
     setDisplayData(data.records)
     setLoading(false)
   }
@@ -125,29 +130,10 @@ export default function ScheduleViewer() {
 
   return (
     <div style={{ margin: "85px auto 0", paddingBottom: "80px", width: "90%" }}>
-      <ScheduleTitle>Schedule</ScheduleTitle>
+      <Heading>{heading ? heading : "Schedule"}</Heading>
       <div style={{ display: "flex" }}>
         <div>
-          <FilterCat>Styles</FilterCat>
-          <ul className="ks-cboxtags">
-            {Object.keys(typeFilters).map(typeFilter => {
-              return (
-                <li key={uuidv4()}>
-                  <input
-                    type="checkbox"
-                    id={typeFilter}
-                    name={typeFilter}
-                    onChange={handleTypeFilterChage}
-                    checked={typeFilters[typeFilter]}
-                  />
-                  <label for={typeFilter}>{typeFilter}</label>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <div style={{ marginLeft: "20px" }}>
-          <FilterCat>Ages</FilterCat>
+          <SubHeading>Ages</SubHeading>
           <ul className="ks-cboxtags">
             {Object.keys(ageFilters).map(ageFilter => {
               return (
@@ -165,6 +151,27 @@ export default function ScheduleViewer() {
             })}
           </ul>
         </div>
+        {!style && (
+          <div style={{ marginLeft: "20px" }}>
+            <SubHeading>Styles</SubHeading>
+            <ul className="ks-cboxtags">
+              {Object.keys(typeFilters).map(typeFilter => {
+                return (
+                  <li key={uuidv4()}>
+                    <input
+                      type="checkbox"
+                      id={typeFilter}
+                      name={typeFilter}
+                      onChange={handleTypeFilterChage}
+                      checked={typeFilters[typeFilter]}
+                    />
+                    <label for={typeFilter}>{typeFilter}</label>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )}
       </div>
 
       {displayData.length ? (

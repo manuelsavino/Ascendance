@@ -55,7 +55,7 @@ export default function NavColor({ hero }) {
                 icon={faPhoneAlt}
                 style={{ marginRight: "5px" }}
               />
-              (786) 571-7778
+              786-571-7778
             </a>
             <span className="sociaMediaIcons">
               <a
