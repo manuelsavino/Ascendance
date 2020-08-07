@@ -19,6 +19,7 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
+import { Link } from "gatsby"
 
 export default function Footer({ children }) {
   return (
@@ -42,7 +43,9 @@ export default function Footer({ children }) {
           </div>
           <FooterArea>
             <ListItemTitle>Classes by Style</ListItemTitle>
-            <ListItem>Ballet </ListItem>
+            <ListItem>
+              <Link to="">Ballet</Link>
+            </ListItem>
             <ListItem>Tap</ListItem>
             <ListItem>Flamenco</ListItem>
             <ListItem>Jazz</ListItem>

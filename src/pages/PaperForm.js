@@ -6,7 +6,6 @@ import { Modal } from "../components/Modal/Modal"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Hero } from "../styled/Hero"
 
 const addScript = url => {
   const script = document.createElement("script")

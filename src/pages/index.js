@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Hero } from "../styled/Hero"
+import { Hero } from "../components/common/Hero"
 import DanceStyles from "../components/DanceStyles/DanceStyles"
 
 const IndexPage = () => {
@@ -11,7 +11,7 @@ const IndexPage = () => {
       <Hero>
         <h1>Try a class for Free</h1>
       </Hero>
-      {/* <DanceStyles /> */}
+      <DanceStyles />
     </Layout>
   )
 }

@@ -3,34 +3,24 @@ import { graphql } from "gatsby"
 import Layout from "./layout"
 
 export default function danceStylePage(props) {
-  const { markdownRemark } = props.data
+  // const { markdownRemark } = props.data
   return (
     <Layout>
-      {console.log(markdownRemark)}
+      {/* {console.log(markdownRemark)}
       <h1>{markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-      {markdownRemark.youtube && (
-        <iframe
-          width="560"
-          height="315"
-          src={markdownRemark.youtube}
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      )}
+      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} /> */}
     </Layout>
   )
 }
 
-export const query = graphql`
-  query PageQuery($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        youtube
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query PageQuery($slug: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         title
+//         youtube
+//       }
+//     }
+//   }
+// `
