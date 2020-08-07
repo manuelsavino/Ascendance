@@ -15,7 +15,7 @@ export const Hero = styled.div`
   position: relative;
   z-index: 1;
   padding-top: 200px;
-  /* &::before {
+  &::before {
     content: "";
     z-index: -1;
     position: absolute;
@@ -28,5 +28,5 @@ export const Hero = styled.div`
     background: radial-gradient(transparent, rgba(0, 0, 0, 0.95));
     width: 100%;
     height: 100%;
-  } */
+  }
 `

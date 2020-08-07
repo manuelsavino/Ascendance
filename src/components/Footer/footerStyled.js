@@ -7,6 +7,7 @@ export const StyledOuterFooter = styled.div`
     radial-gradient(#0000000d 1px, #0000 0);
   background-size: 40px 40px, 40px 40px;
   background-position: 0 0, 20px 20px;
+  overflow: hidden;
 `
 
 export const StyledTopFooter = styled.div`
