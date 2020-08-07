@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Hero } from "../components/common/Hero"
+import { Hero } from "../components/Hero/hero"
 import DanceStyles from "../components/DanceStyles/DanceStyles"
 
 const IndexPage = () => {
