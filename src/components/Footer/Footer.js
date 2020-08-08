@@ -1,10 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   StyledTopFooter,
   StyledOuterFooter,
   StyledBottomFooter,
   StyledInnerFooter,
-  ListItemTitle,
   FooterArea,
   ListItem,
   Separator,
@@ -12,6 +11,7 @@ import {
   Copy,
   Social,
   ListLink,
+  ListItemTitlet,
 } from "./footerStyled"
 import LogoWhite from "../../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -20,23 +20,46 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
-import { Link } from "gatsby"
 
 export default function Footer({ children }) {
+  const [mobileExpand, setMobileExpand] = useState({
+    contact: false,
+    hours: false,
+    styles: false,
+    ages: false,
+    program: false,
+    stutio: false,
+    resources: false,
+  })
+
+  const handleClick = heading => {
+    setMobileExpand({ ...mobileExpand, [heading]: !mobileExpand[heading] })
+  }
   return (
     <StyledOuterFooter>
       <StyledTopFooter />
       <StyledBottomFooter>
         <StyledInnerFooter justify="space-between">
           <div>
-            <FooterArea>
-              <ListItemTitle>Hours Of Operation</ListItemTitle>
+            <ListItemTitlet
+              active={mobileExpand.hours}
+              onClick={() => handleClick("hours")}
+            >
+              Hours Of Operation
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.hours}>
               <ListItem>Monday - Friday: 5:00pm - 9:30pm</ListItem>
               <ListItem>Saturday:11:00am - 2:00pm</ListItem>
               <ListItem>Sunday: Closed</ListItem>
             </FooterArea>
-            <FooterArea style={{ marginTop: "20px" }}>
-              <ListItemTitle>Contact Us</ListItemTitle>
+            <ListItemTitlet
+              active={mobileExpand.contact}
+              onClick={() => handleClick("contact")}
+              style={{ marginTop: "20px" }}
+            >
+              Contact Us
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.contact}>
               <ListItem>
                 <a
                   href="https://g.page/ascendancemiami?share"
@@ -52,50 +75,61 @@ export default function Footer({ children }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Doral, FL 33172{" "}
+                  Doral, FL 33172
                 </a>
               </ListItem>
               <ListItem>786-571-7778</ListItem>
             </FooterArea>
           </div>
-          <FooterArea>
-            <ListItemTitle>Classes by Style</ListItemTitle>
-            <li>
-              <ListLink to="/ballet">Ballet</ListLink>
-            </li>
-            <li>
-              <ListLink to="/tap">Tap</ListLink>
-            </li>
-            <li>
-              <ListLink to="/flamenco">Flamenco</ListLink>
-            </li>
-            <li>
-              <ListLink to="/jazz">Jazz</ListLink>
-            </li>
-            <li>
-              <ListLink to="/technique">Technique</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">
-                <ListLink to="/hip-hop">Hip Hop</ListLink>
-              </ListLink>
-            </li>
-            <li>
-              <ListLink to="/contemporary">Contemporary</ListLink>
-            </li>
-            <li>
-              <ListLink to="/ball-room">Ball Room</ListLink>
-            </li>
-            <li>
-              <ListLink to="/lyrical">Lyrical</ListLink>
-            </li>
-            <li>
-              <ListLink to="/acrobatics">Acrobatics</ListLink>
-            </li>
-          </FooterArea>
           <div>
-            <FooterArea>
-              <ListItemTitle>Classes by Ages</ListItemTitle>
+            <ListItemTitlet
+              active={mobileExpand.styles}
+              onClick={() => handleClick("styles")}
+            >
+              Classes by Style
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.styles}>
+              <li>
+                <ListLink to="/ballet">Ballet</ListLink>
+              </li>
+              <li>
+                <ListLink to="/tap">Tap</ListLink>
+              </li>
+              <li>
+                <ListLink to="/flamenco">Flamenco</ListLink>
+              </li>
+              <li>
+                <ListLink to="/jazz">Jazz</ListLink>
+              </li>
+              <li>
+                <ListLink to="/technique">Technique</ListLink>
+              </li>
+              <li>
+                <ListLink to="/hip-hop">Hip Hop</ListLink>
+              </li>
+              <li>
+                <ListLink to="/contemporary">Contemporary</ListLink>
+              </li>
+              <li>
+                <ListLink to="/ball-room">Ball Room</ListLink>
+              </li>
+              <li>
+                <ListLink to="/lyrical">Lyrical</ListLink>
+              </li>
+              <li>
+                <ListLink to="/acrobatics">Acrobatics</ListLink>
+              </li>
+            </FooterArea>
+          </div>
+          <div>
+            <ListItemTitlet
+              active={mobileExpand.ages}
+              onClick={() => handleClick("ages")}
+            >
+              Classes by Ages
+            </ListItemTitlet>
+
+            <FooterArea active={mobileExpand.ages}>
               <li>
                 <ListLink to="/3-4">3 to 4 Years Old</ListLink>
               </li>
@@ -112,8 +146,15 @@ export default function Footer({ children }) {
                 <ListLink to="/teens">Teens</ListLink>
               </li>
             </FooterArea>
-            <FooterArea style={{ marginTop: "20px" }}>
-              <ListItemTitle>Classes by Program</ListItemTitle>
+            <ListItemTitlet
+              active={mobileExpand.program}
+              onClick={() => handleClick("program")}
+              style={{ marginTop: "20px" }}
+            >
+              Classes by Program
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.program}>
+              {/* <ListItemTitle>Classes by Program</ListItemTitle> */}
               <li>
                 <ListLink to="/">Recreational Program</ListLink>
               </li>
@@ -122,56 +163,70 @@ export default function Footer({ children }) {
               </li>
             </FooterArea>
           </div>
-          <FooterArea>
-            <ListItemTitle>Studio</ListItemTitle>
-            <li>
-              <ListLink to="/about">About</ListLink>
-            </li>
-            <li>
-              <ListLink to="/facility">Facility</ListLink>
-            </li>
-            <li>
-              <ListLink to="/blog">Blog</ListLink>
-            </li>
-            <li>
-              <ListLink to="/jobs">Jobs</ListLink>
-            </li>
-            <li>
-              <ListLink to="/ascendance-studio-company">
-                Ascendance Studio Company
-              </ListLink>
-            </li>
-            <li>
-              <ListLink to="/summer-camp">Summer Camp</ListLink>
-            </li>
-          </FooterArea>
-          <FooterArea>
-            <ListItemTitle>Resources</ListItemTitle>
-            <li>
-              <ListLink to="/">Free Trial Class</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Frequently Asked Questions</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Recitals</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Calendar of Events</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Register Now</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">COVID-19 resources</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Contact</ListLink>
-            </li>
-            <li>
-              <ListLink to="/">Sitemap</ListLink>
-            </li>
-          </FooterArea>
+          <div>
+            <ListItemTitlet
+              active={mobileExpand.stutio}
+              onClick={() => handleClick("studio")}
+            >
+              Studio
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.studio}>
+              <li>
+                <ListLink to="/about">About</ListLink>
+              </li>
+              <li>
+                <ListLink to="/facility">Facility</ListLink>
+              </li>
+              <li>
+                <ListLink to="/blog">Blog</ListLink>
+              </li>
+              <li>
+                <ListLink to="/jobs">Jobs</ListLink>
+              </li>
+              <li>
+                <ListLink to="/ascendance-studio-company">
+                  Ascendance Studio Company
+                </ListLink>
+              </li>
+              <li>
+                <ListLink to="/summer-camp">Summer Camp</ListLink>
+              </li>
+            </FooterArea>
+          </div>
+          <div>
+            <ListItemTitlet
+              active={mobileExpand.resources}
+              onClick={() => handleClick("resources")}
+            >
+              Resources
+            </ListItemTitlet>
+            <FooterArea active={mobileExpand.resources}>
+              <li>
+                <ListLink to="/">Free Trial Class</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Frequently Asked Questions</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Recitals</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Calendar of Events</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Register Now</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">COVID-19 resources</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Contact</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Sitemap</ListLink>
+              </li>
+            </FooterArea>
+          </div>
         </StyledInnerFooter>
 
         <StyledInnerFooter justify="center">
@@ -181,10 +236,18 @@ export default function Footer({ children }) {
         <StyledInnerFooter justify="space-between">
           <Copy>&copy; {new Date().getFullYear()} Ascendance Studio </Copy>
           <Social>
-            <a href="https://www.facebook.com/ascendanceMiami" target="_blank">
+            <a
+              href="https://www.facebook.com/ascendanceMiami"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://www.instagram.com/ascendanceMiami" target="_blank">
+            <a
+              href="https://www.instagram.com/ascendanceMiami"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a

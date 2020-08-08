@@ -12,6 +12,23 @@ export const StyledOuterFooter = styled.div`
   overflow: hidden;
 `
 
+export const FooterArea = styled.ul`
+  list-style: none;
+  color: white;
+  transition: all 0.1s ease;
+  @media (max-width: 768px) {
+    transform-origin: top center;
+    margin-top: 0 !important;
+    transform: ${props => (props.active ? "scale(1)" : "scaleY(0)")};
+    height: ${props => (props.active ? "auto" : "0")};
+    margin-bottom: ${props => (props.active ? "10px" : "0")};
+    & > li {
+      /* margin-bottom: 10px;
+      font-size: 1rem; */
+    }
+  }
+`
+
 export const StyledTopFooter = styled.div`
   width: 100%;
   height: 100px;
@@ -39,47 +56,42 @@ export const StyledInnerFooter = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     width: 90%;
-    &:first-child > :first-child {
+    &:last-child > :first-child {
       border-top: solid 1px #fff;
     }
   }
 `
 
-export const FooterArea = styled.ul`
-  list-style: none;
-  color: white;
-  @media (max-width: 768px) {
-    margin-top: 0 !important;
-  }
-`
-export const ListItemTitle = styled.li`
+export const ListItemTitlet = styled.h5`
   font-weight: 600;
   font-size: 1.1rem;
   padding-bottom: 8px;
+  color: #fff;
+
   @media (max-width: 768px) {
-    border-bottom: solid 1px #fff;
+    margin-top: 0 !important;
+    /* border-top: ${props => (props.active ? "none" : "solid 1px #fff")}; */
+    border-top: solid 1px #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
     &::after {
       content: "";
+      transition: all 0.25s ease;
       background-image: url(${Caret});
       position: absolute;
       right: 10px;
       width: 15px;
       height: 15px;
       top: 30%;
+      transform: ${props => (props.active ? "rotate(180deg)" : "rotate(0deg)")};
     }
   }
 `
-
 export const ListItem = styled.li`
   font-weight: 300;
   padding-bottom: 5px;
   font-size: 0.8rem;
-  @media (max-width: 768px) {
-    display: none;
-  }
   & > a {
     color: white;
     text-decoration: none;
@@ -91,9 +103,6 @@ export const ListLink = styled(Link)`
   font-size: 0.8rem;
   color: #fff;
   text-decoration: none;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `
 export const Separator = styled.div`
   width: 100%;
