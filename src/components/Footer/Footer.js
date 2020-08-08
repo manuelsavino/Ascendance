@@ -12,6 +12,7 @@ import {
   Social,
   ListLink,
   ListItemTitlet,
+  MobileImportant,
 } from "./footerStyled"
 import LogoWhite from "../../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -40,26 +41,9 @@ export default function Footer({ children }) {
       <StyledTopFooter />
       <StyledBottomFooter>
         <StyledInnerFooter justify="space-between">
-          <div>
-            <ListItemTitlet
-              active={mobileExpand.hours}
-              onClick={() => handleClick("hours")}
-            >
-              Hours Of Operation
-            </ListItemTitlet>
-            <FooterArea active={mobileExpand.hours}>
-              <ListItem>Monday - Friday: 5:00pm - 9:30pm</ListItem>
-              <ListItem>Saturday:11:00am - 2:00pm</ListItem>
-              <ListItem>Sunday: Closed</ListItem>
-            </FooterArea>
-            <ListItemTitlet
-              active={mobileExpand.contact}
-              onClick={() => handleClick("contact")}
-              style={{ marginTop: "20px" }}
-            >
-              Contact Us
-            </ListItemTitlet>
-            <FooterArea active={mobileExpand.contact}>
+          <MobileImportant>
+            <ListItemTitlet expanded>Contact Us</ListItemTitlet>
+            <FooterArea expanded>
               <ListItem>
                 <a
                   href="https://g.page/ascendancemiami?share"
@@ -78,9 +62,19 @@ export default function Footer({ children }) {
                   Doral, FL 33172
                 </a>
               </ListItem>
-              <ListItem>786-571-7778</ListItem>
+              <ListItem>
+                <a href="tel:786-571-7778">786-571-7778</a>
+              </ListItem>
             </FooterArea>
-          </div>
+            <ListItemTitlet expanded style={{ marginTop: "20px" }}>
+              Hours Of Operation
+            </ListItemTitlet>
+            <FooterArea expanded>
+              <ListItem>Monday - Friday: 5:00pm - 9:30pm</ListItem>
+              <ListItem>Saturday:11:00am - 2:00pm</ListItem>
+              <ListItem>Sunday: Closed</ListItem>
+            </FooterArea>
+          </MobileImportant>
           <div>
             <ListItemTitlet
               active={mobileExpand.styles}

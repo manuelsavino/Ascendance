@@ -19,13 +19,11 @@ export const FooterArea = styled.ul`
   @media (max-width: 768px) {
     transform-origin: top center;
     margin-top: 0 !important;
-    transform: ${props => (props.active ? "scale(1)" : "scaleY(0)")};
-    height: ${props => (props.active ? "auto" : "0")};
-    margin-bottom: ${props => (props.active ? "10px" : "0")};
-    & > li {
-      /* margin-bottom: 10px;
-      font-size: 1rem; */
-    }
+    transform: ${props =>
+      props.expanded || props.active ? "scale(1)" : "scaleY(0)"};
+    height: ${props => (props.expanded || props.active ? "auto" : "0")};
+    margin-bottom: ${props => (props.expanded || props.active ? "10px" : "0")};
+    text-align: ${props => (props.expanded ? "center" : "left")};
   }
 `
 
@@ -56,9 +54,13 @@ export const StyledInnerFooter = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     width: 90%;
-    &:last-child > :first-child {
-      border-top: solid 1px #fff;
-    }
+  }
+`
+
+export const MobileImportant = styled.div`
+  @media (max-width: 768px) {
+    margin: auto;
+    margin-bottom: 10px;
   }
 `
 
@@ -67,18 +69,18 @@ export const ListItemTitlet = styled.h5`
   font-size: 1.1rem;
   padding-bottom: 8px;
   color: #fff;
-
   @media (max-width: 768px) {
     margin-top: 0 !important;
     /* border-top: ${props => (props.active ? "none" : "solid 1px #fff")}; */
-    border-top: solid 1px #fff;
+    border-top: ${props => (props.expanded ? "none" : "solid 1px #fff")};
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
+    text-align: ${props => (props.expanded ? "center" : "left")};
     &::after {
       content: "";
       transition: all 0.25s ease;
-      background-image: url(${Caret});
+      background-image: ${props => (props.expanded ? "none" : `url(${Caret})`)};
       position: absolute;
       right: 10px;
       width: 15px;
