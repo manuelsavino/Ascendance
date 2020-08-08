@@ -11,6 +11,7 @@ import {
   LogoImage,
   Copy,
   Social,
+  ListLink,
 } from "./footerStyled"
 import LogoWhite from "../../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -36,61 +37,140 @@ export default function Footer({ children }) {
             </FooterArea>
             <FooterArea style={{ marginTop: "20px" }}>
               <ListItemTitle>Contact Us</ListItemTitle>
-              <ListItem>10466 NW 31ST Terrace</ListItem>
-              <ListItem>Doral, FL 33172 </ListItem>
+              <ListItem>
+                <a
+                  href="https://g.page/ascendancemiami?share"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  10466 NW 31ST Terrace
+                </a>
+              </ListItem>
+              <ListItem>
+                <a
+                  href="https://g.page/ascendancemiami?share"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Doral, FL 33172{" "}
+                </a>
+              </ListItem>
               <ListItem>786-571-7778</ListItem>
             </FooterArea>
           </div>
           <FooterArea>
             <ListItemTitle>Classes by Style</ListItemTitle>
-            <ListItem>
-              Ballet
-              {/* <Link to="">Ballet</Link> */}
-            </ListItem>
-            <ListItem>Tap</ListItem>
-            <ListItem>Flamenco</ListItem>
-            <ListItem>Jazz</ListItem>
-            <ListItem>Technique</ListItem>
-            <ListItem>Hip Hop</ListItem>
-            <ListItem>Contemporary</ListItem>
-            <ListItem>Ball Room</ListItem>
-            <ListItem>Lyrical</ListItem>
-            <ListItem>Acrobatics</ListItem>
+            <li>
+              <ListLink to="/ballet">Ballet</ListLink>
+            </li>
+            <li>
+              <ListLink to="/tap">Tap</ListLink>
+            </li>
+            <li>
+              <ListLink to="/flamenco">Flamenco</ListLink>
+            </li>
+            <li>
+              <ListLink to="/jazz">Jazz</ListLink>
+            </li>
+            <li>
+              <ListLink to="/technique">Technique</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">
+                <ListLink to="/hip-hop">Hip Hop</ListLink>
+              </ListLink>
+            </li>
+            <li>
+              <ListLink to="/contemporary">Contemporary</ListLink>
+            </li>
+            <li>
+              <ListLink to="/ball-room">Ball Room</ListLink>
+            </li>
+            <li>
+              <ListLink to="/lyrical">Lyrical</ListLink>
+            </li>
+            <li>
+              <ListLink to="/acrobatics">Acrobatics</ListLink>
+            </li>
           </FooterArea>
           <div>
             <FooterArea>
               <ListItemTitle>Classes by Ages</ListItemTitle>
-              <ListItem>3 to 4 Years Old</ListItem>
-              <ListItem>5 to 6 Years Old</ListItem>
-              <ListItem>7 to 9 Years Old</ListItem>
-              <ListItem>10 to 12 Years Old</ListItem>
-              <ListItem>Teens</ListItem>
+              <li>
+                <ListLink to="/3-4">3 to 4 Years Old</ListLink>
+              </li>
+              <li>
+                <ListLink to="/5-6">5 to 6 Years Old</ListLink>
+              </li>
+              <li>
+                <ListLink to="/7-9">7 to 9 Years Old</ListLink>
+              </li>
+              <li>
+                <ListLink to="/10-12">10 to 12 Years Old</ListLink>
+              </li>
+              <li>
+                <ListLink to="/teens">Teens</ListLink>
+              </li>
             </FooterArea>
             <FooterArea style={{ marginTop: "20px" }}>
               <ListItemTitle>Classes by Program</ListItemTitle>
-              <ListItem>Recreational Program</ListItem>
-              <ListItem>Competitive Program</ListItem>
+              <li>
+                <ListLink to="/">Recreational Program</ListLink>
+              </li>
+              <li>
+                <ListLink to="/">Competitive Program</ListLink>
+              </li>
             </FooterArea>
           </div>
           <FooterArea>
             <ListItemTitle>Studio</ListItemTitle>
-            <ListItem>About</ListItem>
-            <ListItem>Facility</ListItem>
-            <ListItem>Blog</ListItem>
-            <ListItem>Jobs</ListItem>
-            <ListItem>Ascendance Studio Company</ListItem>
-            <ListItem>Summer Camp</ListItem>
+            <li>
+              <ListLink to="/about">About</ListLink>
+            </li>
+            <li>
+              <ListLink to="/facility">Facility</ListLink>
+            </li>
+            <li>
+              <ListLink to="/blog">Blog</ListLink>
+            </li>
+            <li>
+              <ListLink to="/jobs">Jobs</ListLink>
+            </li>
+            <li>
+              <ListLink to="/ascendance-studio-company">
+                Ascendance Studio Company
+              </ListLink>
+            </li>
+            <li>
+              <ListLink to="/summer-camp">Summer Camp</ListLink>
+            </li>
           </FooterArea>
           <FooterArea>
             <ListItemTitle>Resources</ListItemTitle>
-            <ListItem>Free Trial Class</ListItem>
-            <ListItem>Frequently Asked Questions</ListItem>
-            <ListItem>Recitals</ListItem>
-            <ListItem>Calendar of Events</ListItem>
-            <ListItem>Register Now</ListItem>
-            <ListItem>COVID-19 resources</ListItem>
-            <ListItem>Contact</ListItem>
-            <ListItem>Sitemap</ListItem>
+            <li>
+              <ListLink to="/">Free Trial Class</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Frequently Asked Questions</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Recitals</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Calendar of Events</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Register Now</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">COVID-19 resources</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Contact</ListLink>
+            </li>
+            <li>
+              <ListLink to="/">Sitemap</ListLink>
+            </li>
           </FooterArea>
         </StyledInnerFooter>
 

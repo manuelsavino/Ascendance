@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import HeroImg from "../../images/hero.jpg"
-
 export const Hero = styled.div`
   display: flex;
   justify-content: center;
@@ -8,7 +7,7 @@ export const Hero = styled.div`
   color: white;
   width: 100%;
   height: 800px;
-  background: url(${HeroImg});
+  background: url(${props => props.img || HeroImg});
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
