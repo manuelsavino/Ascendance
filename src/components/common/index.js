@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { Hero } from "../components/Hero/hero"
 import DanceStyles from "../components/DanceStyles/DanceStyles"
 
-const IndexPage = () => {
+const Index = () => {
   return (
     <Layout hero={true}>
       <SEO title="Home" />
@@ -16,4 +16,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Index
