@@ -9,7 +9,7 @@ const Tap = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ScheduleViewer />
+      <ScheduleViewer style="Tap" heading="Tap Schedule" />
     </Layout>
   )
 }

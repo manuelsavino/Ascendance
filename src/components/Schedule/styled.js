@@ -8,7 +8,7 @@ export const ScheduleDay = styled.h2`
   font-weight: 300;
   padding: 10px;
   text-align: "center";
-  font-family: "Open Sans Condensed";
+  font-family: "Roboto";
 `
 
 export const TryButton = styled(Link)`
@@ -44,23 +44,23 @@ export const DanceClassBlock = styled.div`
 
 export const DanceClassDetail = styled.p`
   font-size: 0.8rem;
-  font-family: "Open Sans Condensed";
+  font-family: "Roboto";
   font-weight: 300;
 `
 
 export const DanceClassTime = styled(DanceClassDetail)`
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-weight: 400;
   margin-bottom: 5px;
 `
 export const ScheduleTitle = styled.h2`
   font-size: 3.5rem;
-  font-family: "Open Sans Condensed";
+  font-family: "Roboto";
   font-weight: 300;
 `
 
 export const FilterCat = styled.h4`
   font-size: 2rem;
-  font-family: "Open Sans Condensed";
+  font-family: "Roboto";
   font-weight: 300;
 `
