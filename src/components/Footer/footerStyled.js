@@ -2,6 +2,7 @@ import styled from "styled-components"
 import PinkWave from "../../images/footerWave.svg"
 import Caret from "../../images/caret-down.svg"
 import { Link } from "gatsby"
+import { TryButton } from "../FreeClass/styled"
 
 export const StyledOuterFooter = styled.div`
   background-color: #f8f8f8;
@@ -134,5 +135,15 @@ export const Copy = styled.p`
   color: white;
   @media (max-width: 768px) {
     text-align: center;
+  }
+`
+
+export const FooterTryFreeClass = styled(TryButton)`
+  display: none;
+  background-color: #3e424d;
+  background-image: linear-gradient(150deg, #3e424d 50%, transparent 50%);
+  @media (max-width: 768px) {
+    display: inline;
+    align-self: center;
   }
 `

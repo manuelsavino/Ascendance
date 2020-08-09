@@ -6,7 +6,7 @@ export default function FreeClass({ style }) {
   return (
     <FreeClassContainer>
       <SubHeading secondary style={{ marginBottom: "20px" }}>
-        Do you want to book Free {style} class today? Call us{" "}
+        Do you want to book Free {style} class today? Call us
         <a href="tel:786-571-7778">786-571-7778</a> or click below.
       </SubHeading>
       <TryButton to="/">

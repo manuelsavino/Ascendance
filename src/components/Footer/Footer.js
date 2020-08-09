@@ -13,7 +13,9 @@ import {
   ListLink,
   ListItemTitlet,
   MobileImportant,
+  FooterTryFreeClass,
 } from "./footerStyled"
+
 import LogoWhite from "../../images/logoWhite.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -41,6 +43,7 @@ export default function Footer({ children }) {
       <StyledTopFooter />
       <StyledBottomFooter>
         <StyledInnerFooter justify="space-between">
+          <FooterTryFreeClass to="/">Try A Free Class</FooterTryFreeClass>
           <MobileImportant>
             <ListItemTitlet expanded>Contact Us</ListItemTitlet>
             <FooterArea expanded>
@@ -148,7 +151,6 @@ export default function Footer({ children }) {
               Classes by Program
             </ListItemTitlet>
             <FooterArea active={mobileExpand.program}>
-              {/* <ListItemTitle>Classes by Program</ListItemTitle> */}
               <li>
                 <ListLink to="/">Recreational Program</ListLink>
               </li>
@@ -199,7 +201,7 @@ export default function Footer({ children }) {
                 <ListLink to="/">Free Trial Class</ListLink>
               </li>
               <li>
-                <ListLink to="/">Frequently Asked Questions</ListLink>
+                <ListLink to="/faq">Frequently Asked Questions</ListLink>
               </li>
               <li>
                 <ListLink to="/">Recitals</ListLink>

@@ -22,7 +22,6 @@ export const TryButton = styled(Link)`
   padding: 10px 15px;
   border-radius: 5px;
   margin-top: 10px;
-  transform: skewX(-15deg);
   position: relative;
   font-size: 1rem;
   text-decoration: none;
