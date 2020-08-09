@@ -1,9 +1,9 @@
 import React from "react"
 // import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ScheduleViewer from "../components/Schedule/ScheduleViewer"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import ScheduleViewer from "../../components/Schedule"
 
 const Tap = () => {
   return (

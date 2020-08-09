@@ -8,7 +8,7 @@ export const Hero = styled.div`
   width: 100%;
   height: 800px;
   background: url(${props => props.img || HeroImg});
-  background-attachment: fixed;
+  background-attachment: ${props => (props.parallax ? "fixed" : "initial")};
   background-size: cover;
   background-position: center;
   position: relative;
@@ -24,7 +24,10 @@ export const Hero = styled.div`
       rgba(204, 43, 94, 0.5) 0%,
       rgba(117, 58, 136, 0.5) 100%
     );
-    background: radial-gradient(transparent, rgba(0, 0, 0, 0.95));
+    background: ${props =>
+      props.gradient
+        ? "radial-gradient(transparent, rgba(0, 0, 0, 0.95))"
+        : "none"};
     width: 100%;
     height: 100%;
   }

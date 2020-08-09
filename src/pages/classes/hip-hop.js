@@ -1,24 +1,26 @@
 import React from "react"
-// import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ScheduleViewer from "../components/Schedule/ScheduleViewer"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import { Hero } from "../../components/Hero"
+import hiphopHero from "../../images/hiphop.jpg"
+import { Container } from "../../components/common/layout"
+import ScheduleViewer from "../../components/Schedule"
+import FreeClass from "../../components/FreeClass"
 import {
   Heading,
   SubHeading,
   Paragraph,
   ListItem,
-} from "../components/common/copy"
+} from "../../components/common/copy"
+
+const classLabel = "Hip Hop"
 
 const HipHop = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div
-        style={{ margin: "85px auto 0", paddingBottom: "80px", width: "90%" }}
-      >
-        <Heading>Hip Hop</Heading>
+      <Container>
+        <Heading>{classLabel}</Heading>
         <Paragraph>
           Has your child ever tried to pop and lock? Have you noticed them
           curious about moving their bodies in rhythmic ways that groove and
@@ -26,6 +28,7 @@ const HipHop = () => {
           Help them embrace confidence in a new way via expression and movement
           on the dance floor!
         </Paragraph>
+        <Hero img={hiphopHero} />
         <SubHeading weight={600}>
           What do Hip-Hop classes look like at Ascendance?
         </SubHeading>
@@ -72,6 +75,7 @@ const HipHop = () => {
           become more well-rounded, indulge in fitness, and have fun all at the
           same time!
         </Paragraph>
+        <FreeClass style={`${classLabel}`} />
         <SubHeading>Objectives of Hip-Hop</SubHeading>
         <ListItem>To develop social skills </ListItem>
         <ListItem>To enhance cardiovascular activity </ListItem>
@@ -109,8 +113,8 @@ const HipHop = () => {
           show such as “So You Think You Can Dance” or “World of Dance”, you’ve
           definitely seen hip-hop in action!
         </Paragraph>
-      </div>
-      <ScheduleViewer style="HipHop" heading="Hip-Hop Schedule" />
+        <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
+      </Container>
     </Layout>
   )
 }

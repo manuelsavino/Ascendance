@@ -1,15 +1,17 @@
 import React from "react"
 // import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ScheduleViewer from "../components/Schedule/ScheduleViewer"
+import ScheduleViewer from "../components/Schedule"
+import { Container } from "../components/common/layout"
 
 const Schedule = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ScheduleViewer />
+      <Container>
+        <ScheduleViewer />
+      </Container>
     </Layout>
   )
 }

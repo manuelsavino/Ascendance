@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from "react"
-import { Hero } from "../Hero/hero"
-
 import { v4 as uuidv4 } from "uuid"
 import {
   ScheduleDay,
@@ -57,16 +55,17 @@ export default function ScheduleViewer({ style, heading }) {
     const res = await fetch("/.netlify/functions/getSchedule")
     const data = await res.json()
     filterDay(data.records)
-
     if (style) {
       const preFiltered = data.records.filter(
         danceClass => danceClass.fields.Type === style
       )
+      filterDay(preFiltered)
       setDisplayData(preFiltered)
       setData(preFiltered)
     } else {
       setData(data.records)
       setDisplayData(data.records)
+      filterDay(data.records)
     }
     setLoading(false)
   }
@@ -134,10 +133,7 @@ export default function ScheduleViewer({ style, heading }) {
   }
 
   return (
-    <div style={{ margin: "85px auto 0", paddingBottom: "80px", width: "90%" }}>
-      <Hero>
-        <h1>Try a class for Free</h1>
-      </Hero>
+    <div>
       <Heading>{heading ? heading : "Schedule"}</Heading>
       <div style={{ display: "flex" }}>
         <div>
@@ -173,7 +169,7 @@ export default function ScheduleViewer({ style, heading }) {
                       onChange={handleTypeFilterChage}
                       checked={typeFilters[typeFilter]}
                     />
-                    <label for={typeFilter}>{typeFilter}</label>
+                    <label htmlFor={typeFilter}>{typeFilter}</label>
                   </li>
                 )
               })}

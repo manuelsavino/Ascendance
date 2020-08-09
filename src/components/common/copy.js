@@ -4,7 +4,8 @@ const paragraphFontFam = '"Roboto",sans-serif'
 
 export const SubHeading = styled.h4`
   font-size: 2rem;
-  font-family: ${headingFontFam};
+  font-family: ${props =>
+    props.secondary ? `${paragraphFontFam}` : `${headingFontFam}`};
   font-weight: 300;
   margin-top: 20px;
   color: #393e46;

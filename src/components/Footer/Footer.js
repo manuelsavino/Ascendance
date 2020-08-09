@@ -84,7 +84,7 @@ export default function Footer({ children }) {
             </ListItemTitlet>
             <FooterArea active={mobileExpand.styles}>
               <li>
-                <ListLink to="/ballet">Ballet</ListLink>
+                <ListLink to="/classes/ballet">Ballet</ListLink>
               </li>
               <li>
                 <ListLink to="/tap">Tap</ListLink>
@@ -99,7 +99,7 @@ export default function Footer({ children }) {
                 <ListLink to="/technique">Technique</ListLink>
               </li>
               <li>
-                <ListLink to="/hip-hop">Hip Hop</ListLink>
+                <ListLink to="/classes/hip-hop">Hip Hop</ListLink>
               </li>
               <li>
                 <ListLink to="/contemporary">Contemporary</ListLink>
