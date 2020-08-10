@@ -1,5 +1,6 @@
 import styled from "styled-components"
-const headingFontFam = '"Archivo Black", sans-serif'
+import { Link } from "gatsby"
+const headingFontFam = '"Roboto",sans-serif'
 const paragraphFontFam = '"Roboto",sans-serif'
 
 export const SubHeading = styled.h4`
@@ -13,9 +14,10 @@ export const SubHeading = styled.h4`
 export const Heading = styled.h2`
   font-size: 3.5rem;
   font-family: ${headingFontFam};
-  font-weight: 300;
+  font-weight: 700;
   padding-top: 30px;
   color: #393e46;
+  line-height: 1;
 `
 export const Paragraph = styled.p`
   font-size: 1rem;
@@ -31,4 +33,14 @@ export const ListItem = styled.li`
   font-weight: ${props => props.weight || 300};
   color: #393e46;
   line-height: 2;
+`
+
+export const CopyLink = styled(Link)`
+  color: #ea3ba1;
+  text-decoration: none;
+`
+
+export const CopyLinkE = styled.a`
+  color: #ea3ba1;
+  text-decoration: none;
 `

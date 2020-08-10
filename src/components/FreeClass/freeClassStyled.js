@@ -5,7 +5,6 @@ export const FreeClassContainer = styled.div`
   padding: 40px 0;
   & > * > a {
     text-decoration: none;
-    color: inherit;
     font-weight: inherit;
     font-family: inherit;
   }

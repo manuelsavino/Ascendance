@@ -108,7 +108,7 @@ export default function Footer({ children }) {
                 <ListLink to="/contemporary">Contemporary</ListLink>
               </li>
               <li>
-                <ListLink to="/ball-room">Ball Room</ListLink>
+                <ListLink to="/ballroom">Ballroom</ListLink>
               </li>
               <li>
                 <ListLink to="/lyrical">Lyrical</ListLink>

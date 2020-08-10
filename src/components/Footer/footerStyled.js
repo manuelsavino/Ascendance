@@ -2,7 +2,7 @@ import styled from "styled-components"
 import PinkWave from "../../images/footerWave.svg"
 import Caret from "../../images/caret-down.svg"
 import { Link } from "gatsby"
-import { TryButton } from "../FreeClass/styled"
+import { TryButton } from "../FreeClass/freeClassStyled"
 
 export const StyledOuterFooter = styled.div`
   background-color: #f8f8f8;

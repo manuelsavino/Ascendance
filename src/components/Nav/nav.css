@@ -145,6 +145,7 @@
   text-decoration: none;
   transition: color 0.2s ease-out;
   text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-item a:hover {

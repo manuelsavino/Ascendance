@@ -93,7 +93,7 @@ export default function NavColor({ hero }) {
               <Link to="/schedule">Schedule</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/classes">Classes</Link>
+              <Link to="/free">Free Class</Link>
             </li>
           </ul>
           <Link to="/">
@@ -125,16 +125,16 @@ export default function NavColor({ hero }) {
               <Link to="/schedule">Schedule</Link>
             </li>
             <li className="nav-item m-only" onClick={closeMobileMenu}>
-              <Link to="/classes">Classes</Link>
+              <Link to="/free">Free Class</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <a href="#">Other</a>
+              <Link to="/summer">Summer Camp</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <a href="#">Summer</a>
+              <Link to="/aboutus">About Us</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <a href="#">Contact Us</a>
+              <Link to="/faq">FAQ</Link>
             </li>
           </ul>
         </nav>

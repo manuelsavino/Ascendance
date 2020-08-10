@@ -11,6 +11,8 @@ import {
   SubHeading,
   Paragraph,
   ListItem,
+  CopyLink,
+  CopyLinkE,
 } from "../../components/common/copy"
 
 const classLabel = "Hip Hop"
@@ -20,7 +22,7 @@ const HipHop = () => {
     <Layout>
       <SEO title="Home" />
       <Container>
-        <Heading>{classLabel}</Heading>
+        <Heading>{classLabel} Classes</Heading>
         <Paragraph>
           Has your child ever tried to pop and lock? Have you noticed them
           curious about moving their bodies in rhythmic ways that groove and
@@ -39,13 +41,13 @@ const HipHop = () => {
           can just tell, and their confidence is contagious! Now imagine where
           this person’s training must have started and how dancing and training
           in hip-hop has helped them develop their personality. Hip-hop at
-          Ascendance Studio really encourages the development of individuality.
-          Our hip-hop professionals make it a point to teach every dancer not
-          only how to follow a combination of steps, but to develop a style of
-          their own. Isolations and sharp accents make for a strong foundation
-          of hip-hop and every movement choreographed is meant to emphasize
-          these elements so that dancers understand the music and movement
-          promulgating each sound.
+          <CopyLink to="/"> Ascendance Studio</CopyLink> really encourages the
+          development of individuality. Our hip-hop professionals make it a
+          point to teach every dancer not only how to follow a combination of
+          steps, but to develop a style of their own. Isolations and sharp
+          accents make for a strong foundation of hip-hop and every movement
+          choreographed is meant to emphasize these elements so that dancers
+          understand the music and movement promulgating each sound.
         </Paragraph>
         <Paragraph>
           From the very early age of five years old, our instructors teach
@@ -110,8 +112,23 @@ const HipHop = () => {
           aspect of hip-hop that you have perhaps observed at gatherings or
           parties, hip-hop is all around us. Popular on both television and
           movies, if you’ve ever seen any of the “Step-Up” movies or any dance
-          show such as “So You Think You Can Dance” or “World of Dance”, you’ve
-          definitely seen hip-hop in action!
+          show such as{" "}
+          <CopyLinkE
+            href="https://www.fox.com/so-you-think-you-can-dance/"
+            target="_blank"
+            rel="noopener"
+          >
+            “So You Think You Can Dance”
+          </CopyLinkE>
+          or
+          <CopyLinkE
+            href="https://www.nbc.com/world-of-dance"
+            target="_blank"
+            rel="noopener"
+          >
+            “World of Dance”
+          </CopyLinkE>
+          , you’ve definitely seen hip-hop in action!
         </Paragraph>
         <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
       </Container>
