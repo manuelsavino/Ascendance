@@ -24,7 +24,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 
-export default function Footer({ children, hideFreeClass }) {
+export default function Footer({ children, hidefreeflass }) {
   const [mobileExpand, setMobileExpand] = useState({
     contact: false,
     hours: false,

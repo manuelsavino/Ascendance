@@ -23,7 +23,7 @@ const Layout = ({ children, hero, hidefreeflass }) => {
       <Header hero={hero} siteTitle={data.site.siteMetadata.title} />
       <Global />
       <main className={!hero ? "mainMargin" : ""}>{children}</main>
-      <Footer hideFreeClass={hidefreeflass} />
+      <Footer hidefreeflass={hidefreeflass} />
     </>
   )
 }
