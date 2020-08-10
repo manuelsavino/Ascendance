@@ -6,7 +6,7 @@ export const Hero = styled.div`
   align-items: center;
   color: white;
   width: 100%;
-  height: 800px;
+  height: ${props => props.height || "800px"};
   background: url(${props => props.img || HeroImg});
   background-attachment: ${props => (props.parallax ? "fixed" : "initial")};
   background-size: cover;

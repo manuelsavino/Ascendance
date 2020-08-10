@@ -5,7 +5,7 @@ import {
   Question,
   QuestionAnswer,
   QuestionText,
-} from "./styled"
+} from "./faqStyled"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -16,7 +16,7 @@ import {
 const questionsArr = [
   {
     id: uuidv4(),
-    question: "Why this and that 2?",
+    question: "Why is this such a long question?",
     answer: {
       __html:
         "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",

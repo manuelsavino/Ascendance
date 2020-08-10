@@ -30,7 +30,7 @@ const HipHop = () => {
           Help them embrace confidence in a new way via expression and movement
           on the dance floor!
         </Paragraph>
-        <Hero img={hiphopHero} />
+
         <SubHeading weight={600}>
           What do Hip-Hop classes look like at Ascendance?
         </SubHeading>
@@ -62,6 +62,7 @@ const HipHop = () => {
           watch! Let your child’s inner star shine through in the dance room!
           Sign them up for hip-hop today!
         </Paragraph>
+        <Hero img={hiphopHero} height="600px" />
         <SubHeading weight={600}>Benefits of Hip-Hop</SubHeading>
         <Paragraph>
           Hip-hop incorporates both anaerobic and aerobic elements, making it
@@ -89,17 +90,24 @@ const HipHop = () => {
           What is hip-hop dance and where does it come from?
         </SubHeading>
         <Paragraph>
-          Originating in the 1960’s, hip-hop was born on the streets from the
-          east all the way to the west coast. Although the beginnings of hip-hop
-          ranged in both style and execution, depending on which side you asked,
-          they both had one thing in common for sure– their urban roots.
-          Beginning in New York, uprock and breaking were two elements of funky
-          dance created by African-Americans and Latino populations in the city.
-          On the other side of the coin was the west coast, developing their
-          style into what is commonly recognized as pop and lock and the
-          “robot”. With exposure and popularity of both differing styles, came
-          the undeniable evolution that morphed in what is today known and
-          celebrated as hip-hop dance.
+          Originating in the 1960’s,{" "}
+          <CopyLinkE
+            href="https://en.wikipedia.org/wiki/Hip_hop"
+            target="_blank"
+            rel="noopener"
+          >
+            hip-hop
+          </CopyLinkE>{" "}
+          was born on the streets from the east all the way to the west coast.
+          Although the beginnings of hip-hop ranged in both style and execution,
+          depending on which side you asked, they both had one thing in common
+          for sure– their urban roots. Beginning in New York, uprock and
+          breaking were two elements of funky dance created by African-Americans
+          and Latino populations in the city. On the other side of the coin was
+          the west coast, developing their style into what is commonly
+          recognized as pop and lock and the “robot”. With exposure and
+          popularity of both differing styles, came the undeniable evolution
+          that morphed in what is today known and celebrated as hip-hop dance.
         </Paragraph>
         <Paragraph>
           Aside from the funky fundamental components, hip-hop dance was very
@@ -107,12 +115,27 @@ const HipHop = () => {
           continues to flourish primarily in groups of people. Maybe you’ve done
           the funky chicken or dabbled in the running man– both popular hip-hop
           dances back in the day. Perhaps you’ve heard of the “Soulja Boy” or
-          the “Cha Cha Slide”? These are just a few examples of the diversity
-          and evolution that hip-hop continues to offer. Other than the social
-          aspect of hip-hop that you have perhaps observed at gatherings or
-          parties, hip-hop is all around us. Popular on both television and
-          movies, if you’ve ever seen any of the “Step-Up” movies or any dance
-          show such as{" "}
+          the{" "}
+          <CopyLinkE
+            href="https://www.youtube.com/watch?v=wZv62ShoStY"
+            target="_blank"
+            rel="noopener"
+          >
+            “Cha Cha Slide”
+          </CopyLinkE>
+          ? These are just a few examples of the diversity and evolution that
+          hip-hop continues to offer. Other than the social aspect of hip-hop
+          that you have perhaps observed at gatherings or parties, hip-hop is
+          all around us. Popular on both television and movies, if you’ve ever
+          seen any of the “
+          <CopyLinkE
+            href="https://www.imdb.com/title/tt0462590/"
+            target="_blank"
+            rel="noopener"
+          >
+            Step-Up
+          </CopyLinkE>
+          ” movies or any dance show such as{" "}
           <CopyLinkE
             href="https://www.fox.com/so-you-think-you-can-dance/"
             target="_blank"

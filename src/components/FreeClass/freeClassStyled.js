@@ -2,16 +2,23 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const FreeClassContainer = styled.div`
-  padding: 40px 0;
+  padding: 20px 0;
   & > * > a {
     text-decoration: none;
     font-weight: inherit;
     font-family: inherit;
   }
+  & > p {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #393e46;
+  }
 `
 
 export const TryButton = styled(Link)`
-  background-color: #ea3ba1;
+  background-color: --color-primary;
   background-image: linear-gradient(150deg, #3e424d 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;

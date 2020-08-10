@@ -9,9 +9,9 @@ ul.ks-cboxtags li {
 ul.ks-cboxtags li label {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(62, 66, 77, 0.6);
+  border: 1px solid rgba(62, 66, 77, 0.6);
   color: #3e424d;
-  border-radius: 25px;
+  border-radius: 5px;
   white-space: nowrap;
   margin: 3px 0px;
   -webkit-touch-callout: none;
@@ -21,6 +21,10 @@ ul.ks-cboxtags li label {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   transition: all 0.2s;
+}
+ul.ks-cboxtags li label:hover {
+  border: 1px solid #ea3ba1;
+  color: #ea3ba1;
 }
 
 ul.ks-cboxtags li label {
@@ -49,7 +53,7 @@ ul.ks-cboxtags li label {
 } */
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-  border: 2px solid #ea3ba1;
+  border: 1px solid #ea3ba1;
   background-color: #ea3ba1;
   color: #fff;
   transition: all 0.2s;

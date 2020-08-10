@@ -70,7 +70,7 @@ export default function Footer({ children }) {
               </ListItem>
             </FooterArea>
             <ListItemTitlet expanded style={{ marginTop: "20px" }}>
-              Hours Of Operation
+              Hours of Operation
             </ListItemTitlet>
             <FooterArea expanded>
               <ListItem>Monday - Friday: 5:00pm - 9:30pm</ListItem>

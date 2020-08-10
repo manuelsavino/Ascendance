@@ -6,6 +6,9 @@ export const StyledFaqOuter = styled.div`
   height: max-content;
   margin-top: 20px;
   background: white;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const Question = styled.div`
