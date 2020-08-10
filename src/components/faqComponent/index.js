@@ -13,86 +13,28 @@ import {
   faMinusSquare,
 } from "@fortawesome/free-regular-svg-icons"
 
-const questionsArr = [
-  {
-    id: uuidv4(),
-    question: "Why is this such a long question?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-  {
-    id: uuidv4(),
-    question: "Why this and that 2?",
-    answer: {
-      __html:
-        "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Quisque rhoncus quam venenatis orci lacinia, non posuere mauris tempor. Ut auctor leo non justo ornare mattis. Integer sit amet fringilla orci.</p>",
-    },
-  },
-]
-const ids = {}
-questionsArr.map(each => {
-  ids[each.id] = false
-})
-
 export default function Faqs() {
-  const [faqExpand, setFaqExpand] = useState(ids)
+  const fetchFaq = async () => {
+    const res = await fetch("/.netlify/functions/getFaq")
+    const { records } = await res.json()
+    console.log(records)
+    setQuetions(records)
+  }
+
+  useEffect(() => {
+    fetchFaq()
+    // eslint-disable-line no-use-before-define
+  }, [])
+  const [faqExpand, setFaqExpand] = useState({})
+  const [questions, setQuetions] = useState([])
   const handleClick = id => {
     setFaqExpand({ ...faqExpand, [id]: !faqExpand[id] })
   }
 
   return (
     <StyledFaqOuter>
-      {questionsArr.map(each => {
+      {questions.map(each => {
+        const answer = { __html: each.fields.Answer }
         return (
           <Question
             onClick={() => {
@@ -107,10 +49,12 @@ export default function Faqs() {
                   faqExpand[each.id] === true ? faMinusSquare : faPlusSquare
                 }
               />
-              <span style={{ paddingLeft: "10px" }}>{each.question}</span>
+              <span style={{ paddingLeft: "10px" }}>
+                {each.fields.Question}
+              </span>
             </QuestionText>
             <QuestionAnswer
-              dangerouslySetInnerHTML={each.answer}
+              dangerouslySetInnerHTML={answer}
               opened={faqExpand[each.id]}
             />
           </Question>

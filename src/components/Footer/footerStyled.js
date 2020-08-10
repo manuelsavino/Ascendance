@@ -145,5 +145,6 @@ export const FooterTryFreeClass = styled(TryButton)`
   @media (max-width: 768px) {
     display: inline;
     align-self: center;
+    display: ${props => (props.hideFreeClass ? "none" : "block")};
   }
 `

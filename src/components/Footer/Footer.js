@@ -24,7 +24,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 
-export default function Footer({ children }) {
+export default function Footer({ children, hideFreeClass }) {
   const [mobileExpand, setMobileExpand] = useState({
     contact: false,
     hours: false,
@@ -43,7 +43,9 @@ export default function Footer({ children }) {
       <StyledTopFooter />
       <StyledBottomFooter>
         <StyledInnerFooter justify="space-between">
-          <FooterTryFreeClass to="/">Try A Free Class</FooterTryFreeClass>
+          <FooterTryFreeClass hidefreeflass={hidefreeflass} to="/free">
+            Try A Free Class
+          </FooterTryFreeClass>
           <MobileImportant>
             <ListItemTitlet expanded>Contact Us</ListItemTitlet>
             <FooterArea expanded>
@@ -198,7 +200,7 @@ export default function Footer({ children }) {
             </ListItemTitlet>
             <FooterArea active={mobileExpand.resources}>
               <li>
-                <ListLink to="/">Free Trial Class</ListLink>
+                <ListLink to="/free">Free Trial Class</ListLink>
               </li>
               <li>
                 <ListLink to="/faq">Frequently Asked Questions</ListLink>

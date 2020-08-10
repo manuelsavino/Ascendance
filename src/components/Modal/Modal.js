@@ -1,6 +1,6 @@
 import React from "react"
 
-import { OuterModal, InnerModal, CloseButton } from "./styled"
+import { OuterModal, InnerModal, CloseButton } from "./modalStyled"
 
 export const Modal = ({ children, close }) => {
   return (

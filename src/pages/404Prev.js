@@ -1,12 +1,33 @@
 import React from "react"
-
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import NotFound from "../images/404.svg"
 import { Container, Button } from "../components/common/layout"
 import { Heading } from "../components/common/copy"
+
+const NotFoundImage = styled.img`
+  width: 40%;
+  margin: 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 50px;
+  }
+`
+
+const NotFoundCopy = styled(Heading)`
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-size: 1.9rem;
+  padding: 0;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+`
+
 const NotFoundPage = () => (
-  <Layout>
+  <Layout hidefreeflass>
     <SEO title="404: Not found" />
     <Container
       style={{
@@ -17,15 +38,11 @@ const NotFoundPage = () => (
         alignItems: "center",
       }}
     >
-      <img src={NotFound} style={{ width: "40%", margin: "20px" }} />
-      <Heading
-        size="2.5rem"
-        style={{ marginBottom: "15px", lineHeight: "1.2" }}
-      >
-        Oopps... Sorry we can't find that page!
-        <br />
+      <NotFoundImage src={NotFound} />
+      <NotFoundCopy>Oopps... Sorry we can't find that page!</NotFoundCopy>
+      <NotFoundCopy>
         We did find this awesome link to try a free class!
-      </Heading>
+      </NotFoundCopy>
       <Button to="/free">Try a free class</Button>
     </Container>
   </Layout>

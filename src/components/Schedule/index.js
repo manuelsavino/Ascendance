@@ -198,7 +198,7 @@ export default function ScheduleViewer({ style, heading }) {
                           </DanceClassTime>
                           <TryButton
                             i={i}
-                            to={`/PaperForm?class=${danceClass.fields.classId}`}
+                            to={`/free?class=${danceClass.fields.classId}`}
                           >
                             Try Class
                           </TryButton>

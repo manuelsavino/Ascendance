@@ -6,7 +6,7 @@ import NotFound from "../images/404.svg"
 import { Container, Button } from "../components/common/layout"
 import { Heading } from "../components/common/copy"
 const NotFoundPage = () => (
-  <Layout>
+  <Layout NotFound>
     <SEO title="404: Not found" />
     <Container
       style={{
