@@ -36,13 +36,12 @@ export default function Faqs() {
       {questions.map(each => {
         const answer = { __html: each.fields.Answer }
         return (
-          <Question
-            onClick={() => {
-              handleClick(each.id)
-            }}
-            key={each.id}
-          >
-            <QuestionText>
+          <Question key={each.id}>
+            <QuestionText
+              onClick={() => {
+                handleClick(each.id)
+              }}
+            >
               <FontAwesomeIcon
                 style={{ color: "#ea3ba1" }}
                 icon={
