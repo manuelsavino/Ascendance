@@ -10,6 +10,7 @@ import {
 } from "./styled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
+import Loading from "../../images/loading.svg"
 
 export default function ScheduleViewer({ style, heading }) {
   const didMountRef = useRef(false)
@@ -129,12 +130,18 @@ export default function ScheduleViewer({ style, heading }) {
   }
 
   if (loading) {
-    return <div>Loading...</div>
+    return (
+      <img
+        style={{ display: "block", margin: "auto" }}
+        alt="loading image animation"
+        src={Loading}
+      />
+    )
   }
 
   return (
     <div>
-      <Heading>{heading ? heading : "Schedule"}</Heading>
+      {heading && <Heading>{heading}</Heading>}
       <div style={{ display: "flex" }}>
         <div>
           <SubHeading>Ages</SubHeading>

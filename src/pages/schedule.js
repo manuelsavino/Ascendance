@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScheduleViewer from "../components/Schedule"
+import { Heading } from "../components/common/copy"
 import { Container } from "../components/common/layout"
 
 const Schedule = () => {
@@ -10,6 +11,7 @@ const Schedule = () => {
     <Layout>
       <SEO title="Home" />
       <Container>
+        <Heading>Schedule</Heading>
         <ScheduleViewer />
       </Container>
     </Layout>

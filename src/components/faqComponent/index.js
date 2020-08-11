@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { v4 as uuidv4 } from "uuid"
 import {
   StyledFaqOuter,
   Question,
   QuestionAnswer,
   QuestionText,
 } from "./faqStyled"
+import Loading from "../../images/loading.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -17,8 +17,8 @@ export default function Faqs() {
   const fetchFaq = async () => {
     const res = await fetch("/.netlify/functions/getFaq")
     const { records } = await res.json()
-    console.log(records)
     setQuetions(records)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -26,9 +26,19 @@ export default function Faqs() {
     // eslint-disable-line no-use-before-define
   }, [])
   const [faqExpand, setFaqExpand] = useState({})
+  const [loading, setLoading] = useState(true)
   const [questions, setQuetions] = useState([])
   const handleClick = id => {
     setFaqExpand({ ...faqExpand, [id]: !faqExpand[id] })
+  }
+  if (loading) {
+    return (
+      <img
+        style={{ display: "block", margin: "auto" }}
+        alt="loading image animation"
+        src={Loading}
+      />
+    )
   }
 
   return (
