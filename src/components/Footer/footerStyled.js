@@ -16,7 +16,7 @@ export const StyledOuterFooter = styled.div`
 export const FooterArea = styled.ul`
   list-style: none;
   color: white;
-  transition: all 0.1s ease;
+  transition: all 0.15s ease-in-out;
   @media (max-width: 768px) {
     transform-origin: top center;
     margin-top: 0 !important;
@@ -25,6 +25,9 @@ export const FooterArea = styled.ul`
     height: ${props => (props.expanded || props.active ? "auto" : "0")};
     margin-bottom: ${props => (props.expanded || props.active ? "10px" : "0")};
     text-align: ${props => (props.expanded ? "center" : "left")};
+    & > li {
+      padding: ${props => (props.expanded ? "0" : "5px 0")};
+    }
   }
 `
 
@@ -54,7 +57,7 @@ export const StyledInnerFooter = styled.div`
   padding-bottom: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 90%;
+    width: 95%;
   }
 `
 
@@ -72,12 +75,15 @@ export const ListItemTitlet = styled.h5`
   color: #fff;
   @media (max-width: 768px) {
     margin-top: 0 !important;
-    /* border-top: ${props => (props.active ? "none" : "solid 1px #fff")}; */
-    border-top: ${props => (props.expanded ? "none" : "solid 1px #fff")};
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-top: ${props =>
+      props.expanded ? "none" : "solid 1px rgba(255,255,255,.4)"};
+    padding-top: 15px;
+    padding-bottom: 15px;
     position: relative;
     text-align: ${props => (props.expanded ? "center" : "left")};
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: ${props => (props.active ? "600" : "500")};
     &::after {
       content: "";
       transition: all 0.25s ease;

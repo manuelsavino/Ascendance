@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
-// import { Link } from "gatsby"
-import { Modal } from "../components/Modal/Modal"
+import Loading from "../images/loading.svg"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -32,23 +31,14 @@ const PaperForm = ({ search }) => {
   return (
     <>
       <Layout hero={false}>
-        {console.log(showModal)}
         <SEO title="Home" />
-        {/* <Hero>
-          <button
-            onClick={() => {
-              setShowModal(true)
-            }}
-          >
-            Show Modal
-          </button>
-        </Hero> */}
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`88mik=--1--`}
           data-paperform-id="vnhsjqfa"
-        ></div>
-        {showModal && <Modal close={closeModal}></Modal>}
+        >
+          <img src={Loading} />
+        </div>
       </Layout>
     </>
   )
