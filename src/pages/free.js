@@ -13,8 +13,6 @@ const addScript = url => {
   document.body.appendChild(script)
 }
 
-const classDict = {}
-
 const PaperForm = ({ search }) => {
   const { formId } = search
 

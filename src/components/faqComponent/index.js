@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, ReactHTMLElement } from "react"
+import convert from "htmr"
 import {
   StyledFaqOuter,
   Question,
   QuestionAnswer,
   QuestionText,
 } from "./faqStyled"
+import { CopyLink, CopyLinkE } from "../../components/common/copy"
 import Loading from "../../images/loading.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -41,10 +43,25 @@ export default function Faqs() {
     )
   }
 
+  const transform = {
+    a: node => {
+      if (node.to) return <CopyLink to={node.to}>{node.children}</CopyLink>
+      else
+        return (
+          <CopyLinkE
+            href={node.href}
+            target={node.target}
+            rel="noopener noreferrer"
+          >
+            {node.children}
+          </CopyLinkE>
+        )
+    },
+  }
+
   return (
     <StyledFaqOuter>
       {questions.map(each => {
-        const answer = { __html: each.fields.Answer }
         return (
           <Question key={each.id}>
             <QuestionText
@@ -62,10 +79,9 @@ export default function Faqs() {
                 {each.fields.Question}
               </span>
             </QuestionText>
-            <QuestionAnswer
-              dangerouslySetInnerHTML={answer}
-              opened={faqExpand[each.id]}
-            />
+            <QuestionAnswer opened={faqExpand[each.id]}>
+              {convert(each.fields.Answer, { transform })}
+            </QuestionAnswer>
           </Question>
         )
       })}

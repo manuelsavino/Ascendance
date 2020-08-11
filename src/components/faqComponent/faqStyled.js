@@ -33,7 +33,7 @@ export const QuestionAnswer = styled.div`
   transform-origin: top center;
   overflow: hidden;
   padding: ${props => (props.opened ? "5px 10px 10px 10px" : "0")};
-  color: #ea3ba1;
+  color: #393e45;
   & > p {
     line-height: 1.2;
     padding: 0 10px;
