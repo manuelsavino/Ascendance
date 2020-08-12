@@ -64,3 +64,22 @@ export const FilterCat = styled.h4`
   font-family: "Roboto";
   font-weight: 300;
 `
+
+export const NoResultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px 0;
+`
+
+export const NoResultsImage = styled.img`
+  width: 50%;
+  margin-top: 50px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+`

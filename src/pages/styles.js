@@ -6,7 +6,7 @@ import { Container } from "../components/common/layout"
 export default function styles() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Styles" />
       <Container>
         <DanceStyles />
       </Container>

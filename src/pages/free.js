@@ -29,7 +29,7 @@ const PaperForm = ({ search }) => {
   return (
     <>
       <Layout hero={false}>
-        <SEO title="Home" />
+        <SEO title="Free Class" />
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`88mik=--1--`}

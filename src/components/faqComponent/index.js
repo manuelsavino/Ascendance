@@ -68,6 +68,7 @@ export default function Faqs() {
           return (
             <Question key={each.id}>
               <QuestionText
+                opened={faqExpand[each.id]}
                 onClick={() => {
                   handleClick(each.id)
                 }}
@@ -78,9 +79,7 @@ export default function Faqs() {
                     faqExpand[each.id] === true ? faMinusSquare : faPlusSquare
                   }
                 />
-                <span style={{ paddingLeft: "10px" }}>
-                  {each.fields.Question}
-                </span>
+                <span>{each.fields.Question}</span>
               </QuestionText>
               <QuestionAnswer opened={faqExpand[each.id]}>
                 {convert(each.fields.Answer, { transform })}

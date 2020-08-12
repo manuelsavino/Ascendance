@@ -11,7 +11,7 @@ const Index = () => {
       <Hero parallax gradient>
         <h1>Try a class for Free</h1>
       </Hero>
-      {/* <DanceStyles /> */}
+      <DanceStyles />
     </Layout>
   )
 }

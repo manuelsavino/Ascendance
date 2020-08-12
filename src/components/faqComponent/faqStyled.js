@@ -19,10 +19,15 @@ export const Question = styled.div`
 `
 
 export const QuestionText = styled.div`
-  font-size: 1.1rem;
   padding: 10px;
   &:hover {
     cursor: pointer;
+  }
+  & > span {
+    padding-left: 10px;
+    font-weight: ${props => (props.opened ? "600" : "initial")};
+    font-size: ${props => (props.opened ? "1.2rem" : "1.1rem")};
+    color: ${props => (props.opened ? "#ea3ba1" : "#393e45")};
   }
 `
 

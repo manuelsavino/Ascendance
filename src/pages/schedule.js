@@ -9,7 +9,7 @@ import { Container } from "../components/common/layout"
 const Schedule = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Schedule" />
       <Container>
         <Heading>Schedule</Heading>
         <ScheduleViewer />

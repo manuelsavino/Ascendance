@@ -7,7 +7,7 @@ import DanceStyles from "../components/DanceStyles/"
 const Index = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Classes" />
       <Container>
         <DanceStyles />
       </Container>

@@ -7,10 +7,13 @@ import {
   DanceClassTime,
   DayContainer,
   TryButton,
+  NoResultsContainer,
+  NoResultsImage,
 } from "./styled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
 import Loading from "../../images/loading.svg"
+import NoResults from "../../images/noResults.svg"
 
 export default function ScheduleViewer({ style, heading }) {
   const didMountRef = useRef(false)
@@ -55,11 +58,12 @@ export default function ScheduleViewer({ style, heading }) {
   const fetchSchedule = async () => {
     const res = await fetch("/.netlify/functions/getSchedule")
     const data = await res.json()
-    filterDay(data.records)
+    data.records = data.records.filter(danceClass => danceClass.fields.Prod)
     if (style) {
       const preFiltered = data.records.filter(
         danceClass => danceClass.fields.Type === style
       )
+      filterDay(preFiltered)
       filterDay(preFiltered)
       setDisplayData(preFiltered)
       setData(preFiltered)
@@ -221,9 +225,10 @@ export default function ScheduleViewer({ style, heading }) {
           })}
         </DayContainer>
       ) : (
-        <div style={{ display: "flex", width: "90%", margin: "auto" }}>
-          <h2>No Results...</h2>
-        </div>
+        <NoResultsContainer>
+          <SubHeading>No Results Found...</SubHeading>
+          <NoResultsImage src={NoResults} />
+        </NoResultsContainer>
       )}
     </div>
   )

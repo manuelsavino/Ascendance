@@ -9,7 +9,7 @@ import Faqs from "../components/faqComponent"
 const Faq = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="FAQ" />
       <Container>
         <Heading>Frequently Asked Questions</Heading>
         <Faqs />
