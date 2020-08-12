@@ -87,7 +87,7 @@ export default function NavColor({ hero }) {
             className={`nav d-only ${!isTops || !hero ? "scrollNavLinks" : ""}`}
           >
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/">Home</Link>
+              <Link to="/styles">Styles</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/schedule">Schedule</Link>
@@ -119,7 +119,7 @@ export default function NavColor({ hero }) {
         `}
           >
             <li className="nav-item m-only" onClick={closeMobileMenu}>
-              <Link to="/">Home</Link>
+              <Link to="/styles">Styles</Link>
             </li>
             <li className="nav-item m-only" onClick={closeMobileMenu}>
               <Link to="/schedule">Schedule</Link>
@@ -128,13 +128,13 @@ export default function NavColor({ hero }) {
               <Link to="/free">Free Class</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/summer">Summer Camp</Link>
+              <Link to="/ages">Ages</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/aboutus">About Us</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/summer">Summer Camp</Link>
             </li>
           </ul>
         </nav>

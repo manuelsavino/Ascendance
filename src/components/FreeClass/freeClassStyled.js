@@ -18,7 +18,7 @@ export const FreeClassContainer = styled.div`
 `
 
 export const TryButton = styled(Link)`
-  background-color: --color-primary;
+  background-color: #ea3ba1;
   background-image: linear-gradient(150deg, #3e424d 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;

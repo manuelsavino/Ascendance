@@ -18,7 +18,7 @@ import {
   Card,
   Title,
   Description,
-} from "./styled"
+} from "./danceStylesstyled"
 
 export default function DanceStyles() {
   // const ballet = useRef() as React.MutableRefObject<HTMLInputElement>;

@@ -61,30 +61,33 @@ export default function Faqs() {
 
   return (
     <StyledFaqOuter>
-      {questions.map(each => {
-        return (
-          <Question key={each.id}>
-            <QuestionText
-              onClick={() => {
-                handleClick(each.id)
-              }}
-            >
-              <FontAwesomeIcon
-                style={{ color: "#ea3ba1" }}
-                icon={
-                  faqExpand[each.id] === true ? faMinusSquare : faPlusSquare
-                }
-              />
-              <span style={{ paddingLeft: "10px" }}>
-                {each.fields.Question}
-              </span>
-            </QuestionText>
-            <QuestionAnswer opened={faqExpand[each.id]}>
-              {convert(each.fields.Answer, { transform })}
-            </QuestionAnswer>
-          </Question>
-        )
-      })}
+      {console.log(questions.filter(each => each.fields.Prod))}
+      {questions
+        .filter(each => each.fields.Prod)
+        .map(each => {
+          return (
+            <Question key={each.id}>
+              <QuestionText
+                onClick={() => {
+                  handleClick(each.id)
+                }}
+              >
+                <FontAwesomeIcon
+                  style={{ color: "#ea3ba1" }}
+                  icon={
+                    faqExpand[each.id] === true ? faMinusSquare : faPlusSquare
+                  }
+                />
+                <span style={{ paddingLeft: "10px" }}>
+                  {each.fields.Question}
+                </span>
+              </QuestionText>
+              <QuestionAnswer opened={faqExpand[each.id]}>
+                {convert(each.fields.Answer, { transform })}
+              </QuestionAnswer>
+            </Question>
+          )
+        })}
     </StyledFaqOuter>
   )
 }

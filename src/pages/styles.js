@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import DanceStyles from "../components/DanceStyles"
 import { Container } from "../components/common/layout"
-import DanceStyles from "../components/DanceStyles/"
-
-const Index = () => {
+export default function styles() {
   return (
     <Layout>
       <SEO title="Home" />
@@ -14,5 +13,3 @@ const Index = () => {
     </Layout>
   )
 }
-
-export default Index
