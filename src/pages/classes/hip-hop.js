@@ -1,8 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { Hero } from "../../components/Hero"
-import hiphopHero from "../../images/hiphop.jpg"
 import {
   Container,
   VideoContainer,
@@ -65,16 +63,17 @@ const HipHop = () => {
         </Paragraph>
         <Paragraph>
           From the very early age of five years old, our instructors teach
-          students how to listen to the music and feel the beat. At Ascendance
-          Studio, we teach hip-hop that is age-appropriate, straying away from
-          risque movements. Our focus stems from the elements of the original
-          dance form rather than conforming to the pressure of what is more
-          common in society. In addition to providing training on musicality,
-          hip-hop trains the body on how to incorporate isolations into
-          movement. Each dancer is taught how to control different parts of
-          their body to match the beat of the music. The result is so cool to
-          watch! Let your child’s inner star shine through in the dance room!
-          Sign them up for hip-hop today!
+          students how to listen to the music and feel the beat. At{" "}
+          <CopyLink to="/"> Ascendance Studio</CopyLink>, we teach hip-hop that
+          is age-appropriate, straying away from risque movements. Our focus
+          stems from the elements of the original dance form rather than
+          conforming to the pressure of what is more common in society. In
+          addition to providing training on musicality, hip-hop trains the body
+          on how to incorporate isolations into movement. Each dancer is taught
+          how to control different parts of their body to match the beat of the
+          music. The result is so cool to watch! Let your child’s inner star
+          shine through in the dance room!{" "}
+          <CopyLink to="/free"> Sign them up for hip-hop today!</CopyLink>
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
         <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
@@ -95,12 +94,14 @@ const HipHop = () => {
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
         <SubHeading>Objectives of our Hip-Hop classes</SubHeading>
-        <ListItem>To develop social skills </ListItem>
-        <ListItem>To enhance cardiovascular activity </ListItem>
-        <ListItem>To teach body control through body isolations </ListItem>
-        <ListItem>To focus on musicality and individual beats </ListItem>
-        <ListItem>To encourage individuality </ListItem>
-        <ListItem>To promote fun times while still being active!</ListItem>
+        <ul>
+          <ListItem>To develop social skills </ListItem>
+          <ListItem>To enhance cardiovascular activity </ListItem>
+          <ListItem>To teach body control through body isolations </ListItem>
+          <ListItem>To focus on musicality and individual beats </ListItem>
+          <ListItem>To encourage individuality </ListItem>
+          <ListItem>To promote fun times while still being active!</ListItem>
+        </ul>
         <VideoContainer>
           <SingleVideoCotnainer>
             <iframe

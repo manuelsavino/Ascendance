@@ -92,7 +92,7 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/classes/ballet">Ballet</ListLink>
               </li>
               <li>
-                <ListLink to="/tap">Tap</ListLink>
+                <ListLink to="/classes/tap">Tap</ListLink>
               </li>
               <li>
                 <ListLink to="/flamenco">Flamenco</ListLink>
