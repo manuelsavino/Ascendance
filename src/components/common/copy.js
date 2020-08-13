@@ -28,8 +28,9 @@ export const Paragraph = styled.p`
   font-size: 1rem;
   font-weight: ${props => props.weight || 300};
   font-family: ${paragraphFontFam};
-  line-height: 2;
+  line-height: 1.7;
   color: #393e46;
+  padding: 10px 0;
 `
 
 export const ListItem = styled.li`

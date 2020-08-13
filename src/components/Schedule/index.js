@@ -6,10 +6,12 @@ import {
   DanceClassDetail,
   DanceClassTime,
   DayContainer,
-  TryButton,
+  // TryButton,
   NoResultsContainer,
   NoResultsImage,
+  ScheduleFilterTitle,
 } from "./styled"
+import { TryButton } from "../FreeClass/freeClassStyled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
 import Loading from "../../images/loading.svg"
@@ -145,10 +147,17 @@ export default function ScheduleViewer({ style, heading }) {
 
   return (
     <div>
-      {heading && <Heading>{heading}</Heading>}
+      {heading && (
+        <SubHeading style={{ textAlign: "left" }}>{heading}</SubHeading>
+      )}
       <div style={{ display: "flex" }}>
         <div>
-          <SubHeading>Ages</SubHeading>
+          {heading ? (
+            <ScheduleFilterTitle>Ages</ScheduleFilterTitle>
+          ) : (
+            <SubHeading>Ages</SubHeading>
+          )}
+
           <ul className="ks-cboxtags">
             {Object.keys(ageFilters).map(ageFilter => {
               return (
@@ -208,10 +217,11 @@ export default function ScheduleViewer({ style, heading }) {
                             {danceClass.fields.Time}
                           </DanceClassTime>
                           <TryButton
+                            schedule
                             i={i}
                             to={`/free?class=${danceClass.fields.classId}`}
                           >
-                            Try Class
+                            Try Class Free
                           </TryButton>
                         </div>
                         <DanceClassDetail>

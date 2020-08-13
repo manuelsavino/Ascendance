@@ -17,6 +17,7 @@ export const TryButton = styled(Link)`
   padding: 5px 5px;
   font-size: 0.7rem;
   text-decoration: none;
+  border-radius: 4px;
   &:hover {
     background: ${props => (props.i % 2 === 0 ? "#FDF4FA" : "#EA3BA1")};
     color: ${props => (props.i % 2 === 0 ? "#EA3BA1" : "#FDF4FA")};
@@ -53,10 +54,12 @@ export const DanceClassTime = styled(DanceClassDetail)`
   font-weight: 400;
   margin-bottom: 5px;
 `
-export const ScheduleTitle = styled.h2`
-  font-size: 3.5rem;
+export const ScheduleFilterTitle = styled.h3`
+  font-size: 1.5rem;
   font-family: "Roboto";
   font-weight: 300;
+  color: #393e46;
+  margin-top: 15px;
 `
 
 export const FilterCat = styled.h4`
