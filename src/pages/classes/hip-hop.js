@@ -24,7 +24,7 @@ const classLabel = "Hip Hop"
 const HipHop = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Hip Hop Classes - Dance Classes in Doral, FL" />
       <Container>
         <Heading>{classLabel} Classes</Heading>
         <Paragraph>
@@ -34,6 +34,17 @@ const HipHop = () => {
           Help them embrace confidence in a new way via expression and movement
           on the dance floor!
         </Paragraph>
+        <VideoContainer>
+          <SingleVideoCotnainer>
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/A_rEyqWfohA"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </SingleVideoCotnainer>
+        </VideoContainer>
         <SubHeading weight={600}>
           What do Hip-Hop classes look like at Ascendance?
         </SubHeading>
@@ -64,9 +75,10 @@ const HipHop = () => {
           their body to match the beat of the music. The result is so cool to
           watch! Let your child’s inner star shine through in the dance room!
           Sign them up for hip-hop today!
-        </Paragraph>{" "}
+        </Paragraph>
+        <FreeClass style={`${classLabel}`} />
         <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
-        <SubHeading weight={600}>Benefits of Hip-Hop</SubHeading>
+        <SubHeading weight={600}>Benefits of our Hip-Hop classes</SubHeading>
         <Paragraph>
           Hip-hop incorporates both anaerobic and aerobic elements, making it
           the perfect activity to enrich your child’s cardiovascular health! Not
@@ -82,7 +94,7 @@ const HipHop = () => {
           same time!
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
-        <SubHeading>Objectives of Hip-Hop</SubHeading>
+        <SubHeading>Objectives of our Hip-Hop classes</SubHeading>
         <ListItem>To develop social skills </ListItem>
         <ListItem>To enhance cardiovascular activity </ListItem>
         <ListItem>To teach body control through body isolations </ListItem>
@@ -100,6 +112,7 @@ const HipHop = () => {
             ></iframe>
           </SingleVideoCotnainer>
         </VideoContainer>
+        <FreeClass style={`${classLabel}`} />
         <SubHeading>
           What is hip-hop dance and where does it come from?
         </SubHeading>
@@ -167,7 +180,6 @@ const HipHop = () => {
           </CopyLinkE>
           , you’ve definitely seen hip-hop in action!
         </Paragraph>
-        {/* <Hero img={hiphopHero} height="600px" /> */}
       </Container>
     </Layout>
   )
