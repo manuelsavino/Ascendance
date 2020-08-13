@@ -3,7 +3,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Hero } from "../../components/Hero"
 import hiphopHero from "../../images/hiphop.jpg"
-import { Container } from "../../components/common/layout"
+import { Container, DualVideoContainer } from "../../components/common/layout"
 import ScheduleViewer from "../../components/Schedule"
 import FreeClass from "../../components/FreeClass"
 import {
@@ -30,7 +30,6 @@ const HipHop = () => {
           Help them embrace confidence in a new way via expression and movement
           on the dance floor!
         </Paragraph>
-
         <SubHeading weight={600}>
           What do Hip-Hop classes look like at Ascendance?
         </SubHeading>
@@ -61,8 +60,8 @@ const HipHop = () => {
           their body to match the beat of the music. The result is so cool to
           watch! Let your child’s inner star shine through in the dance room!
           Sign them up for hip-hop today!
-        </Paragraph>
-        <Hero img={hiphopHero} height="600px" />
+        </Paragraph>{" "}
+        <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
         <SubHeading weight={600}>Benefits of Hip-Hop</SubHeading>
         <Paragraph>
           Hip-hop incorporates both anaerobic and aerobic elements, making it
@@ -86,6 +85,24 @@ const HipHop = () => {
         <ListItem>To focus on musicality and individual beats </ListItem>
         <ListItem>To encourage individuality </ListItem>
         <ListItem>To promote fun times while still being active!</ListItem>
+        <DualVideoContainer>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/A_rEyqWfohA"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/bN9JsyI_2S0"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </DualVideoContainer>
         <SubHeading>
           What is hip-hop dance and where does it come from?
         </SubHeading>
@@ -153,7 +170,7 @@ const HipHop = () => {
           </CopyLinkE>
           , you’ve definitely seen hip-hop in action!
         </Paragraph>
-        <ScheduleViewer style="HipHop" heading={`${classLabel} Schedule`} />
+        {/* <Hero img={hiphopHero} height="600px" /> */}
       </Container>
     </Layout>
   )

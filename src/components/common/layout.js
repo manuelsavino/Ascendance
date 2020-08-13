@@ -25,3 +25,20 @@ export const Button = styled(Link)`
     cursor: pointer;
   }
 `
+export const DualVideoContainer = styled.div`
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 40px 0 30px;
+  align-items: center;
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    & > iframe {
+      margin-bottom: 10px;
+      width: 95%;
+    }
+  }
+`
