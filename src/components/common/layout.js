@@ -25,20 +25,23 @@ export const Button = styled(Link)`
     cursor: pointer;
   }
 `
-export const DualVideoContainer = styled.div`
+export const VideoContainer = styled.div`
   margin: auto;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 40px 0 30px;
-  align-items: center;
-  @media (max-width: 768px) {
+  width: 75%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+`
+export const SingleVideoCotnainer = styled.div`
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  & > iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    & > iframe {
-      margin-bottom: 10px;
-      width: 95%;
-    }
+    position: absolute;
   }
 `

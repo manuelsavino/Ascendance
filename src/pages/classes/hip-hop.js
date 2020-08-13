@@ -3,7 +3,11 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Hero } from "../../components/Hero"
 import hiphopHero from "../../images/hiphop.jpg"
-import { Container, DualVideoContainer } from "../../components/common/layout"
+import {
+  Container,
+  VideoContainer,
+  SingleVideoCotnainer,
+} from "../../components/common/layout"
 import ScheduleViewer from "../../components/Schedule"
 import FreeClass from "../../components/FreeClass"
 import {
@@ -85,24 +89,17 @@ const HipHop = () => {
         <ListItem>To focus on musicality and individual beats </ListItem>
         <ListItem>To encourage individuality </ListItem>
         <ListItem>To promote fun times while still being active!</ListItem>
-        <DualVideoContainer>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/A_rEyqWfohA"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/bN9JsyI_2S0"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </DualVideoContainer>
+        <VideoContainer>
+          <SingleVideoCotnainer>
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/A_rEyqWfohA"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </SingleVideoCotnainer>
+        </VideoContainer>
         <SubHeading>
           What is hip-hop dance and where does it come from?
         </SubHeading>

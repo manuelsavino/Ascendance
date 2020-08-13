@@ -215,6 +215,12 @@
     transition: all 0.3s ease;
   }
 
+  .youtubeIcon::before,
+  .facebookIcon::before,
+  .isntagramIcon::before {
+    height: 30px;
+  }
+
   .navbar {
     justify-content: space-between;
     height: 85px;
