@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import colors from "../common/colors"
 
 export default createGlobalStyle`
  *{margin: 0;
@@ -8,7 +9,7 @@ export default createGlobalStyle`
  }
 
  *::selection {
-    background: #ea3ba1;
+    background: ${colors.primary};
     color: #fff;
   }
 `

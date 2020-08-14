@@ -31,80 +31,6 @@
 
 /* NAVIGATION */
 
-.contactBar {
-  background: #ea3ba1;
-  width: 100%;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-}
-.contactBarInner {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  align-items: center;
-}
-.sociaMediaIcons {
-  display: flex;
-}
-
-.socialMedia {
-  color: white;
-}
-.facebookIcon,
-.isntagramIcon,
-.youtubeIcon {
-  /* padding: 6px 5px 6px 10px; */
-  padding: 6px 11px;
-  z-index: 0;
-  position: relative;
-}
-
-.isntagramIcon {
-  padding: 6px 12px 6px 12px;
-}
-
-.youtubeIcon::before,
-.facebookIcon::before,
-.isntagramIcon::before {
-  content: "";
-  width: 33px;
-  height: 32px;
-  position: absolute;
-  z-index: -1;
-  top: -113%;
-  left: 3px;
-  transition: all 0.2s ease;
-}
-
-.youtubeIcon::before {
-  content: "";
-  background: red;
-}
-
-.isntagramIcon::before {
-  content: "";
-  background: #661b77;
-}
-
-.facebookIcon::before {
-  content: "";
-  background: #4267b2;
-}
-
-.youtubeIcon:hover::before,
-.isntagramIcon:hover::before,
-.facebookIcon:hover::before {
-  top: -1px;
-}
-
-.phoneNumber {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -215,12 +141,6 @@
     transition: all 0.3s ease;
   }
 
-  .youtubeIcon::before,
-  .facebookIcon::before,
-  .isntagramIcon::before {
-    height: 30px;
-  }
-
   .navbar {
     justify-content: space-between;
     height: 85px;
@@ -270,13 +190,5 @@
 
   .mainMargin {
     margin-top: 85px;
-  }
-
-  .contactBar {
-    height: 29px;
-  }
-
-  .contactBarInner {
-    width: 90%;
   }
 }

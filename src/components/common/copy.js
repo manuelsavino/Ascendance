@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import colors from "./colors"
+
 const headingFontFam = '"Roboto",sans-serif'
 const paragraphFontFam = '"Roboto",sans-serif'
 
@@ -16,7 +18,7 @@ export const Heading = styled.h1`
   font-family: ${headingFontFam};
   font-weight: 700;
   padding-top: 30px;
-  color: #393e46;
+  color: ${colors.secondary};
   line-height: 1;
   text-align: center;
   @media (max-width: 768px) {
@@ -29,7 +31,7 @@ export const Paragraph = styled.p`
   font-weight: ${props => props.weight || 300};
   font-family: ${paragraphFontFam};
   line-height: 1.7;
-  color: #393e46;
+  color: ${colors.secondary};
   padding: 10px 0;
 `
 
@@ -40,19 +42,19 @@ export const ListItem = styled.li`
   color: #393e46;
   line-height: 2;
   & ::selection {
-    background: #ea3ba1;
+    background: ${colors.primary};
     color: #fff;
   }
 `
 
 export const CopyLink = styled(Link)`
-  color: #ea3ba1;
+  color: ${colors.primary};
   text-decoration: none;
   font-weight: 500;
 `
 
 export const CopyLinkE = styled.a`
-  color: #ea3ba1;
+  color: ${colors.primary};
   text-decoration: none;
   font-weight: 500;
 `

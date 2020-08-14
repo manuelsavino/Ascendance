@@ -3,6 +3,7 @@ import PinkWave from "../../images/footerWave.svg"
 import Caret from "../../images/caret-down.svg"
 import { Link } from "gatsby"
 import { TryButton } from "../FreeClass/freeClassStyled"
+import colors from "../common/colors"
 
 export const StyledOuterFooter = styled.div`
   background-color: #f8f8f8;
@@ -41,7 +42,7 @@ export const StyledTopFooter = styled.div`
   background-position: top;
 `
 export const StyledBottomFooter = styled.div`
-  background: #ea3ba1;
+  background: ${colors.primary};
   width: 100%;
   height: max-content;
   margin-top: -1px;
@@ -146,8 +147,12 @@ export const Copy = styled.p`
 
 export const FooterTryFreeClass = styled(TryButton)`
   display: none;
-  background-color: #3e424d;
-  background-image: linear-gradient(150deg, #3e424d 50%, transparent 50%);
+  background-color: ${colors.secondary};
+  background-image: linear-gradient(
+    150deg,
+    ${colors.secondary} 50%,
+    transparent 50%
+  );
   @media (max-width: 768px) {
     display: inline;
     align-self: center;

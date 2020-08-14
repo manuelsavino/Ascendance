@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import colors from "./colors"
 
 export const Container = styled.div`
   margin: 85px auto 0;
@@ -7,8 +8,12 @@ export const Container = styled.div`
   width: 90%;
 `
 export const Button = styled(Link)`
-  background-color: #ea3ba1;
-  background-image: linear-gradient(150deg, #3e424d 50%, transparent 50%);
+  background-color: ${colors.primary};
+  background-image: linear-gradient(
+    150deg,
+    ${colors.secondary} 50%,
+    transparent 50%
+  );
   background-position: 100%;
   background-size: 400%;
   transition: background 500ms ease-in-out;
@@ -30,6 +35,9 @@ export const VideoContainer = styled.div`
   width: 75%;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const SingleVideoCotnainer = styled.div`
   overflow: hidden;

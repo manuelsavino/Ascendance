@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import colors from "../common/colors"
 
 export const FreeClassContainer = styled.div`
   padding: 20px 0;
@@ -18,13 +19,14 @@ export const FreeClassContainer = styled.div`
 `
 
 export const TryButton = styled(Link)`
-  background-color: ${props => (props.schedule ? "#3e424d" : "#EA3BA1")};
+  background-color: ${props =>
+    props.schedule ? colors.secondary : colors.primary};
   background-image: ${props =>
     props.schedule
       ? props.i % 2 === 0
-        ? "linear-gradient(150deg, #FDF4FA 50%, transparent 50%)"
-        : "linear-gradient(150deg, #EA3BA1 50%, transparent 50%)"
-      : "linear-gradient(150deg, #3e424d 50%, transparent 50%)"};
+        ? `linear-gradient(150deg, ${colors.lightPink} 50%, transparent 50%)`
+        : `linear-gradient(150deg, ${colors.primary} 50%, transparent 50%)`
+      : `linear-gradient(150deg, ${colors.secondary} 50%, transparent 50%)`};
   background-position: 100%;
   background-size: 400%;
   transition-property: background, color;
@@ -41,6 +43,6 @@ export const TryButton = styled(Link)`
   &:hover {
     background-position: 0;
     cursor: pointer;
-    color: ${props => (props.i % 2 === 0 ? "#EA3BA1" : "#FFF")};
+    color: ${props => (props.i % 2 === 0 ? colors.primary : "#FFF")};
   }
 `

@@ -8,10 +8,18 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
+import {
+  ContactBar,
+  ContactBarInner,
+  PhoneNumber,
+  SocialMediaIcons,
+  SocialMediaIcon,
+} from "./styledNav"
 
 import { Link } from "gatsby"
+// import styled from "styled-components"
 
-export default function NavColor({ hero }) {
+export default function NavBar({ hero }) {
   const [navOpen, setNavOpen] = useState(false)
   const [isTops, setIsTop] = useState(true)
 
@@ -48,40 +56,40 @@ export default function NavColor({ hero }) {
           !hero || navOpen ? "scrollNav" : ""
         }`}
       >
-        <div className="contactBar">
-          <div className="contactBarInner">
-            <a className="phoneNumber" href="tel:786-571-7778">
+        <ContactBar>
+          <ContactBarInner>
+            <PhoneNumber href="tel:786-571-7778">
               <FontAwesomeIcon
                 icon={faPhoneAlt}
                 style={{ marginRight: "5px" }}
               />
               786-571-7778
-            </a>
-            <span className="sociaMediaIcons">
-              <a
-                className="socialMedia facebookIcon"
+            </PhoneNumber>
+            <SocialMediaIcons>
+              <SocialMediaIcon
+                icon="facebook"
                 href="https://www.facebook.com/ascendanceMiami"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faFacebook} />
-              </a>
-              <a
-                className="socialMedia isntagramIcon"
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                icon="instagram"
                 href="https://www.instagram.com/ascendanceMiami"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a
-                className="socialMedia youtubeIcon"
+              </SocialMediaIcon>
+              <SocialMediaIcon
+                icon="youtube"
                 href="https://www.youtube.com/c/AscendanceStudio/"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faYoutube} />
-              </a>
-            </span>
-          </div>
-        </div>
+              </SocialMediaIcon>
+            </SocialMediaIcons>
+          </ContactBarInner>
+        </ContactBar>
         <nav className="navbar">
           <ul
             className={`nav d-only ${!isTops || !hero ? "scrollNavLinks" : ""}`}
@@ -143,6 +151,6 @@ export default function NavColor({ hero }) {
   )
 }
 
-NavColor.defaultProps = {
+NavBar.defaultProps = {
   hero: false,
 }

@@ -1,27 +1,15 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import colors from "../common/colors"
 
 export const ScheduleDay = styled.h2`
-  background: #3e424d;
+  background: ${colors.secondary};
   color: #fff;
   font-size: 1rem;
   font-weight: 300;
   padding: 10px;
   text-align: "center";
   font-family: "Roboto";
-`
-
-export const TryButton = styled(Link)`
-  background: #3e424d;
-  color: #fff;
-  padding: 5px 5px;
-  font-size: 0.7rem;
-  text-decoration: none;
-  border-radius: 4px;
-  &:hover {
-    background: ${props => (props.i % 2 === 0 ? "#FDF4FA" : "#EA3BA1")};
-    color: ${props => (props.i % 2 === 0 ? "#EA3BA1" : "#FDF4FA")};
-  }
 `
 
 export const DayContainer = styled.div`
@@ -39,8 +27,9 @@ export const DanceClassBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: ${props => (props.i % 2 === 0 ? "#EA3BA1" : "#FDF4FA")};
-  color: ${props => (props.i % 2 === 0 ? "#FFF" : "#EA3BA1")};
+  background: ${props =>
+    props.i % 2 === 0 ? colors.primary : colors.lightPink};
+  color: ${props => (props.i % 2 === 0 ? "#FFF" : colors.primary)};
 `
 
 export const DanceClassDetail = styled.p`

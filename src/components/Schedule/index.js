@@ -6,11 +6,10 @@ import {
   DanceClassDetail,
   DanceClassTime,
   DayContainer,
-  // TryButton,
   NoResultsContainer,
   NoResultsImage,
   ScheduleFilterTitle,
-} from "./styled"
+} from "./scheduleStyled"
 import { TryButton } from "../FreeClass/freeClassStyled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"

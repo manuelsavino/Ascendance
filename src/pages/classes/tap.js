@@ -44,7 +44,7 @@ const Tap = () => {
           </SingleVideoCotnainer>
         </VideoContainer>
         <SubHeading weight={600}>
-          How does Ascendance manage tap classes
+          How does Ascendance manage Tap classes
         </SubHeading>
         <Paragraph>
           The direct answer to this question is: in the most fun and
@@ -186,14 +186,32 @@ const Tap = () => {
           tap dance!
         </Paragraph>
         <Paragraph>
-          Hollywood icons like Fred Astaire and Shirley Temple, among others,
-          were instrumental in rising tap dance to fame. Some of our favorite
-          gems include “Singing In The Rain”, starring Gene Kelly and his
-          amazingly, gifted feet. During the 1980’s, tap experienced a rebirth.
-          Tap dancers like Gregory Hines, Savion Glover, Bill Bojangles and
-          others who continue to make a priceless impact on the art, are admired
-          for their bold, unique contributions to the style and for
-          revolutionizing the industry.
+          Hollywood icons like{" "}
+          <CopyLinkE href="https://en.wikipedia.org/wiki/Fred_Astaire">
+            {" "}
+            Fred Astaire
+          </CopyLinkE>{" "}
+          and
+          <CopyLinkE href="https://en.wikipedia.org/wiki/Shirley_Temple">
+            Shirley Temple
+          </CopyLinkE>
+          , among others, were instrumental in rising tap dance to fame. Some of
+          our favorite gems include{" "}
+          <CopyLinkE href="https://www.imdb.com/title/tt0045152/">
+            "Singing In The Rain”
+          </CopyLinkE>
+          , starring Gene Kelly and his amazingly, gifted feet. During the
+          1980’s, tap experienced a rebirth. Tap dancers like{" "}
+          <CopyLinkE href="https://en.wikipedia.org/wiki/Gregory_Hines">
+            Gregory Hines
+          </CopyLinkE>
+          ,{" "}
+          <CopyLinkE href="https://en.wikipedia.org/wiki/Savion_Glover">
+            Savion Glover
+          </CopyLinkE>
+          , Bill Bojangles and others who continue to make a priceless impact on
+          the art, are admired for their bold, unique contributions to the style
+          and for revolutionizing the industry.
         </Paragraph>
       </Container>
     </Layout>
