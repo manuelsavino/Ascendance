@@ -35,7 +35,7 @@ const PaperForm = ({ search }) => {
           data-prefill={`88mik=--1--`}
           data-paperform-id="vnhsjqfa"
         >
-          <img src={Loading} />
+          {/* <img src={Loading} /> */}
         </div>
       </Layout>
     </>

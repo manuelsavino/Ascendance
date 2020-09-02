@@ -9,7 +9,7 @@ const Index = () => {
     <Layout hero>
       <SEO title="Home" />
       <Hero parallax gradient>
-        <h1>Try a class for Free</h1>
+        {/* <h1>Try a class for Free</h1> */}
       </Hero>
       <DanceStyles />
     </Layout>
