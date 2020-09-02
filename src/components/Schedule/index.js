@@ -231,7 +231,7 @@ export default function ScheduleViewer({ style, heading }) {
                           <TryButton
                             schedule
                             i={i}
-                            to={`/free?class=${danceClass.fields.classId}`}
+                            to={`/free?class=${danceClass.fields.classId}&prefill=${danceClass.fields.preFill}`}
                           >
                             Try Class Free
                           </TryButton>

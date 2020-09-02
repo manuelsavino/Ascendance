@@ -14,7 +14,7 @@ const addScript = url => {
 }
 
 const PaperForm = ({ search }) => {
-  const { formId } = search
+  console.log(search.class)
 
   // const { className } = search
   const className = "Thursday - 5:00PM - 3-6 Hip Hop"
@@ -32,7 +32,7 @@ const PaperForm = ({ search }) => {
         <SEO title="Free Class" />
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={`88mik=--1--`}
+          data-prefill={`${search.prefill}=${search.class}`}
           data-paperform-id="vnhsjqfa"
         >
           {/* <img src={Loading} /> */}
