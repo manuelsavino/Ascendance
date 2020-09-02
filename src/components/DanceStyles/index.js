@@ -90,7 +90,7 @@ export default function DanceStyles() {
                 <Title>{style.title}</Title>
                 <Description>{style.description}</Description>
               </Card>
-              <DancerIcon src={style.icon} />
+              {/* <DancerIcon src={style.icon} /> */}
             </OuterCard>
           )
         })}

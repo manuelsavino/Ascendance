@@ -103,6 +103,8 @@ export default function ScheduleViewer({ style, heading }) {
     let typeFiltered = Object.keys(typeFilters).filter(
       filter => typeFilters[filter] === true
     )
+    // console.log(typeFiltered)
+
     let ageFiltered = Object.keys(ageFilters).filter(
       filter => ageFilters[filter] === true
     )
@@ -110,9 +112,17 @@ export default function ScheduleViewer({ style, heading }) {
     if (typeFiltered.length || ageFiltered.length) {
       let filtereddata = []
       if (typeFiltered.length) {
-        filtereddata = data.filter(danceClass =>
-          typeFiltered.includes(danceClass.fields.Type)
-        )
+        filtereddata = data.filter(danceClass => {
+          let danceStyles = danceClass.fields.Type.split(",")
+          if (danceStyles.length === 1)
+            return typeFiltered.includes(danceClass.fields.Type)
+          else {
+            return (
+              typeFiltered.includes(danceStyles[0]) ||
+              typeFiltered.includes(danceStyles[1])
+            )
+          }
+        })
       }
 
       if (ageFiltered.length) {
@@ -224,7 +234,8 @@ export default function ScheduleViewer({ style, heading }) {
                           </TryButton>
                         </div>
                         <DanceClassDetail>
-                          Instructor: {danceClass.fields.Instructor}
+                          {/* Instructor: {danceClass.fields.Instructor} */}
+                          Ages: {danceClass.fields.Age}
                         </DanceClassDetail>
                       </DanceClassBlock>
                     )

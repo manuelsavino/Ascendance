@@ -39,7 +39,7 @@ export const StylesSubHeadline = styled.p`
 export const CardContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2em;
   align-content: flex-start;
   font-family: "Poppins", sans-serif;
@@ -62,10 +62,10 @@ export const OuterCard = styled.div`
   border-radius: 4px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
-  &:hover {
+  /* &:hover {
     transform: scale(1.03);
     transform: rotate(1deg);
-  }
+  } */
 `
 
 export const DancerIcon = styled.img`
@@ -95,7 +95,7 @@ export const Title = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #000;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 `
 
 export const Description = styled.p`
@@ -103,5 +103,6 @@ export const Description = styled.p`
   font-weight: 400;
   color: #000;
   font-size: 0.5em;
-  padding-left: 100px;
+  /* padding-left: 100px; */
+  padding-top: 5px;
 `
