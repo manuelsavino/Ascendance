@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Hero } from "../components/Hero"
+import Instagram from "../components/Instagram"
+
 import DanceStyles from "../components/DanceStyles/"
 
 const Index = () => {
@@ -12,6 +14,7 @@ const Index = () => {
         {/* <h1>Try a class for Free</h1> */}
       </Hero>
       <DanceStyles />
+      <Instagram />
     </Layout>
   )
 }
