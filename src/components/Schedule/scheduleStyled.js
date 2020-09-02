@@ -36,12 +36,13 @@ export const DanceClassDetail = styled.p`
   font-size: 0.8rem;
   font-family: "Roboto";
   font-weight: 300;
+  margin-top: 10px;
 `
 
 export const DanceClassTime = styled(DanceClassDetail)`
   font-family: "Roboto";
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `
 export const ScheduleFilterTitle = styled.h3`
   font-size: 1.5rem;
