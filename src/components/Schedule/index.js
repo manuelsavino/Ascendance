@@ -24,16 +24,19 @@ export default function ScheduleViewer({ style, heading }) {
   const [typeFilters, setTypeFilters] = useState({
     Ballet: false,
     Tap: false,
-    HipHop: false,
+    "Hip Hop": false,
     Jazz: false,
     Contemporary: false,
     Lyrical: false,
+    Flamenco: false,
+    Acrobatics: false,
   })
   const [ageFilters, setAgeFilters] = useState({
-    "3-6": false,
+    "3-4": false,
+    "5-6": false,
     "7-9": false,
     "10-12": false,
-    "12+": false,
+    Teens: false,
   })
   const daysDic = {
     0: "Sunday",

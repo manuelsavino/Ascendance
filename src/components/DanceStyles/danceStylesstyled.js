@@ -39,7 +39,7 @@ export const StylesSubHeadline = styled.p`
 export const CardContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
   align-content: flex-start;
   font-family: "Poppins", sans-serif;

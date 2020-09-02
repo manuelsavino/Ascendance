@@ -26,53 +26,35 @@ export default function DanceStyles() {
   const styles = [
     {
       refv: "ballet",
-      title: "BALLET",
+      title: " Ages 3-4",
       description:
-        "Ballet is the foundation of all other dances and is based on stylized movement.This is a form of dance that is performed to instrumental music using precise and highly formalized steps.Ballet will help students with better posture, strength, balance, musicality, grace and flexibility. We highly recommend for all students to take at least one hour of ballet a week.",
+        "Our 3-4 ballet/tap classes offer the best of both worlds to even our smallest dancers. With mobility being a fairly new concept, exploration is key! Our classes encompass movement, the introduction of grace and technique, and also rhythm. Dancers use all their senses as they listen to upbeat and engaging music and are led by the highly trained dance instructors. ",
       icon: Ballet,
     },
     {
       refv: "tap",
-      title: "TAP",
+      title: "Ages 5-6",
       description:
-        "This style of dance is performed by using shoes with metal taps.Tap is characterized by using the sound of one's tap shoes hitting the floor as a percussive instrument.Tap is extremely good for the development of good coordination, musicality, rhythm, strength and endurance.",
+        "Whether your child has or has not ever taken a dance class, Ascendance Studio offers our 5-6 aged classes for all kinds of beginners! Explore ballet, tap, and/or flamenco in our fun, structured, and encouraging classes led by our creative and trained staff. Dancers dive into the world of movement and rhythm, listening closely to the music and living out their favorite princess dreams!",
       icon: Dancer,
     },
     {
-      title: "FLAMENCO",
+      title: "Ages 7-9",
       description:
-        "This style of dance is performed by using shoes with metal taps.Tap is characterized by using the sound of one's tap shoes hitting the floor as a percussive instrument.Tap is extremely good for the development of good coordination, musicality, rhythm, strength and endurance.",
+        "Does your child have all this energy and nowhere to put it? Primary to secondary-aged children usually do! It is this age group where most of our dancers really begin to get comfortable with exploring their creativity. Our classes are also designed to be able to really indulge in a variety of styles and begin to find that inner passion for dance, even at a young age! Maintain a strong mind and body as your dancer engages in jazz, hip-hop, tap, ballet, flamenco, or acro classes.",
       icon: Flamenco,
     },
     {
-      title: "JAZZ",
+      title: "Ages 10-12",
       description:
-        "Jazz showcases the dancer individual style and originality. Jazz dance was developed parallel to popular music, thus the movement continuously changes and evolves into different styles and ramifications.Lyrical and Contemporary styles are great examples of these ramifications. Jazz dance is extremely good for dancers to loosen up to music and at the same time learn technical skills.",
+        "Have a middle-schooler or an about-to-be-middle-schooler? Our 10-12 year old classes have been an awesome outlet for young children and pre-teens. With the increasing worry and rigor of school and growing up in general, our classes have been a creative and healthy experience for children within this age range. Styles varying between jazz, ballet, tap, hip-hop, lyrical, flamenco, and acro each offer something unique to your dancer, but all provide an introduction to a healthy lifestyle both physically and mentally. Your dancer will explore rhythm, movement, space, and technique, while feeling challenged and excited! Ascendance Studio classes for this age level have groomed long-lasting friendships and a lifelong passion in dance! ",
       icon: Jazz,
     },
     {
-      title: "TECHNIQUE",
+      title: "Teens",
       description:
-        "Technique classes are where we focus on developing technical skills and correcting bad habits that prevent dancers from advancing to the next level. Our technique classes are based on our unique curriculum which is geared toward strengthening the dancer’s flexibility, strength and becoming familiar with correct structural and muscular placement.",
+        "Whether your teenager is at a beginner or intermediate dance level, our instructors have got you covered. Surrounded by dancers of similar ages, our teen classes provide a comfortable experience where energy and creativity meet in the middle. From jazz, tap, and hip-hop to lyrical, jazz funk, and ballet, teens love taking more than one Ascendance Studio dance class in conjunction. While the styles all complement each other, our teen dancers feel self-motivated and more prepared when they take two or more classes because the concepts and technique in one generally reinforce the concepts and technique in the other(s). Dancers learn responsibility with time management, as well as beneficial ways to exercise physical, mental, and emotional health. Focus on rigid technique and flow in ballet class, let out your inner groove in hip-hop class, or choose from our other amazing class offerings– the sky is the limit.",
       icon: Tech,
-    },
-    {
-      title: "HIP HOP",
-      description:
-        "Hip-Hop is referred primarily to street dance styles. The movement in Hip Hop has lots of different dynamics; it's powerful, energetic, and stylish and allows for freedom of movement. While hip hop dance can be great for students aerobically, it can also help strengthen and tone muscles, and give joints more flexibility and elasticity.",
-      icon: HipHop,
-    },
-    {
-      title: "BELLY DANCE",
-      description:
-        "Belly dance has its roots in ancient cultures. This style focuses on isolating different parts of the body, footwork and musicality associated to Middle Eastern rhythms.",
-      icon: Belly,
-    },
-    {
-      title: "JAZZ FUNK",
-      description:
-        "Jazz funk is a combination of some foundational movements in Jazz and Hip Hop, all which turns into a funky style that is fun and expressive. Isolations and varying dynamics are characteristic of the style.",
-      icon: JazzFunk,
     },
   ]
 
