@@ -7,7 +7,7 @@ export const OuterSocial = styled.div`
   padding-bottom: 50px;
 `
 export const FollowUs = styled.a`
-  color: #1e1e1e;
+  color: ${colors.secondary};
   text-decoration: none;
   & > span {
     color: ${colors.primary};
@@ -34,8 +34,8 @@ export const PostImage = styled.a`
   background-image: url(${props => props.image});
   background-size: cover;
   @media screen and (max-width: 768px) {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 `
 export const SocialHeadline = styled.h2`
@@ -49,7 +49,7 @@ export const SocialHeadline = styled.h2`
     color: ${colors.primary};
   }
   @media (max-width: 768px) {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.1;
     padding-bottom: 0.5em;
   }

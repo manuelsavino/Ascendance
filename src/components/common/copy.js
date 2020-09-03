@@ -11,14 +11,15 @@ export const SubHeading = styled.h2`
     props.secondary ? `${paragraphFontFam}` : `${headingFontFam}`};
   font-weight: 300;
   margin-top: 20px;
-  color: #393e46;
+  text-align: ${props => (props.center ? "center" : "left")};
+  color: ${props => colors[props.color] || colors.secondary};
 `
 export const Heading = styled.h1`
   font-size: ${props => props.size || "3.5rem"};
   font-family: ${headingFontFam};
   font-weight: 700;
   padding-top: 30px;
-  color: ${colors.secondary};
+  color: ${props => colors[props.color] || colors.secondary};
   line-height: 1;
   text-align: center;
   @media (max-width: 768px) {
