@@ -4,8 +4,13 @@ import colors from "./colors"
 
 export const Container = styled.div`
   margin: 85px auto 0;
-  padding-bottom: 80px;
+  padding-bottom: ${props => (props.pb ? props.pb : "80px")};
   width: 90%;
+  display: ${props => (props.flex ? "flex" : "block")};
+  justify-content: center;
+  align-items: center;
+  flex-direction: ${props => (props.column ? "column" : "row")};
+  min-height: ${props => (props.height ? props.height : "auto")};
 `
 export const Button = styled(Link)`
   background-color: ${colors.primary};
