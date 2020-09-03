@@ -83,7 +83,7 @@ const LiveStream = () => {
     return (
       <Layout>
         <SEO title="Live Stream" />
-        <Container flex column height="30vh" pb="0">
+        <Container column flex height="30vh" pb="0">
           <PassWordLabel htmlFor="password">Password</PassWordLabel>
           <PassWord
             name="password"
@@ -112,7 +112,7 @@ const Video = ({ room }) => (
     <VideoContainer>
       <SingleVideoCotnainer>
         <iframe
-          src={`https://player.twitch.tv/?channel=${room}&parent=localhost&muted=true`}
+          src={`https://player.twitch.tv/?channel=${room}&parent=doraldance.com&muted=true`}
           height="720"
           width="1280"
           frameborder="0"
