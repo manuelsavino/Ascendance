@@ -17,9 +17,9 @@ export const FollowUs = styled.a`
 export const SocialGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* grid-gap: 3em; */
+  grid-gap: 10px;
   padding-bottom: 10px;
-  width: max-content;
+  width: calc(max-content +100px);
   margin: auto;
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -40,10 +40,12 @@ export const PostImage = styled.a`
 `
 export const SocialHeadline = styled.h2`
   font-family: "Roboto", sans-serif;
-  color: #1e1e1e;
-  font-size: 3.5em;
+  color: #545454;
+  font-size: 3rem;
   padding-bottom: 20px;
-  text-align: center;
+  padding-top: 20px;
+  font-weight: 400;
+
   & > svg {
     margin-right: 10px;
     color: ${colors.primary};

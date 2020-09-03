@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import HeroImg from "../../images/hero.jpg"
+import HeroImg from "../../images/heroNew.jpg"
 export const Hero = styled.div`
   display: flex;
   justify-content: center;
@@ -30,5 +30,8 @@ export const Hero = styled.div`
         : "none"};
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `
