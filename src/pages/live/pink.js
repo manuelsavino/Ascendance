@@ -16,7 +16,7 @@ const NotFoundPage = () => (
       <VideoContainer>
         <SingleVideoCotnainer>
           <iframe
-            src="https://player.twitch.tv/?channel=ascendancestudio&parent=https://doraldance.com&muted=true"
+            src="https://player.twitch.tv/?channel=ascendancestudio&parent=doraldance.com&muted=true"
             height="720"
             width="1280"
             frameborder="0"
