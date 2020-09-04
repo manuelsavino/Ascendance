@@ -10,13 +10,13 @@ import {
   NoResultsImage,
   ScheduleFilterTitle,
 } from "./scheduleStyled"
-import { TryButton } from "../FreeClass/freeClassStyled"
+import { TryButton, VirtualLink } from "../FreeClass/freeClassStyled"
 import { Heading, SubHeading } from "../common/copy"
 import "./styledChecks.css"
 import Loading from "../../images/loading.svg"
 import NoResults from "../../images/noResults.svg"
 
-export default function ScheduleViewer({ style, heading }) {
+export default function ScheduleViewer({ style, heading, virtual }) {
   const didMountRef = useRef(false)
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
@@ -228,13 +228,25 @@ export default function ScheduleViewer({ style, heading }) {
                           <DanceClassTime>
                             {danceClass.fields.Time}
                           </DanceClassTime>
-                          <TryButton
-                            schedule
-                            i={i}
-                            to={`/free?class=${danceClass.fields.classId}&prefill=${danceClass.fields.preFill}`}
-                          >
-                            Try Class Free
-                          </TryButton>
+                          {!virtual ? (
+                            <TryButton
+                              schedule
+                              i={i}
+                              to={`/free?class=${danceClass.fields.classId}&prefill=${danceClass.fields.preFill}`}
+                            >
+                              Try Class Free
+                            </TryButton>
+                          ) : (
+                            <VirtualLink
+                              schedule
+                              i={i}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href={danceClass.fields.GoogleMeetLink}
+                            >
+                              View Class
+                            </VirtualLink>
+                          )}
                         </div>
                         <DanceClassDetail>
                           {/* Instructor: {danceClass.fields.Instructor} */}

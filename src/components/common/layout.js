@@ -35,6 +35,7 @@ export const Button = styled(Link)`
     cursor: pointer;
   }
 `
+
 export const VideoContainer = styled.div`
   margin: auto;
   width: 75%;
