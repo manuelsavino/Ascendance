@@ -33,5 +33,6 @@ export const Hero = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    background-attachment: scroll;
   }
 `
