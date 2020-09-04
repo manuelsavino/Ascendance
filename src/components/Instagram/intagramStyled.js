@@ -24,6 +24,9 @@ export const SocialGrid = styled.div`
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
+  @media only screen and (max-width: 900px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 export const PostImage = styled.a`
