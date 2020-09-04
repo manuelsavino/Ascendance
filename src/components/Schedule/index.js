@@ -68,9 +68,16 @@ export default function ScheduleViewer({ style, heading, virtual }) {
         danceClass => danceClass.fields.Type === style
       )
       filterDay(preFiltered)
-      filterDay(preFiltered)
       setDisplayData(preFiltered)
       setData(preFiltered)
+    } else if (virtual) {
+      const day = new Date().getDay()
+      const preFilteredDay = data.records.filter(
+        danceClass => danceClass.fields.Day === day
+      )
+      filterDay(preFilteredDay)
+      setDisplayData(preFilteredDay)
+      setData(preFilteredDay)
     } else {
       setData(data.records)
       setDisplayData(data.records)
