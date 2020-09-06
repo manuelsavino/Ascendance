@@ -10,7 +10,7 @@ import DanceStyles from "../components/DanceStyles/"
 const Index = () => {
   return (
     <Layout hero>
-      <SEO title="Home" />
+      <SEO title="Dance Classes in Doral,Florida" />
       <Hero parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
         <Button to="/schedule" style={{ marginRight: "10px" }}>
@@ -18,7 +18,7 @@ const Index = () => {
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
       </Hero>
-      {/* <DanceStyles /> */}
+      <DanceStyles />
       <Instagram />
     </Layout>
   )

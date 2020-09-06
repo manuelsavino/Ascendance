@@ -16,7 +16,7 @@ export const FollowUs = styled.a`
 
 export const SocialGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   padding-bottom: 10px;
   width: calc(max-content +100px);

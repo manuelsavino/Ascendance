@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ScheduleViewer from "../components/Schedule"
@@ -11,7 +10,7 @@ const Virtual = () => {
     <Layout>
       <SEO title="Schedule" />
       <Container>
-        <Heading>Schedule</Heading>
+        <Heading>Virtual Schedule</Heading>
         <ScheduleViewer virtual />
       </Container>
     </Layout>

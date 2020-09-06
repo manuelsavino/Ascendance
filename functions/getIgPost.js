@@ -1,6 +1,6 @@
 const fetch = require("node-fetch")
 
-const url = `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"487882402","first":10}`
+const url = `https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"487882402","first":6}`
 
 const cache = {
   lastFetch: 0,

@@ -251,7 +251,7 @@ export default function ScheduleViewer({ style, heading, virtual }) {
                               rel="noopener noreferrer"
                               href={danceClass.fields.GoogleMeetLink}
                             >
-                              View Class
+                              Join Class
                             </VirtualLink>
                           )}
                         </div>
