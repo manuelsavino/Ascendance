@@ -17,7 +17,7 @@ const Ballet = () => {
       <SEO title="Home" />
       <Container>
         <Heading>Ballet</Heading>
-        <ScheduleViewer style="Ballet" heading="Ballet Schedule" />
+        {/* <ScheduleViewer style="Ballet" heading="Ballet Schedule" /> */}
       </Container>
     </Layout>
   )

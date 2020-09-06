@@ -85,7 +85,7 @@ const Tap = () => {
           easiest dance form, but that proud smile makes it all worth it!{" "}
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
-        <ScheduleViewer style="Tap" heading={`${classLabel} Schedule`} />
+        {/* <ScheduleViewer style="Tap" heading={`${classLabel} Schedule`} /> */}
         <SubHeading weight={600}>Benefits of our Tap classes</SubHeading>
         <Paragraph>
           To begin, tap teaches students rhythm and musicality. Your child will
