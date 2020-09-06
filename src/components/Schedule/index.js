@@ -64,9 +64,9 @@ export default function ScheduleViewer({ style, heading, virtual }) {
     const data = await res.json()
     data.records = data.records.filter(danceClass => danceClass.fields.Prod)
     if (style) {
-      const preFiltered = data.records.filter(
-        danceClass => danceClass.fields.Type === style
-      )
+      const preFiltered = data.records.filter(danceClass => {
+        return danceClass.fields.Type.includes(style)
+      })
       filterDay(preFiltered)
       setDisplayData(preFiltered)
       setData(preFiltered)

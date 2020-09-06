@@ -7,16 +7,15 @@ export const OuterContainer = styled.div`
     radial-gradient(#0000000d 1px, #0000 0);
   background-size: 40px 40px, 40px 40px;
   background-position: 0 0, 20px 20px;
-  padding: 30px 50px;
+  padding: 30px 0;
   @media (max-width: 768px) {
     padding: 30px 20px;
     font-size: 0.5rem;
   }
 `
 export const StylesHeadline = styled.h2`
-  font-family: "Poppins", sans-serif;
-  color: #000;
-  font-size: 4.5em;
+  color: #1e1e1e;
+  font-size: 3.5em;
   font-weight: 600;
   @media (max-width: 768px) {
     /* font-size: 2.5em; */
@@ -25,8 +24,17 @@ export const StylesHeadline = styled.h2`
   }
 `
 
+export const StyleSubHeadline = styled.h4`
+  color: #000;
+  font-size: 0.8em;
+  font-weight: 300;
+  @media (max-width: 768px) {
+    /* font-size: 2.5em; */
+    /* line-height: 1; */
+  }
+`
+
 export const StylesSubHeadline = styled.p`
-  font-family: "Poppins", sans-serif;
   color: #000;
   font-size: 1.5em;
   font-weight: 400;
@@ -44,41 +52,38 @@ export const CardContainer = styled.div`
   align-content: flex-start;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
-  margin-top: 3em;
+  margin-top: 1em;
   align-content: flex-start;
   @media (max-width: 1400px) {
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    margin-top: 1em;
   }
 `
 
 export const OuterCard = styled.div`
   /* min-width: 25%; */
-  margin: 0 1.5% 1.555em 1.555%;
+  margin: 0 1.5% 0 1.555%;
   position: relative;
   background: #fff;
   border-radius: 4px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
-  /* &:hover {
-    transform: scale(1.03);
-    transform: rotate(1deg);
-  } */
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  @media screen and (max-width: 768px) {
+    margin: 0 1.5% 0 1.55%;
+    flex-direction: column;
+  }
 `
 
 export const DancerIcon = styled.img`
-  height: 200px;
-  position: absolute;
-  left: -10%;
-  top: -10%;
-  transition: all 0.5s ease;
-  &:hover {
-    transform: rotate(2deg);
-  }
-  @media (max-width: 1400px) {
-    height: 175px;
+  height: 110px;
+  @media screen and (max-width: 768px) {
+    padding-top: 10px;
   }
 `
 
@@ -89,6 +94,9 @@ export const Card = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
 `
 
 export const Title = styled.p`

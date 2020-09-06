@@ -8,7 +8,7 @@ export default function styles() {
     <Layout>
       <SEO title="Styles" />
       <Container>
-        <DanceStyles />
+        <DanceStyles type="styles" headline="We Offer a Variety of Styles" />
       </Container>
     </Layout>
   )

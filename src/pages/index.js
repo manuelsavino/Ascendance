@@ -2,8 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Hero } from "../components/Hero"
-import Instagram from "../components/Instagram"
-import { Button } from "../components/common/layout"
+import {
+  Button,
+  Container,
+  VideoContainer,
+  SingleVideoCotnainer,
+} from "../components/common/layout"
+import googlelogo from "../images/googleLogo.svg"
+
+import { SubHeading } from "../components/common/copy"
 
 import DanceStyles from "../components/DanceStyles/"
 
@@ -18,8 +25,22 @@ const Index = () => {
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
       </Hero>
-      <DanceStyles />
-      <Instagram />
+      <Container>
+        <DanceStyles type="ages" headline="Dance Classes for Any Age" />
+        {/* <SubHeading>Our Story as Featured by</SubHeading>
+        <img src={googlelogo} />
+        <VideoContainer>
+          <SingleVideoCotnainer>
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/jcwcEuNetMk"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </SingleVideoCotnainer>
+        </VideoContainer> */}
+      </Container>
     </Layout>
   )
 }
