@@ -104,7 +104,7 @@ export default function DanceStyles({ type, headline }) {
     <OuterContainer>
       <StylesHeadline>{headline}</StylesHeadline>
       <CardContainer>
-        {types[type].map(style => {
+        {types.ages.map(style => {
           return (
             <OuterCard>
               <DancerIcon src={style.icon} />
