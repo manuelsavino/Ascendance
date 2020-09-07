@@ -17,7 +17,7 @@ const Authorization = ({ search }) => {
     addScript("https://paperform.co/__embed")
   }, [])
 
-  const prefill = Object.keys(search)
+  let prefill = Object.keys(search)
     .map(property => `${property}=${search[property]}`)
     .join("&")
 
@@ -28,7 +28,7 @@ const Authorization = ({ search }) => {
         {console.log(prefill)}
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={prefill}
+          data-prefill={`lan=${seach.lan}`}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
