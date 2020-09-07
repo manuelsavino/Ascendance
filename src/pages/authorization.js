@@ -17,19 +17,17 @@ const Authorization = ({ search }) => {
     addScript("https://paperform.co/__embed")
   }, [])
 
-  let prefill = Object.keys(search)
-    .map(property => `${property}=${search[property]}`)
-    .join("&")
+  // let prefill = Object.keys(search)
+  //   .map(property => `${property}=${search[property]}`)
+  //   .join("&")
 
   return (
     <>
       <Layout hero={false}>
-        <SEO title="Free Class" />
-        {console.log(prefill)}
-        <h2>{prefill}</h2>
+        <SEO title="Authorization" />
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={prefill}
+          data-prefill={`${search.prefill}=${search.class}`}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
