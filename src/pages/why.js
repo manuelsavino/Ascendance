@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
 
@@ -13,9 +13,23 @@ const addScript = url => {
 }
 
 const PaperForm = ({ search }) => {
+  const [ready, setReady] = useState(false)
   useEffect(() => {
     addScript("https://paperform.co/__embed")
+
+    setTimeout(() => {
+      setReady(true)
+    }, 500)
   }, [])
+
+  if (!ready)
+    return (
+      <>
+        <Layout hero={false}>
+          <SEO title="Free Class" />
+        </Layout>
+      </>
+    )
 
   return (
     <>
