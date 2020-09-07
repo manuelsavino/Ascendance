@@ -24,11 +24,11 @@ const Authorization = ({ search }) => {
   return (
     <>
       <Layout hero={false}>
-        <SEO title="Authorization" />
+        <SEO title="Free Class" />
         {console.log(prefill)}
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={`lan=${search.lan}`}
+          data-prefill={prefill}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
