@@ -27,7 +27,7 @@ const Authorization = ({ search }) => {
         <SEO title="Authorization" />
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={window.location.search.substring(1)}
+          data-prefill={prefill}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
