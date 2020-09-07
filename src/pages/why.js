@@ -21,6 +21,7 @@ const PaperForm = ({ search }) => {
     <>
       <Layout hero={false}>
         <SEO title="Free Class" />
+        {console.log(search)}
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`${search.prefill}=${search.class}`}
