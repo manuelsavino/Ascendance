@@ -11,12 +11,14 @@ import {
   ScheduleFilterTitle,
 } from "./scheduleStyled"
 import { TryButton, VirtualLink } from "../FreeClass/freeClassStyled"
-import { Heading, SubHeading } from "../common/copy"
+import { SubHeading } from "../common/copy"
 import "./styledChecks.css"
 import Loading from "../../images/loading.svg"
 import NoResults from "../../images/noResults.svg"
+import PropTypes from "prop-types"
+import withLocation from "../withLocation"
 
-export default function ScheduleViewer({ style, heading, virtual }) {
+const ScheduleViewer = ({ style, heading, virtual, search }) => {
   const didMountRef = useRef(false)
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
@@ -31,6 +33,7 @@ export default function ScheduleViewer({ style, heading, virtual }) {
     Flamenco: false,
     Acrobatics: false,
   })
+  console.log(search.age)
   const [ageFilters, setAgeFilters] = useState({
     "3-4": false,
     "5-6": false,
@@ -64,11 +67,9 @@ export default function ScheduleViewer({ style, heading, virtual }) {
     const data = await res.json()
     data.records = data.records.filter(danceClass => danceClass.fields.Prod)
     if (style) {
-      const preFiltered = data.records.filter(
-        danceClass => danceClass.fields.Type === style
-        // danceClass.fields.Type.includes(style)
+      const preFiltered = data.records.filter(danceClass =>
+        danceClass.fields.Type.includes(style)
       )
-      console.log(preFiltered)
       filterDay(preFiltered)
       setDisplayData(preFiltered)
       setData(preFiltered)
@@ -277,3 +278,9 @@ export default function ScheduleViewer({ style, heading, virtual }) {
     </div>
   )
 }
+
+ScheduleViewer.propTypes = {
+  search: PropTypes.object,
+}
+
+export default withLocation(ScheduleViewer)

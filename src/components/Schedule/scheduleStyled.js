@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 import colors from "../common/colors"
 
 export const ScheduleDay = styled.h2`

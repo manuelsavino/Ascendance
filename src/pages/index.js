@@ -9,6 +9,7 @@ import {
   SingleVideoCotnainer,
 } from "../components/common/layout"
 import googlelogo from "../images/googleLogo.svg"
+// import Instagram from "../components/Instagram"
 
 import { SubHeading } from "../components/common/copy"
 
@@ -40,6 +41,7 @@ const Index = () => {
             ></iframe>
           </SingleVideoCotnainer>
         </VideoContainer> */}
+        {/* <Instagram /> */}
       </Container>
     </Layout>
   )

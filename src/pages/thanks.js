@@ -6,7 +6,7 @@ import {
   VideoContainer,
   SingleVideoCotnainer,
 } from "../components/common/layout"
-import { Heading, SubHeading } from "../components/common/copy"
+import { Heading } from "../components/common/copy"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faEnvelope,

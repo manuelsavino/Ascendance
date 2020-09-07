@@ -21,9 +21,10 @@ const Authorization = ({ search }) => {
     <>
       <Layout hero={false}>
         <SEO title="Authorization" />
+        {console.log(window.location.search)}
         <div
           style={{ marginTop: "30px" }}
-          //   data-prefill={`${search.prefill}=${search.class}`}
+          data-prefill={window.location.search.substring(1)}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
