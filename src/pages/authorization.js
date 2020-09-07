@@ -17,11 +17,14 @@ const Authorization = ({ search }) => {
     addScript("https://paperform.co/__embed")
   }, [])
 
+  const prefill = Object.keys(search)
+    .map(property => `${property}=${search[property]}`)
+    .join("&")
+
   return (
     <>
       <Layout hero={false}>
         <SEO title="Authorization" />
-        {console.log(window.location.search)}
         <div
           style={{ marginTop: "30px" }}
           data-prefill={window.location.search.substring(1)}
