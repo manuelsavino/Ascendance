@@ -12,20 +12,15 @@ const addScript = url => {
   document.body.appendChild(script)
 }
 
-const Authorization = ({ search }) => {
+const PaperForm = ({ search }) => {
   useEffect(() => {
     addScript("https://paperform.co/__embed")
   }, [])
 
-  // let prefill = Object.keys(search)
-  //   .map(property => `${property}=${search[property]}`)
-  //   .join("&")
-
   return (
     <>
       <Layout hero={false}>
-        <SEO title="Authorization" />
-        {console.log(`${search.prefill}=${search.class}`)}
+        <SEO title="Free Class" />
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`${search.prefill}=${search.class}`}
@@ -36,8 +31,8 @@ const Authorization = ({ search }) => {
   )
 }
 
-Authorization.propTypes = {
+PaperForm.propTypes = {
   search: PropTypes.object,
 }
 
-export default withLocation(Authorization)
+export default withLocation(PaperForm)
