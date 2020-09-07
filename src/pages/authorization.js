@@ -25,6 +25,7 @@ const Authorization = ({ search }) => {
     <>
       <Layout hero={false}>
         <SEO title="Authorization" />
+        {console.log(prefill)}
         <div
           style={{ marginTop: "30px" }}
           data-prefill={prefill}
