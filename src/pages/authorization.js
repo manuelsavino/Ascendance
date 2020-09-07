@@ -29,7 +29,7 @@ const Authorization = ({ search }) => {
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`${search.prefill}=${search.class}`}
-          data-paperform-id="q0mp7wbt"
+          data-paperform-id="vnhsjqfa"
         ></div>
       </Layout>
     </>
