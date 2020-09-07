@@ -28,7 +28,7 @@ const Authorization = ({ search }) => {
         {console.log(prefill)}
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={`lan=${seach.lan}`}
+          data-prefill={`lan=${search.lan}`}
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
