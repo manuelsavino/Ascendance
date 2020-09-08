@@ -41,7 +41,7 @@ const Uniforms = ({ search }) => {
         <SEO title="Free Class" />
         {console.log(search)}
         <div
-          style={{ marginTop: "30px" }}
+          style={{ paddingTop: "30px" }}
           data-prefill={prefill}
           data-paperform-id="companyuniforms"
         ></div>

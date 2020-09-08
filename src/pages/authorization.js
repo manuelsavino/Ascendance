@@ -42,7 +42,8 @@ const Authorization = ({ search }) => {
         {console.log(search)}
         <div
           style={{ marginTop: "30px" }}
-          data-prefill={prefill}
+          // data-prefill={prefill}
+          data-prefill-inherit="1"
           data-paperform-id="q0mp7wbt"
         ></div>
       </Layout>
