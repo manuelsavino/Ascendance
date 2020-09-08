@@ -70,7 +70,7 @@ const ChooseRoom = ({ selectRoom }) => (
       </Button>
       <Button
         onClick={() => {
-          selectRoom({ twitch: "ascgreenkroom", name: "Green Room" })
+          selectRoom({ twitch: "ascgreenroom", name: "Green Room" })
         }}
       >
         Green Room
