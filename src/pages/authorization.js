@@ -13,27 +13,13 @@ const addScript = url => {
 }
 
 const Authorization = ({ search }) => {
-  const [ready, setReady] = useState(false)
   useEffect(() => {
     addScript("https://paperform.co/__embed")
-
-    setTimeout(() => {
-      setReady(true)
-    }, 500)
   }, [])
 
   let prefill = Object.keys(search)
     .map(property => `${property}=${search[property]}`)
     .join("&")
-
-  if (!ready)
-    return (
-      <>
-        <Layout hero={false}>
-          <SEO title="Free Class" />
-        </Layout>
-      </>
-    )
 
   return (
     <>
