@@ -21,7 +21,7 @@ export const Heading = styled.h1`
   padding-top: 30px;
   color: ${props => colors[props.color] || colors.secondary};
   line-height: 1;
-  text-align: center;
+  text-align: ${props => (props.center ? "center" : "left")};
   @media (max-width: 768px) {
     padding-top: 40px;
     padding-bottom: 20px;

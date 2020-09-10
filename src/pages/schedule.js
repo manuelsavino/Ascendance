@@ -11,11 +11,12 @@ const Schedule = () => {
   return (
     <Layout>
       <SEO title="Schedule" />
-      <Container fullWidth>
+      <Container>
         <Heading>Schedule</Heading>
         <ScheduleViewer />
       </Container>
       <Container style={{ margin: "auto" }}>
+        <Heading>Pricing</Heading>
         <Pricing />
       </Container>
     </Layout>

@@ -42,7 +42,9 @@ const Index = () => {
     <Layout>
       <SEO title="Thanks" />
       <Container>
-        <Heading color="primary">Thank You!</Heading>
+        <Heading center color="primary">
+          Thank You!
+        </Heading>
         <VideoContainer>
           <SingleVideoCotnainer>
             <iframe

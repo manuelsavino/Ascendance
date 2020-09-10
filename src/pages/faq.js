@@ -10,8 +10,8 @@ const Faq = () => {
   return (
     <Layout>
       <SEO title="FAQ" />
-      <Container fullWidth>
-        <Heading>Frequently Asked Questions</Heading>
+      <Container>
+        <Heading center>Frequently Asked Questions</Heading>
         <Faqs />
       </Container>
     </Layout>

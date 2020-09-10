@@ -6,7 +6,6 @@ export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
-  justify-items: center;
   align-content: flex-start;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
@@ -47,12 +46,12 @@ export const PriceCard = styled.div`
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
   position: relative;
   &::after {
-    content: "MOST POPULAR";
+  content: "${props => props.message}";
     position: absolute;
     font-size: 0.8rem;
     right: 0;
     bottom: 0;
-    display: ${props => (props.popular ? "block" : "none")};
+    display: ${props => (props.message ? "block" : "none")};
     background: ${colors.secondary};
     color: #fff;
     padding: 3px;

@@ -20,7 +20,7 @@ export default function Pricing() {
       numClasses: "2 Classes",
       strike: "144",
       price: "125",
-      popular: true,
+      message: "MOST POPULAR",
     },
     { numClasses: "3 Classes", strike: "216", price: "151" },
     { numClasses: "4 Classes", strike: "208", price: "189" },
@@ -31,10 +31,9 @@ export default function Pricing() {
 
   return (
     <>
-      <PricingHeadline>Pricing</PricingHeadline>
       <CardContainer>
         {pricing.map(price => (
-          <PriceCard popular={price.popular}>
+          <PriceCard popular={price.popular} message={price.message}>
             <ClassesPerWeek>{price.numClasses} per Week</ClassesPerWeek>
             <OuterPricingContainer>
               <PricingContainer>
