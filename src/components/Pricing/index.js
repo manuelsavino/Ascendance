@@ -82,7 +82,7 @@ export default function Pricing() {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "50px;",
+          marginTop: "50px",
         }}
       >
         <Button to="/schedule">See Our Schedule</Button>

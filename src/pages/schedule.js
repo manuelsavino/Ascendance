@@ -10,7 +10,7 @@ const Schedule = () => {
   return (
     <Layout>
       <SEO title="Schedule" />
-      <Container>
+      <Container fullWidth>
         <Heading>Schedule</Heading>
         <ScheduleViewer />
       </Container>

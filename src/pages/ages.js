@@ -7,7 +7,7 @@ export default function ages() {
   return (
     <Layout>
       <SEO title="Styles" />
-      <Container>
+      <Container fullWidth>
         <DanceStyles type="ages" />
       </Container>
     </Layout>

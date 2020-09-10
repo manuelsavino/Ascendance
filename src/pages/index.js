@@ -26,7 +26,7 @@ const Index = () => {
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
       </Hero>
-      <Container>
+      <Container fullWidth>
         <DanceStyles type="ages" headline="Dance Classes for Any Age" />
         {/* <SubHeading>Our Story as Featured by</SubHeading>
         <img src={googlelogo} />

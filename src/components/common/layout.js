@@ -5,12 +5,24 @@ import colors from "./colors"
 export const Container = styled.div`
   margin: 85px auto 0;
   padding-bottom: ${props => (props.pb ? props.pb : "80px")};
-  width: 90%;
+  max-width: ${props => (props.fullWidth ? "1800px" : "1400px")};
   display: ${props => (props.flex ? "flex" : "block")};
   justify-content: center;
   align-items: center;
   flex-direction: ${props => (props.column ? "column" : "row")};
   min-height: ${props => (props.height ? props.height : "auto")};
+  @media screen and (max-width: 1400px) {
+    max-width: ${props => (props.fullWidth ? "1300px" : "1400px")};
+  }
+  @media screen and (max-width: 1400px) {
+    max-width: ${props => (props.fullWidth ? "1300px" : "1400px")};
+  }
+  @media screen and (max-width: 1300px) {
+    max-width: ${props => (props.fullWidth ? "90%" : "1100px")};
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: ${props => (props.fullWidth ? "90%" : "90%")};
+  }
 `
 export const Button = styled(Link)`
   background-color: ${colors.primary};

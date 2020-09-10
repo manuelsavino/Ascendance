@@ -23,7 +23,7 @@ const HipHop = () => {
   return (
     <Layout>
       <SEO title="Hip Hop Classes - Dance Classes in Doral, FL" />
-      <Container>
+      <Container fullWidth>
         <Heading>{classLabel} Classes</Heading>
         <Paragraph>
           Has your child ever tried to pop and lock? Have you noticed them
