@@ -10,7 +10,6 @@ import {
   Price,
   PerMonth,
   PrivatePricing,
-  PricingHeadline,
 } from "./pricingStyled"
 
 export default function Pricing() {

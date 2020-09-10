@@ -50,7 +50,7 @@ export const StyledBottomFooter = styled.div`
 `
 
 export const StyledInnerFooter = styled.div`
-  width: 75%;
+  max-width: 1400px;
   margin: auto;
   height: max-content;
   display: flex;

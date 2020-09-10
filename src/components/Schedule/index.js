@@ -81,6 +81,27 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
       filterDay(preFilteredDay)
       setDisplayData(preFilteredDay)
       setData(preFilteredDay)
+    } else if (
+      search.age &&
+      ageFilters.hasOwnProperty(
+        search.age.charAt(0).toUpperCase() + search.age.slice(1)
+      )
+    ) {
+      //If query param is passed ti filter by age
+      let age = search.age.charAt(0).toUpperCase() + search.age.slice(1)
+      setAgeFilters({
+        ...ageFilters,
+        [age]: !ageFilters[age],
+      })
+
+      console.log(age)
+      const filteredByAge = data.records.filter(
+        danceClass => danceClass.fields.Age === age
+      )
+
+      setData(data.records)
+      setDisplayData(filteredByAge)
+      filterDay(filteredByAge)
     } else {
       setData(data.records)
       setDisplayData(data.records)
@@ -111,19 +132,6 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
     if (didMountRef.current) applyFilters()
     else didMountRef.current = true
   }, [typeFilters, ageFilters])
-
-  // useEffect(() => {
-  //   console.log("ran")
-  //   console.log(ageFilters)
-  //   applyFilters()
-  // }, [ageFilters])
-
-  // useEffect(() => {
-  //   setAgeFilters({
-  //     ...ageFilters,
-  //     [search.age]: !ageFilters[search.age],
-  //   })
-  // }, [search.age])
 
   const applyFilters = () => {
     let typeFiltered = Object.keys(typeFilters).filter(
@@ -184,7 +192,6 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
       {heading && (
         <SubHeading style={{ textAlign: "left" }}>{heading}</SubHeading>
       )}
-      {console.log(search)}
       <div style={{ display: "flex" }}>
         <div>
           {heading ? (

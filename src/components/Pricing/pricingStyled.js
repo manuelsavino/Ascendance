@@ -24,17 +24,6 @@ export const CardContainer = styled.div`
   }
 `
 
-export const PricingHeadline = styled.h2`
-  color: ${colors.secondary};
-  font-size: 3.5em;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 30px;
-  @media (max-width: 768px) {
-    padding-top: 50px;
-  }
-`
-
 export const PriceCard = styled.div`
   min-width: 300px;
   height: 160px;

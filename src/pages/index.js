@@ -5,13 +5,12 @@ import { Hero } from "../components/Hero"
 import {
   Button,
   Container,
-  VideoContainer,
-  SingleVideoCotnainer,
+  // VideoContainer,
+  // SingleVideoCotnainer,
 } from "../components/common/layout"
-import googlelogo from "../images/googleLogo.svg"
-// import Instagram from "../components/Instagram"
+// import googlelogo from "../images/googleLogo.svg"
 
-import { SubHeading } from "../components/common/copy"
+// import { SubHeading } from "../components/common/copy"
 
 import DanceStyles from "../components/DanceStyles/"
 

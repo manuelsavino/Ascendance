@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container } from "../components/common/layout"
-import { Heading, SubHeading } from "../components/common/copy"
+import { Heading } from "../components/common/copy"
 import Faqs from "../components/faqComponent"
 
 const Faq = () => {

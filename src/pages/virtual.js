@@ -9,7 +9,7 @@ const Virtual = () => {
   return (
     <Layout>
       <SEO title="Schedule" />
-      <Container fullWidth>
+      <Container>
         <Heading>Virtual Schedule</Heading>
         <ScheduleViewer virtual />
       </Container>

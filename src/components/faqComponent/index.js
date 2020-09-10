@@ -37,7 +37,7 @@ export default function Faqs() {
     return (
       <img
         style={{ display: "block", margin: "auto" }}
-        alt="loading image animation"
+        alt="loading animation"
         src={Loading}
       />
     )
