@@ -28,20 +28,12 @@ export const StyleSubHeadline = styled.h4`
   color: #000;
   font-size: 0.8em;
   font-weight: 300;
-  @media (max-width: 768px) {
-    /* font-size: 2.5em; */
-    /* line-height: 1; */
-  }
 `
 
 export const StylesSubHeadline = styled.p`
   color: #000;
   font-size: 1.5em;
   font-weight: 400;
-  @media (max-width: 768px) {
-    /* font-size: 2.5em; */
-    /* line-height: 1; */
-  }
 `
 
 export const CardContainer = styled.div`
@@ -50,7 +42,6 @@ export const CardContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
   align-content: flex-start;
-  font-family: "Poppins", sans-serif;
   font-size: 24px;
   margin-top: 1em;
   align-content: flex-start;
