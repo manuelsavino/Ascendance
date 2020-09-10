@@ -25,7 +25,7 @@ export default function Pricing() {
     { numClasses: "4 Classes", strike: "208", price: "189" },
     { numClasses: "5 Classes", strike: "360", price: "229" },
     { numClasses: "6 Classes", strike: "432", price: "259" },
-    { numClasses: "7 Classes", strike: "360", price: "289" },
+    { numClasses: "7 Classes", strike: "504", price: "289" },
   ]
 
   return (
