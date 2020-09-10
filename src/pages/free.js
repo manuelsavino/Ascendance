@@ -19,7 +19,7 @@ const PaperForm = ({ search }) => {
 
   return (
     <>
-      <Layout hero={false}>
+      <Layout hidefreeflass hero={false}>
         <SEO title="Free Class" />
         <div
           style={{ marginTop: "30px" }}

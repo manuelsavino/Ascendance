@@ -203,6 +203,9 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/free">Free Trial Class</ListLink>
               </li>
               <li>
+                <ListLink to="/authorization">Authorization</ListLink>
+              </li>
+              <li>
                 <ListLink to="/faq">Frequently Asked Questions</ListLink>
               </li>
               <li>
