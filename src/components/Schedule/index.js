@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react"
+
 import { v4 as uuidv4 } from "uuid"
 import {
   ScheduleDay,
@@ -33,7 +34,6 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
     Flamenco: false,
     Acrobatics: false,
   })
-  console.log(search.age)
   const [ageFilters, setAgeFilters] = useState({
     "3-4": false,
     "5-6": false,
@@ -112,11 +112,23 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
     else didMountRef.current = true
   }, [typeFilters, ageFilters])
 
+  // useEffect(() => {
+  //   console.log("ran")
+  //   console.log(ageFilters)
+  //   applyFilters()
+  // }, [ageFilters])
+
+  // useEffect(() => {
+  //   setAgeFilters({
+  //     ...ageFilters,
+  //     [search.age]: !ageFilters[search.age],
+  //   })
+  // }, [search.age])
+
   const applyFilters = () => {
     let typeFiltered = Object.keys(typeFilters).filter(
       filter => typeFilters[filter] === true
     )
-    // console.log(typeFiltered)
 
     let ageFiltered = Object.keys(ageFilters).filter(
       filter => ageFilters[filter] === true
@@ -172,6 +184,7 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
       {heading && (
         <SubHeading style={{ textAlign: "left" }}>{heading}</SubHeading>
       )}
+      {console.log(search)}
       <div style={{ display: "flex" }}>
         <div>
           {heading ? (

@@ -13,8 +13,6 @@ import {
   PricingHeadline,
 } from "./pricingStyled"
 
-import { Button } from "../common/layout"
-
 export default function Pricing() {
   const pricing = [
     { numClasses: "1 Class", strike: "", price: "72" },
@@ -78,15 +76,6 @@ export default function Pricing() {
           <p style={{ fontSize: "1rem" }}>Cash Only</p>
         </PriceCard>
       </CardContainer>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "50px",
-        }}
-      >
-        <Button to="/schedule">See Our Schedule</Button>
-      </div>
     </>
   )
 }
