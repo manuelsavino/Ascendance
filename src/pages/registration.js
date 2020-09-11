@@ -18,12 +18,12 @@ const Authorization = () => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <SEO title="Authorization" />
+        <SEO title="Registration" />
 
         <div
           style={{ marginTop: "30px" }}
           data-prefill-inherit="1"
-          data-paperform-id="q0mp7wbt"
+          data-paperform-id="tsaummrd"
         ></div>
       </Layout>
     </>
