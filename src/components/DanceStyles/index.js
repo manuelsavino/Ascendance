@@ -123,7 +123,7 @@ export default function DanceStyles({ type, headline }) {
                   </Button>
                 ) : (
                   <div style={{ display: "flex" }}>
-                    <Button to="/schedule">
+                    <Button to={`/schedule?style=${style.title}`}>
                       See our {style.title} Schedule
                     </Button>
                     <Button

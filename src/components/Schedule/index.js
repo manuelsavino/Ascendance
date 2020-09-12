@@ -19,7 +19,7 @@ import NoResults from "../../images/noResults.svg"
 import PropTypes from "prop-types"
 import withLocation from "../withLocation"
 
-const ScheduleViewer = ({ style, heading, virtual, search }) => {
+const ScheduleViewer = ({ danceStyle, heading, virtual, search }) => {
   const didMountRef = useRef(false)
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
@@ -66,9 +66,9 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
     const res = await fetch("/.netlify/functions/getSchedule")
     const data = await res.json()
     data.records = data.records.filter(danceClass => danceClass.fields.Prod)
-    if (style) {
+    if (danceStyle) {
       const preFiltered = data.records.filter(danceClass =>
-        danceClass.fields.Type.includes(style)
+        danceClass.fields.Type.includes(danceStyle)
       )
       filterDay(preFiltered)
       setDisplayData(preFiltered)
@@ -102,6 +102,28 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
       setData(data.records)
       setDisplayData(filteredByAge)
       filterDay(filteredByAge)
+    } else if (
+      search.style &&
+      typeFilters.hasOwnProperty(
+        search.style.charAt(0).toUpperCase() + search.style.slice(1)
+      )
+    ) {
+      //If query param is passed style filter by style
+      let danceStyle =
+        search.style.charAt(0).toUpperCase() + search.style.slice(1)
+      console.log(danceStyle)
+      setTypeFilters({
+        ...typeFilters,
+        [danceStyle]: !typeFilters[danceStyle],
+      })
+
+      const preFiltered = data.records.filter(danceClass =>
+        danceClass.fields.Type.includes(danceStyle)
+      )
+
+      setData(data.records)
+      setDisplayData(preFiltered)
+      filterDay(preFiltered)
     } else {
       setData(data.records)
       setDisplayData(data.records)
@@ -217,7 +239,7 @@ const ScheduleViewer = ({ style, heading, virtual, search }) => {
             })}
           </ul>
         </div>
-        {!style && (
+        {!danceStyle && (
           <div style={{ marginLeft: "20px" }}>
             <SubHeading>Styles</SubHeading>
             <ul className="ks-cboxtags">

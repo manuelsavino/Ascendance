@@ -11,16 +11,16 @@ import {
   ListItem,
 } from "../../components/common/copy"
 
-const Ballet = () => {
+const Acrobatics = () => {
   return (
     <Layout>
-      <SEO title="Ballet Classes - Dance Classes in Doral, FL" />
+      <SEO title="Acrobatics Classes - Dance Classes in Doral, FL" />
       <Container>
-        <Heading>Ballet</Heading>
-        <ScheduleViewer danceStyle="Ballet" heading="Ballet Schedule" />
+        <Heading>Acrobatics</Heading>
+        <ScheduleViewer danceStyle="Acrobatics" heading="Acrobatics Schedule" />
       </Container>
     </Layout>
   )
 }
 
-export default Ballet
+export default Acrobatics

@@ -12,6 +12,8 @@ import {
   PrivatePricing,
 } from "./pricingStyled"
 
+import { v4 as uuidv4 } from "uuid"
+
 export default function Pricing() {
   const pricing = [
     { numClasses: "1 Class", strike: "", price: "72" },
@@ -32,7 +34,11 @@ export default function Pricing() {
     <>
       <CardContainer>
         {pricing.map(price => (
-          <PriceCard popular={price.popular} message={price.message}>
+          <PriceCard
+            key={uuidv4()}
+            popular={price.popular}
+            message={price.message}
+          >
             <ClassesPerWeek>{price.numClasses} per Week</ClassesPerWeek>
             <OuterPricingContainer>
               <PricingContainer>
@@ -51,7 +57,7 @@ export default function Pricing() {
             </OuterPricingContainer>
           </PriceCard>
         ))}
-        <PriceCard>
+        <PriceCard key={uuidv4()}>
           <ClassesPerWeek>Private Lessons</ClassesPerWeek>
           <OuterPricingContainer>
             <PricingContainer>

@@ -76,7 +76,10 @@ const HipHop = () => {
           <CopyLink to="/free"> Sign them up for hip-hop today!</CopyLink>
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
-        <ScheduleViewer style="Hip Hop" heading={`${classLabel} Schedule`} />
+        <ScheduleViewer
+          danceStyle="Hip Hop"
+          heading={`${classLabel} Schedule`}
+        />
         <SubHeading weight={600}>Benefits of our Hip-Hop classes</SubHeading>
         <Paragraph>
           Hip-hop incorporates both anaerobic and aerobic elements, making it

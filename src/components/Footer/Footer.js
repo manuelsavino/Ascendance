@@ -95,28 +95,28 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/classes/tap">Tap</ListLink>
               </li>
               <li>
-                <ListLink to="/flamenco">Flamenco</ListLink>
+                <ListLink to="/classes/flamenco">Flamenco</ListLink>
               </li>
               <li>
-                <ListLink to="/jazz">Jazz</ListLink>
+                <ListLink to="/classes/jazz">Jazz</ListLink>
               </li>
               <li>
-                <ListLink to="/technique">Technique</ListLink>
+                <ListLink to="/classes/technique">Technique</ListLink>
               </li>
               <li>
                 <ListLink to="/classes/hip-hop">Hip Hop</ListLink>
               </li>
               <li>
-                <ListLink to="/contemporary">Contemporary</ListLink>
+                <ListLink to="/classes/contemporary">Contemporary</ListLink>
               </li>
               <li>
-                <ListLink to="/ballroom">Ballroom</ListLink>
+                <ListLink to="/classes/ballroom">Ballroom</ListLink>
               </li>
               <li>
-                <ListLink to="/lyrical">Lyrical</ListLink>
+                <ListLink to="/classes/lyrical">Lyrical</ListLink>
               </li>
               <li>
-                <ListLink to="/acrobatics">Acrobatics</ListLink>
+                <ListLink to="/classes/acrobatics">Acrobatics</ListLink>
               </li>
             </FooterArea>
           </div>
