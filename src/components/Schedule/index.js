@@ -111,7 +111,6 @@ const ScheduleViewer = ({ danceStyle, heading, virtual, search }) => {
       //If query param is passed style filter by style
       let danceStyle =
         search.style.charAt(0).toUpperCase() + search.style.slice(1)
-      console.log(danceStyle)
       setTypeFilters({
         ...typeFilters,
         [danceStyle]: !typeFilters[danceStyle],

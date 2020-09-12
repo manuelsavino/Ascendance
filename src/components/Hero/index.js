@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import HeroImg from "../../images/heroNew.jpg"
+import HeroImg from "../../images/heroNewC.jpg"
 export const Hero = styled.div`
   display: flex;
   justify-content: center;

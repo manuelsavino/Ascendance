@@ -77,7 +77,7 @@ const HipHop = () => {
         </Paragraph>
         <FreeClass style={`${classLabel}`} />
         <ScheduleViewer
-          danceStyle="Hip Hop"
+          danceStyle={classLabel}
           heading={`${classLabel} Schedule`}
         />
         <SubHeading weight={600}>Benefits of our Hip-Hop classes</SubHeading>
