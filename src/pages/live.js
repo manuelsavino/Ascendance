@@ -124,7 +124,7 @@ const LiveStream = () => {
   }
 
   return (
-    <Layout>
+    <Layout hidefreeflass>
       <SEO title="Live Stream" />
       <Container column flex height="30vh" pb="0">
         {room ? <Video room={room} /> : <ChooseRoom selectRoom={setRoom} />}
