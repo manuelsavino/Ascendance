@@ -21,6 +21,13 @@ export const PassWordLabel = styled.label`
   padding-bottom: 5px;
 `
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 export const Button = styled.button`
   background-color: ${colors.primary};
   border: none;
@@ -60,7 +67,7 @@ const LiveSubHeading = styled(SubHeading)`
 const ChooseRoom = ({ selectRoom }) => (
   <>
     <LiveSubHeading>Please choose a room</LiveSubHeading>
-    <div>
+    <ButtonContainer>
       <Button
         onClick={() => {
           selectRoom({ twitch: "ascpinkroom", name: "Pink Room" })
@@ -69,6 +76,7 @@ const ChooseRoom = ({ selectRoom }) => (
         Pink Room
       </Button>
       <Button
+        style={{ background: "green" }}
         onClick={() => {
           selectRoom({ twitch: "ascgreenroom", name: "Green Room" })
         }}
@@ -76,13 +84,14 @@ const ChooseRoom = ({ selectRoom }) => (
         Green Room
       </Button>
       <Button
+        style={{ background: "black" }}
         onClick={() => {
           selectRoom({ twitch: "ascstudio1", name: "Studio 1" })
         }}
       >
         Studio 1
       </Button>
-    </div>
+    </ButtonContainer>
   </>
 )
 
@@ -92,7 +101,7 @@ const LiveStream = () => {
   const possiblePw = ["7865717778", `dance${new Date().getDate() + 1}`]
   if (possiblePw.indexOf(cheetoPw) < 0) {
     return (
-      <Layout>
+      <Layout hidefreeflass>
         <SEO title="Live Stream" />
         <Container column flex height="40vh" pb="0">
           <LiveSubHeading>

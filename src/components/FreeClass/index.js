@@ -10,7 +10,7 @@ export default function FreeClass({ style }) {
         <CopyLinkE href="tel:786-571-7778"> 786-571-7778</CopyLinkE> or click
         below.
       </p>
-      <TryButton to="/">
+      <TryButton to="/free">
         <span>Try a Free Class</span>
       </TryButton>
     </FreeClassContainer>
