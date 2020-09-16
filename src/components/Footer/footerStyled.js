@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import PinkWave from "../../images/footerWave.svg"
+import PinkWave from "../../images/wave2.svg"
 import Caret from "../../images/caret-down.svg"
 import { Link } from "gatsby"
 import { TryButton } from "../FreeClass/freeClassStyled"
@@ -45,8 +45,14 @@ export const StyledBottomFooter = styled.div`
   background: ${colors.primary};
   width: 100%;
   height: max-content;
-  margin-top: -1px;
-  padding-top: 15px;
+  margin-top: -55px;
+  @media screen and (max-width: 768px) {
+    margin-top: -5px;
+  }
+  @media only screen and (max-width: 900px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    margin-top: -5px;
+  }
+  /* padding-top: 15px; */
 `
 
 export const StyledInnerFooter = styled.div`
