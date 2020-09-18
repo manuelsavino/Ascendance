@@ -23,19 +23,16 @@ export const StylesHeadline = styled.h2`
     padding-bottom: 0.5em;
   }
 `
-
 export const StyleSubHeadline = styled.h4`
   color: #333;
   font-size: 0.8em;
   font-weight: 300;
 `
-
 export const StylesSubHeadline = styled.p`
   color: #333;
   font-size: 1.5em;
   font-weight: 400;
 `
-
 export const CardContainer = styled.div`
   width: 100%;
   display: grid;
