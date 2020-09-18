@@ -14,7 +14,7 @@ export const OuterContainer = styled.div`
   }
 `
 export const StylesHeadline = styled.h2`
-  color: #1e1e1e;
+  color: #333;
   font-size: 3.5em;
   font-weight: 600;
   @media (max-width: 768px) {
@@ -25,13 +25,13 @@ export const StylesHeadline = styled.h2`
 `
 
 export const StyleSubHeadline = styled.h4`
-  color: #000;
+  color: #333;
   font-size: 0.8em;
   font-weight: 300;
 `
 
 export const StylesSubHeadline = styled.p`
-  color: #000;
+  color: #333;
   font-size: 1.5em;
   font-weight: 400;
 `
@@ -93,14 +93,14 @@ export const Card = styled.div`
 export const Title = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #000;
+  color: #333;
   /* padding-left: 100px; */
 `
 
 export const Description = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: #000;
+  color: #333;
   font-size: 0.5em;
   /* padding-left: 100px; */
   padding-top: 5px;
