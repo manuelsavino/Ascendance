@@ -136,19 +136,19 @@ export default function Footer({ children, hidefreeflass }) {
 
             <FooterArea active={mobileExpand.ages}>
               <li>
-                <ListLink to="/3-4">3 to 4 Years Old</ListLink>
+                <ListLink to="/">3 to 4 Years Old</ListLink>
               </li>
               <li>
-                <ListLink to="/5-6">5 to 6 Years Old</ListLink>
+                <ListLink to="/">5 to 6 Years Old</ListLink>
               </li>
               <li>
-                <ListLink to="/7-9">7 to 9 Years Old</ListLink>
+                <ListLink to="/">7 to 9 Years Old</ListLink>
               </li>
               <li>
-                <ListLink to="/10-12">10 to 12 Years Old</ListLink>
+                <ListLink to="/">10 to 12 Years Old</ListLink>
               </li>
               <li>
-                <ListLink to="/teens">Teens</ListLink>
+                <ListLink to="/">Teens</ListLink>
               </li>
             </FooterArea>
             <ListItemTitlet
@@ -176,24 +176,22 @@ export default function Footer({ children, hidefreeflass }) {
             </ListItemTitlet>
             <FooterArea active={mobileExpand.studio}>
               <li>
-                <ListLink to="/about">About</ListLink>
+                <ListLink to="/">About</ListLink>
               </li>
               <li>
                 <ListLink to="/facility">Facility</ListLink>
               </li>
               <li>
-                <ListLink to="/blog">Blog</ListLink>
+                <ListLink to="/">Blog</ListLink>
               </li>
               <li>
-                <ListLink to="/jobs">Jobs</ListLink>
+                <ListLink to="/">Jobs</ListLink>
               </li>
               <li>
-                <ListLink to="/ascendance-studio-company">
-                  Ascendance Studio Company
-                </ListLink>
+                <ListLink to="/">Ascendance Studio Company</ListLink>
               </li>
               <li>
-                <ListLink to="/summer-camp">Summer Camp</ListLink>
+                <ListLink to="/">Summer Camp</ListLink>
               </li>
             </FooterArea>
           </div>

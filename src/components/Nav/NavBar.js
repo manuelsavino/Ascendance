@@ -139,10 +139,10 @@ export default function NavBar({ hero }) {
               <Link to="/ages">Ages</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/">About Us</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/summer">Summer Camp</Link>
+              <Link to="/">Summer Camp</Link>
             </li>
           </ul>
         </nav>
