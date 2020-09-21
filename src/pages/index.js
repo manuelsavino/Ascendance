@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
+import DanceStyles from "../components/DanceStyles/"
 import { Hero } from "../components/Hero"
 import {
   Button,
@@ -12,7 +14,12 @@ import {
 
 // import { SubHeading } from "../components/common/copy"
 
-import DanceStyles from "../components/DanceStyles/"
+const LiveButton = styled(Button)`
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`
 
 const Index = () => {
   return (
@@ -24,6 +31,7 @@ const Index = () => {
           See Our Schedule
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
+        <LiveButton to="/live">Live Stream</LiveButton>
       </Hero>
       <Container fullWidth>
         <DanceStyles type="ages" headline="Dance Classes for Any Age" />

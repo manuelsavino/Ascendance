@@ -210,6 +210,9 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/authorization">Authorization</ListLink>
               </li>
               <li>
+                <ListLink to="/live">Live Stream</ListLink>
+              </li>
+              <li>
                 <ListLink to="/faq">Frequently Asked Questions</ListLink>
               </li>
               <li>
