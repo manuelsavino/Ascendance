@@ -58,6 +58,7 @@ const TrialDetails = styled(StepDetails)`
 `
 
 const TrialInfo = styled(Step)`
+  margin-top: 80px;
   & > div > ul {
     padding-left: 10px;
     padding-top: 10px;
@@ -96,7 +97,7 @@ const Authorization = () => {
             <iframe
               width="420"
               height="315"
-              src="https://www.youtube.com/embed/9Gy-Jr0NXLI?rel=0"
+              src="https://www.youtube.com/embed/X9VmEKazFNs?rel=0"
               frameborder="0"
               allowfullscreen
             ></iframe>
@@ -166,72 +167,70 @@ const Authorization = () => {
         </TrialSubHeading>
         <Schedule />
         <Grid>
-          <div>
-            <NextSteps style={{ marginTop: "80px" }}>
-              <TrialInfo>
-                <TrialImage>
-                  <FontAwesomeIcon size="2x" icon={faUser} />
-                </TrialImage>
-                <div>
-                  <StepTitle>Ages</StepTitle>
-                  <TrialDetails>We have age specific classes:</TrialDetails>
-                  <ul>
-                    <li>3-4 Year old</li>
-                    <li>5-6 Year old</li>
-                    <li>7-9 Year old</li>
-                    <li>10-12 Year old</li>
-                    <li>Teens</li>
-                  </ul>
-                </div>
-              </TrialInfo>
-              <Step>
-                <TrialImage>
-                  <FontAwesomeIcon size="2x" icon={faCalendar} />
-                </TrialImage>
-                <div>
-                  <StepTitle>Dates</StepTitle>
-                  <TrialDetails>
-                    You can schedule your Free Trial any day that we offer
-                    classes for that age group!
-                  </TrialDetails>
-                </div>
-              </Step>
-              <Step>
-                <TrialImage>
-                  <FontAwesomeIcon size="2x" icon={faClock} />
-                </TrialImage>
-                <div>
-                  <StepTitle>Hours</StepTitle>
-                  <TrialDetails>
-                    All of our dance classes start after 5:00 PM
-                  </TrialDetails>
-                </div>
-              </Step>
-              <Step>
-                <TrialImage>
-                  <FontAwesomeIcon size="2x" icon={faStar} />
-                </TrialImage>
-                <div>
-                  <StepTitle>Styles</StepTitle>
-                  <TrialDetails>
-                    Jazz, Tap, Hip Hop, Ballet, Acro, Lyrical, Flamenco,
-                    Contemporary and much more….
-                  </TrialDetails>
-                </div>
-              </Step>
-              <Step>
-                <TrialImage>
-                  <FontAwesomeIcon size="2x" icon={faMapMarker} />
-                </TrialImage>
-                <div>
-                  <StepTitle>Location</StepTitle>
-                  <TrialDetails>
-                    Comfortable clothes (leggings and t-shirt) and tennis shoes
-                  </TrialDetails>
-                </div>
-              </Step>
-            </NextSteps>
-          </div>
+          <NextSteps>
+            <TrialInfo>
+              <TrialImage>
+                <FontAwesomeIcon size="2x" icon={faUser} />
+              </TrialImage>
+              <div>
+                <StepTitle>Ages</StepTitle>
+                <TrialDetails>We have age specific classes:</TrialDetails>
+                <ul>
+                  <li>3-4 Year old</li>
+                  <li>5-6 Year old</li>
+                  <li>7-9 Year old</li>
+                  <li>10-12 Year old</li>
+                  <li>Teens</li>
+                </ul>
+              </div>
+            </TrialInfo>
+            <Step>
+              <TrialImage>
+                <FontAwesomeIcon size="2x" icon={faCalendar} />
+              </TrialImage>
+              <div>
+                <StepTitle>Dates</StepTitle>
+                <TrialDetails>
+                  You can schedule your Free Trial any day that we offer classes
+                  for that age group!
+                </TrialDetails>
+              </div>
+            </Step>
+            <Step>
+              <TrialImage>
+                <FontAwesomeIcon size="2x" icon={faClock} />
+              </TrialImage>
+              <div>
+                <StepTitle>Hours</StepTitle>
+                <TrialDetails>
+                  All of our dance classes start after 5:00 PM
+                </TrialDetails>
+              </div>
+            </Step>
+            <Step>
+              <TrialImage>
+                <FontAwesomeIcon size="2x" icon={faStar} />
+              </TrialImage>
+              <div>
+                <StepTitle>Styles</StepTitle>
+                <TrialDetails>
+                  Jazz, Tap, Hip Hop, Ballet, Acro, Lyrical, Flamenco,
+                  Contemporary and much more….
+                </TrialDetails>
+              </div>
+            </Step>
+            <Step>
+              <TrialImage>
+                <FontAwesomeIcon size="2x" icon={faMapMarker} />
+              </TrialImage>
+              <div>
+                <StepTitle>Location</StepTitle>
+                <TrialDetails>
+                  Comfortable clothes (leggings and t-shirt) and tennis shoes
+                </TrialDetails>
+              </div>
+            </Step>
+          </NextSteps>
           <div>
             <SubHeading
               color="primary"
