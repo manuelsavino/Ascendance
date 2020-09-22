@@ -1,19 +1,6 @@
 import styled from "styled-components"
 import colors from "../common/colors"
 
-export const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 20px;
-  & > ${Testimonial}:nth-of-type(odd) {
-    margin-right: 30px;
-  }
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`
-
 export const Testimonial = styled.div`
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -39,6 +26,19 @@ export const Testimonial = styled.div`
   @media screen and (max-width: 768px) {
     max-width: 100%;
     width: 100%;
+  }
+`
+
+export const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  & > ${Testimonial}:nth-of-type(odd) {
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `
 

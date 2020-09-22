@@ -18,7 +18,6 @@ export const StylesHeadline = styled.h2`
   font-size: 3.5em;
   font-weight: 600;
   @media (max-width: 768px) {
-    /* font-size: 2.5em; */
     line-height: 1.1;
     padding-bottom: 0.5em;
   }
