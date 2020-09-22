@@ -5,6 +5,7 @@ import colors from "./colors"
 export const Container = styled.div`
   margin: 85px auto 0;
   padding-bottom: ${props => (props.pb ? props.pb : "80px")};
+  width: ${props => (props.fullWidth ? "90%" : "1400px")};
   max-width: ${props => (props.fullWidth ? "1800px" : "1400px")};
   display: ${props => (props.flex ? "flex" : "block")};
   justify-content: center;

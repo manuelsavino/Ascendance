@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import Layout from "../components/layout"
+import LandingLayout from "../components/LandingLayout"
 import SEO from "../components/seo"
 import Schedule from "../components/Schedule"
 import {
@@ -20,7 +20,6 @@ import {
   faUser,
   faStar,
   faMapMarker,
-  faQuestion,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   StepImage,
@@ -83,12 +82,12 @@ const Authorization = () => {
   }, [])
 
   return (
-    <Layout hidefreeflass hero={false}>
+    <LandingLayout>
       <SEO title="Trial" />
-      <Container>
+      <Container style={{ margin: "50px auto 0" }}>
         <TrialSubHeading
           color="primary"
-          style={{ textAlign: "center", paddingTop: "30px" }}
+          style={{ textAlign: "center", paddingTop: "50px" }}
         >
           #Monthly Magic Session
         </TrialSubHeading>
@@ -226,7 +225,9 @@ const Authorization = () => {
               <div>
                 <StepTitle>Location</StepTitle>
                 <TrialDetails>
-                  Comfortable clothes (leggings and t-shirt) and tennis shoes
+                  <a href="https://www.google.com/maps/place/Ascendance+Studio,+10466+NW+31st+Terrace,+Doral,+FL+33172/@25.8108899,-80.351904,15z/data=!4m2!3m1!1s0x88d9b959aa99fef7:0x1984b28f6313b51">
+                    10466 NW 31st Terrace Doral, FL 33172
+                  </a>
                 </TrialDetails>
               </div>
             </Step>
@@ -278,7 +279,7 @@ const Authorization = () => {
         </SubHeading>
         <Testimonies />
       </Container>
-    </Layout>
+    </LandingLayout>
   )
 }
 
