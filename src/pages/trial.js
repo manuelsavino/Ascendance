@@ -67,6 +67,7 @@ const TrialInfo = styled(Step)`
 
 const TrialSubHeading = styled(SubHeading)`
   font-size: 3rem;
+  font-weight: 400;
 `
 
 const addScript = url => {
@@ -225,7 +226,11 @@ const Authorization = () => {
               <div>
                 <StepTitle>Location</StepTitle>
                 <TrialDetails>
-                  <a href="https://www.google.com/maps/place/Ascendance+Studio,+10466+NW+31st+Terrace,+Doral,+FL+33172/@25.8108899,-80.351904,15z/data=!4m2!3m1!1s0x88d9b959aa99fef7:0x1984b28f6313b51">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.google.com/maps/place/Ascendance+Studio,+10466+NW+31st+Terrace,+Doral,+FL+33172/@25.8108899,-80.351904,15z/data=!4m2!3m1!1s0x88d9b959aa99fef7:0x1984b28f6313b51"
+                  >
                     10466 NW 31st Terrace Doral, FL 33172
                   </a>
                 </TrialDetails>

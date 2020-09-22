@@ -6,6 +6,9 @@ export const Grid = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+  & > ${Testimonial}:nth-of-type(odd) {
+    margin-right: 30px;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -21,7 +24,7 @@ export const Testimonial = styled.div`
   background: #fff;
   padding: 20px;
   margin-bottom: 10px;
-  margin-right: 10px;
+
   & > p {
     margin-top: 10px;
     color: ${colors.secondary};
