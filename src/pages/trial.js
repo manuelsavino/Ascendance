@@ -63,11 +63,20 @@ const TrialInfo = styled(Step)`
     padding-top: 10px;
     font-weight: 300;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 `
 
 const TrialSubHeading = styled(SubHeading)`
   font-size: 3rem;
   font-weight: 400;
+  text-align: center;
+  padding-top: 30px;
+  @media screen and (max-width: 768px) {
+    line-height: 1;
+    font-size: 2rem;
+  }
 `
 
 const addScript = url => {
@@ -86,10 +95,7 @@ const Authorization = () => {
     <LandingLayout>
       <SEO title="Trial" />
       <Container style={{ margin: "50px auto 0" }}>
-        <TrialSubHeading
-          color="primary"
-          style={{ textAlign: "center", paddingTop: "50px" }}
-        >
+        <TrialSubHeading color="primary">
           Start the new school year dancing!
         </TrialSubHeading>
         <VideoContainer>
