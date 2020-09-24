@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import HeroImg from "../../images/heroNewC.jpg"
+import HeroMob from "../../images/heroNewCMobile.jpg"
+
 export const Hero = styled.div`
   display: flex;
   justify-content: center;
@@ -34,5 +36,6 @@ export const Hero = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     background-attachment: scroll;
+    background: url(${props => props.img || HeroMob});
   }
 `
