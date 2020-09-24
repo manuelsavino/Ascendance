@@ -37,5 +37,6 @@ export const Hero = styled.div`
     flex-direction: column;
     background-attachment: scroll;
     background: url(${props => props.img || HeroMob});
+    background-position: center;
   }
 `
