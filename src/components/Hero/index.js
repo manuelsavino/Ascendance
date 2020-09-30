@@ -9,7 +9,7 @@ export const Hero = styled.div`
   color: white;
   width: 100%;
   height: ${props => props.height || "800px"};
-  background: url(${props => props.img || HeroImg});
+  background: url(${props => props.img || "none"});
   background-attachment: ${props => (props.parallax ? "fixed" : "initial")};
   background-size: cover;
   background-position: center;
