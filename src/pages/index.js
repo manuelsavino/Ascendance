@@ -3,8 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import DanceStyles from "../components/DanceStyles/"
-import { Hero } from "../components/Hero"
+// import { Hero } from "../components/Hero"
 import StyledBackgroundSection from "../components/Hero/Hero"
+import { Helmet } from "react-helmet"
+
 import {
   Button,
   Container,
@@ -25,6 +27,14 @@ const LiveButton = styled(Button)`
 const Index = () => {
   return (
     <Layout hero>
+      <Helmet
+        meta={[
+          {
+            name: `google-site-verification`,
+            content: "PD49E1NbpPSbjQyBOnYqulxZcI8ou3Aeq4nImGIcKjk",
+          },
+        ]}
+      />
       <SEO title="Dance Classes in Doral,Florida" />
       <StyledBackgroundSection parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
