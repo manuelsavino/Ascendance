@@ -112,7 +112,10 @@ export default function DanceStyles({ type, headline }) {
         {types[type].map(style => {
           return (
             <OuterCard key={style.title}>
-              <DancerIcon src={style.icon} />
+              <DancerIcon
+                src={style.icon}
+                alt={`dance classes ${style.title}`}
+              />
               <Card>
                 <Title>{style.title}</Title>
                 <StyleSubHeadline>{style.subTitle}</StyleSubHeadline>
