@@ -36,7 +36,7 @@ export const Hero = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     background-attachment: scroll;
-    background: url(${props => props.img || "none"});
+    background: url(${props => props.img || HeroMob});
     background-position: center;
   }
 `
