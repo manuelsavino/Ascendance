@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import DanceStyles from "../components/DanceStyles/"
 import { Hero } from "../components/Hero"
+import StyledBackgroundSection from "../components/Hero/Hero"
 import {
   Button,
   Container,
@@ -25,14 +26,14 @@ const Index = () => {
   return (
     <Layout hero>
       <SEO title="Dance Classes in Doral,Florida" />
-      <Hero parallax gradient>
+      <StyledBackgroundSection parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
         <Button to="/schedule" style={{ marginRight: "10px" }}>
           See Our Schedule
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
         <LiveButton to="/live">Live Stream</LiveButton>
-      </Hero>
+      </StyledBackgroundSection>
       <Container fullWidth>
         <DanceStyles type="ages" headline="Dance Classes for Any Age" />
         {/* <SubHeading>Our Story as Featured by</SubHeading>

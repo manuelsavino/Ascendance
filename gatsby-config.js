@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Ascendance Studio`,
@@ -47,18 +49,11 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [`Roboto\:300,400,500,600`],
-    //     display: "swap",
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/blog`,
-        name: `pages`,
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     {
