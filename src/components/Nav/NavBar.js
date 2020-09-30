@@ -70,6 +70,7 @@ export default function NavBar({ hero }) {
                 icon="facebook"
                 href="https://www.facebook.com/ascendanceMiami"
                 target="_blank"
+                rel="noopener"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </SocialMediaIcon>
@@ -77,6 +78,7 @@ export default function NavBar({ hero }) {
                 icon="instagram"
                 href="https://www.instagram.com/ascendanceMiami"
                 target="_blank"
+                rel="noopener"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </SocialMediaIcon>
@@ -84,6 +86,7 @@ export default function NavBar({ hero }) {
                 icon="youtube"
                 href="https://www.youtube.com/c/AscendanceStudio/"
                 target="_blank"
+                rel="noopener"
               >
                 <FontAwesomeIcon icon={faYoutube} />
               </SocialMediaIcon>

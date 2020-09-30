@@ -261,6 +261,7 @@ export default function Footer({ children, hidefreeflass }) {
             <a
               href="https://www.youtube.com/c/AscendanceStudio/"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faYoutube} />
             </a>
