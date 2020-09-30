@@ -238,7 +238,7 @@ export default function Footer({ children, hidefreeflass }) {
         </StyledInnerFooter>
 
         <StyledInnerFooter justify="center">
-          <LogoImage src={LogoWhite} />
+          <LogoImage src={LogoWhite} alt="Ascesdance studio logo" />
         </StyledInnerFooter>
         <Separator />
         <StyledInnerFooter justify="space-between">
