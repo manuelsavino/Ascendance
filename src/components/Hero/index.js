@@ -9,7 +9,7 @@ export const Hero = styled.div`
   color: white;
   width: 100%;
   height: ${props => props.height || "800px"};
-  background: url(${props => props.img || "none"});
+  background: url(${props => props.img || HeroImg});
   background-attachment: ${props => (props.parallax ? "fixed" : "initial")};
   background-size: cover;
   background-position: center;
@@ -36,7 +36,7 @@ export const Hero = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     background-attachment: scroll;
-    background: url(${props => props.img || HeroMob});
+    background: url(${props => props.img || "none"});
     background-position: center;
   }
 `
