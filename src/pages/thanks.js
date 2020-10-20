@@ -35,7 +35,7 @@ const addScript = url => {
 const Index = () => {
   useEffect(() => {
     addScript(
-      "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=244628426908532&autoLogAppEvents=1"
+      "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=1931067663785995&autoLogAppEvents=1"
     )
   }, [])
   return (
