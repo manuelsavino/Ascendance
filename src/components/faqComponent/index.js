@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactHTMLElement } from "react"
+import React, { useState, useEffect } from "react"
 import convert from "htmr"
 import {
   StyledFaqOuter,

@@ -6,8 +6,6 @@ import { Link } from "gatsby"
 const Home = ({ user }) => {
   return <p>Hi, {user.name ? user.name : "friend"}!</p>
 }
-const Settings = () => <p>Settings</p>
-const Billing = () => <p>Billing</p>
 
 const Private = () => {
   if (!isAuthenticated()) {
