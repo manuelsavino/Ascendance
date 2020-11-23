@@ -48,6 +48,7 @@ const Index = () => {
         <VideoContainer>
           <SingleVideoCotnainer>
             <iframe
+              title="thanks youtube video"
               width="420"
               height="315"
               src="https://www.youtube.com/embed/iS3EcIWJ2FE"
