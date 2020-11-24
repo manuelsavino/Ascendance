@@ -7,9 +7,9 @@ console.log(process.env.AUTH0CLIENTID)
 
 const auth = isBrowser
   ? new auth0.WebAuth({
-      domain: process.env.AUTH0DOMAIN,
-      clientID: process.env.AUTH0CLIENTID,
-      redirectUri: process.env.AUTH0REDIRECTURI,
+      domain: process.env.GATSBY_AUTH0DOMAIN,
+      clientID: process.env.GATSBY_AUTH0CLIENTID,
+      redirectUri: process.env.GATSBY_AUTH0REDIRECTURI,
       responseType: "token id_token",
       scope: "openid profile email",
     })
