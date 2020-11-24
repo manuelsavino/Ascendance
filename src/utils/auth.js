@@ -3,11 +3,13 @@ import { navigate } from "gatsby"
 
 const isBrowser = typeof window !== "undefined"
 
+console.log(process.env.AUTH0CLIENTID)
+
 const auth = isBrowser
   ? new auth0.WebAuth({
-      domain: "dev-sh6rsr-q.auth0.com",
-      clientID: "OvWTCgIzNQSGI35ia8iOzgMZn6Gh1Bpx",
-      redirectUri: "http://localhost:8000/callback",
+      domain: process.env.AUTH0DOMAIN,
+      clientID: process.env.AUTH0CLIENTID,
+      redirectUri: process.env.AUTH0REDIRECTURI,
       responseType: "token id_token",
       scope: "openid profile email",
     })
