@@ -7,7 +7,7 @@ import Header from "./header"
 import Footer from "./Footer/Footer"
 import "./layout.css"
 
-const Layout = ({ children, hero, hidefreeflass }) => {
+const Layout = ({ children, hero, hidefreeflass, user, logout }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,7 +20,13 @@ const Layout = ({ children, hero, hidefreeflass }) => {
 
   return (
     <>
-      <Header hero={hero} siteTitle={data.site.siteMetadata.title} />
+      {/* {console.log(user)} */}
+      <Header
+        hero={hero}
+        siteTitle={data.site.siteMetadata.title}
+        user={user}
+        logout={logout}
+      />
       <Global />
       <main className={!hero ? "mainMargin" : ""}>{children}</main>
       <Footer hidefreeflass={hidefreeflass} />

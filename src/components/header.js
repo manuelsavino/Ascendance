@@ -3,7 +3,9 @@ import React from "react"
 import NavBar from "./Nav/NavBar"
 import "../components/Nav/nav.css"
 
-const Header = ({ siteTitle, hero }) => <NavBar hero={hero} />
+const Header = ({ siteTitle, hero, user, logout }) => (
+  <NavBar user={user} hero={hero} logout={logout} />
+)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

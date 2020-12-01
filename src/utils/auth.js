@@ -3,11 +3,13 @@ import { navigate } from "gatsby"
 
 const isBrowser = typeof window !== "undefined"
 
+console.log(process.env.GATSBY_AUTH0REDIRECTURI)
+
 const auth = isBrowser
   ? new auth0.WebAuth({
       domain: "ascendancestudio.us.auth0.com",
       clientID: "lUNQ0jF8LO5CoKyV2VAA0j1V8VXgZdMj",
-      redirectUri: "https://doraldance.com/callback",
+      redirectUri: process.env.GATSBY_AUTH0REDIRECTURI,
       responseType: "token id_token",
       scope: "openid profile email",
     })
