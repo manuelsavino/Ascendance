@@ -222,7 +222,7 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/">Calendar of Events</ListLink>
               </li>
               <li>
-                <ListLink to="/">Register Now</ListLink>
+                <ListLink to="/registration">Register Now</ListLink>
               </li>
               <li>
                 <ListLink to="/">COVID-19 resources</ListLink>
