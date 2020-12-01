@@ -7,7 +7,7 @@ const auth = isBrowser
   ? new auth0.WebAuth({
       domain: "ascendancestudio.us.auth0.com",
       clientID: "lUNQ0jF8LO5CoKyV2VAA0j1V8VXgZdMj",
-      redirectUri: "http://localhost:8000/callback",
+      redirectUri: "https://doraldance.com/callback",
       responseType: "token id_token",
       scope: "openid profile email",
     })
