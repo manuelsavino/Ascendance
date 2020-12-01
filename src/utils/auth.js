@@ -5,9 +5,9 @@ const isBrowser = typeof window !== "undefined"
 
 const auth = isBrowser
   ? new auth0.WebAuth({
-      domain: process.env.GATSBY_AUTH0DOMAIN,
-      clientID: process.env.GATSBY_AUTH0CLIENTID,
-      redirectUri: process.env.GATSBY_AUTH0_CALLBACK,
+      domain: "ascendancestudio.us.auth0.com",
+      clientID: "lUNQ0jF8LO5CoKyV2VAA0j1V8VXgZdMj",
+      redirectUri: "http://localhost:8000/callback",
       responseType: "token id_token",
       scope: "openid profile email",
     })
