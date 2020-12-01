@@ -8,7 +8,7 @@ import {
   VideoContainer,
   SingleVideoCotnainer,
 } from "../components/common/layout"
-import { Heading, SubHeading } from "../components/common/copy"
+import { SubHeading } from "../components/common/copy"
 import colors from "../components/common/colors"
 
 import Testimonies from "../components/Testimonies"
@@ -101,6 +101,7 @@ const Authorization = () => {
         <VideoContainer>
           <SingleVideoCotnainer>
             <iframe
+              title="New School Year Dancing youtube video"
               width="420"
               height="315"
               src="https://www.youtube.com/embed/X9VmEKazFNs?rel=0"
@@ -202,6 +203,7 @@ const Authorization = () => {
             <VideoContainer>
               <SingleVideoCotnainer>
                 <iframe
+                  title="What our dancers say about us youtube video"
                   width="420"
                   height="315"
                   src="https://www.youtube.com/embed/f6bC-CBO4mo?rel=0"
@@ -220,6 +222,7 @@ const Authorization = () => {
             <VideoContainer>
               <SingleVideoCotnainer>
                 <iframe
+                  title="The Benefits of Dance youtube video"
                   width="420"
                   height="315"
                   src="https://www.youtube.com/embed/hal-RQSZkpc?rel=0"
@@ -241,6 +244,7 @@ const Authorization = () => {
             <VideoContainer>
               <SingleVideoCotnainer>
                 <iframe
+                  title="Video Tour of our Studio youtube video"
                   width="420"
                   height="315"
                   src="https://www.youtube.com/embed/xuTIAaqGG9c?rel=0"
@@ -260,6 +264,7 @@ const Authorization = () => {
             <VideoContainer>
               <SingleVideoCotnainer>
                 <iframe
+                  title="Google Maps embed"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.0191644908878!2d-80.36861108470288!3d25.802941813189303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b959aa99fef7%3A0x1984b28f6313b51!2sAscendance%20Studio!5e0!3m2!1sen!2sus!4v1600544196364!5m2!1sen!2sus"
                   width="600"
                   height="450"
@@ -267,7 +272,6 @@ const Authorization = () => {
                   style={{ border: 0 }}
                   allowfullscreen=""
                   aria-hidden="false"
-                  tabindex="0"
                 ></iframe>
               </SingleVideoCotnainer>
             </VideoContainer>

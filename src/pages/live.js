@@ -140,6 +140,7 @@ const Video = ({ room }) => (
     <VideoContainer>
       <SingleVideoCotnainer>
         <iframe
+          title="twich live stream for room"
           src={`https://player.twitch.tv/?channel=${room.twitch}&parent=doraldance.com&muted=true`}
           height="720"
           width="1280"

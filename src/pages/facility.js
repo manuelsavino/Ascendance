@@ -15,6 +15,7 @@ export default function Facility() {
         <VideoContainer>
           <SingleVideoCotnainer>
             <iframe
+              title="Video tour of studio"
               width="420"
               height="315"
               src="https://www.youtube.com/embed/xuTIAaqGG9c?rel=0"

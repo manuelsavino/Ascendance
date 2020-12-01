@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import DanceStyles from "../components/DanceStyles/"
 import { Hero } from "../components/Hero"
-import StyledBackgroundSection from "../components/Hero/Hero"
 import { Helmet } from "react-helmet"
 
 import {
