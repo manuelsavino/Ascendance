@@ -19,7 +19,7 @@ import {
 import { Link } from "gatsby"
 // import styled from "styled-components"
 
-export default function NavBar({ hero }) {
+export default function NavBar({ hero, user, logout }) {
   const [navOpen, setNavOpen] = useState(false)
   const [isTops, setIsTop] = useState(true)
 
@@ -57,41 +57,56 @@ export default function NavBar({ hero }) {
         }`}
       >
         <ContactBar>
-          <ContactBarInner>
-            <PhoneNumber href="tel:786-571-7778">
-              <FontAwesomeIcon
-                icon={faPhoneAlt}
-                style={{ marginRight: "5px" }}
-              />
-              786-571-7778
-            </PhoneNumber>
-            <SocialMediaIcons>
-              <SocialMediaIcon
-                icon="facebook"
-                href="https://www.facebook.com/ascendanceMiami"
-                target="_blank"
-                rel="noopener"
+          {user ? (
+            <ContactBarInner>
+              Howdy, {user["https://doraldance.com/username"]}
+              <PhoneNumber
+                href="#logout"
+                onClick={e => {
+                  logout()
+                  e.preventDefault()
+                }}
               >
-                <FontAwesomeIcon icon={faFacebook} />
-              </SocialMediaIcon>
-              <SocialMediaIcon
-                icon="instagram"
-                href="https://www.instagram.com/ascendanceMiami"
-                target="_blank"
-                rel="noopener"
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </SocialMediaIcon>
-              <SocialMediaIcon
-                icon="youtube"
-                href="https://www.youtube.com/c/AscendanceStudio/"
-                target="_blank"
-                rel="noopener"
-              >
-                <FontAwesomeIcon icon={faYoutube} />
-              </SocialMediaIcon>
-            </SocialMediaIcons>
-          </ContactBarInner>
+                Logout
+              </PhoneNumber>
+            </ContactBarInner>
+          ) : (
+            <ContactBarInner>
+              <PhoneNumber href="tel:786-571-7778">
+                <FontAwesomeIcon
+                  icon={faPhoneAlt}
+                  style={{ marginRight: "5px" }}
+                />
+                786-571-7778
+              </PhoneNumber>
+              <SocialMediaIcons>
+                <SocialMediaIcon
+                  icon="facebook"
+                  href="https://www.facebook.com/ascendanceMiami"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FontAwesomeIcon icon={faFacebook} />
+                </SocialMediaIcon>
+                <SocialMediaIcon
+                  icon="instagram"
+                  href="https://www.instagram.com/ascendanceMiami"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </SocialMediaIcon>
+                <SocialMediaIcon
+                  icon="youtube"
+                  href="https://www.youtube.com/c/AscendanceStudio/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </SocialMediaIcon>
+              </SocialMediaIcons>
+            </ContactBarInner>
+          )}
         </ContactBar>
         <nav className="navbar">
           <ul

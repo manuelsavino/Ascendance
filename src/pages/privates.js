@@ -17,7 +17,7 @@ const Private = () => {
   const user = getProfile()
 
   return (
-    <Layout>
+    <Layout user={user} logout={logout}>
       <nav>
         <Link to="/privates/">Home</Link>
         <a
