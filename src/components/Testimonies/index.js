@@ -10,25 +10,25 @@ export default function Testimonies({ lang }) {
         copy:
           "I like Ascendance because it is family oriented and professional. My daughter likes it because it’s fun. She can’t wait for dance class. And you should see the performance! Broadway style!",
         name: "Maria",
-        parent: "Mom",
+        parent: "Ascendance Studio Mom",
       },
       {
         copy:
           "Awesome place, where kids learn how to dance, have a healthy lifestyle, improve their discipline and teamwork skills and have lots of fun!",
         name: "Mauricio",
-        parent: "Dad",
+        parent: "Ascendance Studio Dad",
       },
       {
         copy:
           "My girls love the studio. The teachers are very patient with them and I can see their self confidence improving as they dance.",
         name: "Erin",
-        parent: "Mom",
+        parent: "Ascendance Studio Mom",
       },
       {
         copy:
           "The teachers are great. They are knowledgeable and they are very patient with the kids. The staff is amazing. Always willing to help and answer questions.",
         name: "Judith",
-        parent: "Mom",
+        parent: "Ascendance Studio Mom",
       },
     ],
 
@@ -67,8 +67,7 @@ export default function Testimonies({ lang }) {
           <FontAwesomeIcon icon={faQuoteLeft} />
           <p>{testimonial.copy}</p>
           <TestimonialName>
-            <p>{testimonial.name}</p>{" "}
-            <p>Ascendance Studio {testimonial.parent}</p>
+            <p>{testimonial.name}</p> <p>{testimonial.parent}</p>
           </TestimonialName>
         </Testimonial>
       ))}
