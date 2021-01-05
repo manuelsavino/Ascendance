@@ -11,7 +11,7 @@ const Home = ({ user }) => {
 const Private = () => {
   if (!isAuthenticated()) {
     login()
-    return <p>Redirecting to login...</p>
+    return <p>Loading...</p>
   }
 
   const user = getProfile()
