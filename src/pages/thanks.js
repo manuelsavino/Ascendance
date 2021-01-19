@@ -15,7 +15,7 @@ import {
   faCheck,
   faQuestion,
 } from "@fortawesome/free-solid-svg-icons"
-import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
 import {
   StepImage,
   StepTitle,
@@ -79,15 +79,15 @@ const Index = () => {
             </StepImage>
             <div>
               <StepTitle>2. Like our Facebook page</StepTitle>
-              <div
-                class="fb-like"
-                data-href="https://www.facebook.com/ascendancemiami/"
-                data-width="300px"
-                data-layout="standard"
-                data-action="like"
-                data-size="small"
-                data-share="false"
-              ></div>
+              <StepDetails>
+                <FollowUs
+                  href="https://www.facebook.com/ascendancemiami"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faFacebook} /> Ascendancemiami
+                </FollowUs>
+              </StepDetails>
             </div>
           </Step>
           <Step>
