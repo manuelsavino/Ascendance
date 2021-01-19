@@ -86,17 +86,17 @@ const addScript = url => {
   document.body.appendChild(script)
 }
 
-const Authorization = () => {
+const Prueba = () => {
   useEffect(() => {
     addScript("https://paperform.co/__embed")
   }, [])
 
   return (
     <LandingLayout>
-      <SEO title="Trial" />
+      <SEO title="Prueba" />
       <Container style={{ margin: "50px auto 0" }}>
         <TrialSubHeading color="primary">
-          Start the New Year dancing!
+          Comienza el año bailando!
         </TrialSubHeading>
         <VideoContainer>
           <SingleVideoCotnainer>
@@ -104,7 +104,7 @@ const Authorization = () => {
               title="New School Year Dancing youtube video"
               width="420"
               height="315"
-              src="https://www.youtube.com/embed/X9VmEKazFNs?rel=0"
+              src="https://www.youtube.com/embed/Y09HeZxxPdY?rel=0"
               frameborder="0"
               allowfullscreen
             ></iframe>
@@ -114,7 +114,7 @@ const Authorization = () => {
           color="primary"
           style={{ textAlign: "center", paddingTop: "30px" }}
         >
-          Fill in the Form to Schedule your Free Trial
+          Llene esta planilla para registrarse para una clase de prueba GRATIS
         </TrialSubHeading>
 
         <div
@@ -129,14 +129,16 @@ const Authorization = () => {
                 <FontAwesomeIcon size="2x" icon={faUser} />
               </TrialImage>
               <div>
-                <StepTitle>Ages</StepTitle>
-                <TrialDetails>We have age specific classes:</TrialDetails>
+                <StepTitle>Edades</StepTitle>
+                <TrialDetails>
+                  Tenemos clases específicas por edad:
+                </TrialDetails>
                 <ul>
-                  <li>3-4 Year old</li>
-                  <li>5-6 Year old</li>
-                  <li>7-9 Year old</li>
-                  <li>10-12 Year old</li>
-                  <li>Teens</li>
+                  <li>3-4 años de edad</li>
+                  <li>5-6 años de edad</li>
+                  <li>7-9 años de edad</li>
+                  <li>10-12 años de edad</li>
+                  <li>Adolescentes</li>
                 </ul>
               </div>
             </TrialInfo>
@@ -145,10 +147,10 @@ const Authorization = () => {
                 <FontAwesomeIcon size="2x" icon={faCalendar} />
               </TrialImage>
               <div>
-                <StepTitle>Dates</StepTitle>
+                <StepTitle>Fechas</StepTitle>
                 <TrialDetails>
-                  You can schedule your Free Trial any day that we offer classes
-                  for that age group!
+                  Usted puede programar su clase Gratis cualquier dia que
+                  tengamos clases para esa edad!
                 </TrialDetails>
               </div>
             </Step>
@@ -157,9 +159,9 @@ const Authorization = () => {
                 <FontAwesomeIcon size="2x" icon={faClock} />
               </TrialImage>
               <div>
-                <StepTitle>Hours</StepTitle>
+                <StepTitle>Horas</StepTitle>
                 <TrialDetails>
-                  All of our dance classes start after 5:00 PM
+                  Todas nuestras clases empiezan después de las 5:00 PM
                 </TrialDetails>
               </div>
             </Step>
@@ -168,10 +170,10 @@ const Authorization = () => {
                 <FontAwesomeIcon size="2x" icon={faStar} />
               </TrialImage>
               <div>
-                <StepTitle>Styles</StepTitle>
+                <StepTitle>Estilos</StepTitle>
                 <TrialDetails>
-                  Jazz, Tap, Hip Hop, Ballet, Acro, Lyrical, Flamenco,
-                  Contemporary and much more….
+                  Jazz, Tap, Hip Hop, Ballet, Lírico, Flamenco, Contemporáneo y
+                  mucho más…
                 </TrialDetails>
               </div>
             </Step>
@@ -180,7 +182,7 @@ const Authorization = () => {
                 <FontAwesomeIcon size="2x" icon={faMapMarker} />
               </TrialImage>
               <div>
-                <StepTitle>Location</StepTitle>
+                <StepTitle>Direcction</StepTitle>
                 <TrialDetails>
                   <a
                     target="_blank"
@@ -198,7 +200,7 @@ const Authorization = () => {
               color="primary"
               style={{ textAlign: "center", paddingTop: "30px" }}
             >
-              What our dancers say about us?
+              ¿Qué dicen nuestras bailarinas sobre nosotros?
             </SubHeading>
             <VideoContainer>
               <SingleVideoCotnainer>
@@ -217,7 +219,7 @@ const Authorization = () => {
               color="primary"
               style={{ textAlign: "center", paddingTop: "30px" }}
             >
-              The Benefits of Dance
+              Los Beneficios de la Danza
             </SubHeading>
             <VideoContainer>
               <SingleVideoCotnainer>
@@ -239,7 +241,7 @@ const Authorization = () => {
               color="primary"
               style={{ textAlign: "center", paddingTop: "30px" }}
             >
-              Video Tour of our Studio
+              Video de Nuestro Estudio
             </SubHeading>
             <VideoContainer>
               <SingleVideoCotnainer>
@@ -259,7 +261,7 @@ const Authorization = () => {
               color="primary"
               style={{ textAlign: "center", paddingTop: "30px" }}
             >
-              Directions to the Studio
+              Direcciones al Estudio
             </SubHeading>
             <VideoContainer>
               <SingleVideoCotnainer>
@@ -281,7 +283,7 @@ const Authorization = () => {
           color="primary"
           style={{ textAlign: "center", paddingTop: "30px" }}
         >
-          Schedule
+          Horario de Clases
         </TrialSubHeading>
         <Schedule />
 
@@ -289,12 +291,12 @@ const Authorization = () => {
           color="primary"
           style={{ textAlign: "center", paddingTop: "30px" }}
         >
-          What our parents say about us?
+          ¿Qué dicen nuestros padres sobre Ascendance?
         </SubHeading>
-        <Testimonies lang="en" />
+        <Testimonies lang="es" />
       </Container>
     </LandingLayout>
   )
 }
 
-export default Authorization
+export default Prueba
