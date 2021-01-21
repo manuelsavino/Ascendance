@@ -1,7 +1,13 @@
 import React, { useEffect } from "react"
-
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const FormDiv = styled.div`
+  & > iframe {
+    min-height: 400px;
+  }
+`
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -20,11 +26,11 @@ const Authorization = () => {
       <Layout hidefreeflass hero={false}>
         <SEO title="Registration" />
 
-        <div
+        <FormDiv
           style={{ marginTop: "30px" }}
           data-prefill-inherit="1"
           data-paperform-id="tsaummrd"
-        ></div>
+        ></FormDiv>
       </Layout>
     </>
   )
