@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const FormDiv = styled.div`
   & > iframe {
-    min-height: 400px;
+    min-height: 700px !important;
   }
 `
 
