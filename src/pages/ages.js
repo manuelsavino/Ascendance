@@ -6,7 +6,7 @@ import { Container } from "../components/common/layout"
 export default function ages() {
   return (
     <Layout>
-      <SEO title="Styles" />
+      <SEO title="Ages" />
       <Container>
         <DanceStyles type="ages" />
       </Container>
