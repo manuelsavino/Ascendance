@@ -57,6 +57,14 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
     },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `d52tojxe`,
+        dataset: `production`,
+      },
+    },
+    `gatsby-plugin-image`,
     "gatsby-transformer-remark",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
