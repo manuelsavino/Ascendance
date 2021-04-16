@@ -4,6 +4,11 @@ export default {
   title: "Media Card",
   fields: [
     {
+      name: "order",
+      type: "number",
+      title: "Order",
+    },
+    {
       name: "heading",
       type: "string",
       title: "Heading",

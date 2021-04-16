@@ -21,7 +21,7 @@ const Media = () => {
     <StaticQuery
       query={graphql`
         query MyQuery {
-          allSanityMediaCard {
+          allSanityMediaCard(sort: { fields: order }) {
             edges {
               node {
                 heading
