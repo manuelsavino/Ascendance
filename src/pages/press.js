@@ -41,7 +41,7 @@ const Media = () => {
       `}
       render={({ allSanityMediaCard }) => (
         <Layout>
-          <SEO title="Media" />
+          <SEO title="Press" />
           {showModal && (
             <ModalTest close={() => setShowModal(false)}>
               <VideoContainer>
