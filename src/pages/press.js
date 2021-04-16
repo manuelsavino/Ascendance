@@ -62,18 +62,21 @@ const Media = () => {
 
           <Container>
             <div>
-              {console.log(allSanityMediaCard)}
               <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                 <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                   <div className="space-y-5 sm:space-y-4">
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                      Our Team
+                      Press Center
                     </h2>
-                    <p className="text-xl text-gray-500">
-                      Nulla quam felis, enim faucibus proin velit, ornare id
-                      pretium. Augue ultrices sed arcu condimentum vestibulum
-                      suspendisse. Volutpat eu faucibus vivamus eget bibendum
-                      cras.
+                    <p className="text-base text-gray-500">
+                      Ascendance Studio is a nationally acclaimed dance studio
+                      that trains young artists who are passionate about dance
+                      and aspire to take their abilities to the next level.
+                    </p>
+                    <p className="text-base text-gray-500">
+                      Our mission is to instill an appreciation for the art of
+                      dance in a safe, family-friendly, quality atmosphere,
+                      where kids can have fun while improving their technique.
                     </p>
                   </div>
                   <div className="lg:col-span-2">
