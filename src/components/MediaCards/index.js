@@ -9,9 +9,10 @@ export default function MediaCard({
   setVideo,
   modalvideo,
   url,
+  hash,
 }) {
   return (
-    <li>
+    <li id={hash}>
       <a
         href={modalvideo === true ? "#" : url}
         target={modalvideo === true ? "" : "_blank"}

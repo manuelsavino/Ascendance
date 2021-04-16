@@ -9,6 +9,11 @@ export default {
       title: "Order",
     },
     {
+      name: "hash",
+      type: "string",
+      title: "Hash",
+    },
+    {
       name: "heading",
       type: "string",
       title: "Heading",

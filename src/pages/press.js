@@ -25,6 +25,7 @@ const Media = () => {
             edges {
               node {
                 heading
+                hash
                 body
                 subHeading
                 modalvideo
@@ -94,6 +95,7 @@ const Media = () => {
                           url={card.node.url}
                           modalvideo={card.node.modalvideo}
                           setVideo={setVideo}
+                          hash={card.node.hash}
                           // video={card.node.modalvideo ? card.node.url : }
                         />
                       ))}
