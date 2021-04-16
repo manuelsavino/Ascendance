@@ -18,6 +18,9 @@ const Schedule = () => {
       <Container style={{ margin: "auto" }}>
         <Heading>Pricing</Heading>
         <Pricing />
+        <div className="bg-red-500">
+          <h2 className="text-xl">test</h2>
+        </div>
       </Container>
     </Layout>
   )
