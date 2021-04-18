@@ -110,7 +110,6 @@ const Costumes = () => {
                 </button>
               )}
             </div>
-            {console.log(students)}
             {loading && (
               <img
                 style={{ display: "block", margin: "auto" }}
@@ -150,20 +149,20 @@ const Costumes = () => {
                           className="col-span-1 flex flex-col text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200"
                         >
                           <div className="flex-1 flex flex-col p-8">
-                            <div className="relative">
-                              <img
-                                className="w-48 h-48 flex-shrink-0 mx-auto bg-black rounded-lg object-cover"
-                                src={costume.images[0].thumbnails.large.url}
-                                alt=""
-                                onClick={() => {
-                                  setModalImage(
-                                    costume.images[0].thumbnails.full.url
-                                  )
-                                  setShowModal(true)
-                                }}
-                              />
+                            <div
+                              className="relative w-48 h-48 mx-auto bg-cover rounded-lg"
+                              style={{
+                                backgroundImage: `url(${costume.images[0].thumbnails.large.url})`,
+                              }}
+                              onClick={() => {
+                                setModalImage(
+                                  costume.images[0].thumbnails.full.url
+                                )
+                                setShowModal(true)
+                              }}
+                            >
                               <ZoomInIcon
-                                className="w-5 h-5 text-ascendance absolute top-2 right-2 md:right-14"
+                                className="w-5 h-5 text-ascendance absolute top-2 right-2"
                                 aria-hidden="true"
                               />
                             </div>
