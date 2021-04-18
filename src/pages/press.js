@@ -7,9 +7,9 @@ import {
   VideoContainer,
   SingleVideoCotnainer,
 } from "../components/common/layout"
-import TheKeyWord from "../images/theyKeyword.jpeg"
+
 import MediaCard from "../components/MediaCards"
-import ModalTest from "../components/Modal/Modal"
+import Modal from "../components/Modal/Modal"
 
 import { StaticQuery, graphql } from "gatsby"
 
@@ -44,7 +44,7 @@ const Media = () => {
         <Layout>
           <SEO title="Press" />
           {showModal && (
-            <ModalTest close={() => setShowModal(false)}>
+            <Modal close={() => setShowModal(false)}>
               <VideoContainer>
                 <SingleVideoCotnainer>
                   <iframe
@@ -58,7 +58,7 @@ const Media = () => {
                   ></iframe>
                 </SingleVideoCotnainer>
               </VideoContainer>
-            </ModalTest>
+            </Modal>
           )}
 
           <Container>

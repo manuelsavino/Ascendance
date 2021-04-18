@@ -3,7 +3,7 @@ require("dotenv").config()
 
 exports.handler = async (event, context, callback) => {
   const res = await fetch(
-    `https://api.airtable.com/v0/appsgmvdBE37Yxn1U/FAQ?api_key=${process.env.AIRTABLEAPIKEY}`
+    `https://api.airtable.com/v0/appsgmvdBE37Yxn1U/FAQ?api_key=${process.env.AIRTABLE_API_KEY}`
   )
   const data = await res.json()
 

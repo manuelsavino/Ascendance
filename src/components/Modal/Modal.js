@@ -1,8 +1,6 @@
 import React from "react"
 
-import { OuterModal, InnerModal, CloseButton } from "./modalStyled"
-
-export default function ModalTest({ close, children }) {
+export default function Modal({ close, children }) {
   return (
     <div
       className="fixed z-10 inset-0 overflow-y-auto"
