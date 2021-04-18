@@ -85,6 +85,7 @@ const Costumes = () => {
                   <label className="flex md:items-center flex-col md:flex-row text-base md:text-lg text-gray-600">
                     Phone Number
                     <input
+                      type="tel"
                       className="pl-2 mb-2 md:mb-0 md:ml-2 h-10 rounded-md"
                       name="phone"
                       maxLength="10"
