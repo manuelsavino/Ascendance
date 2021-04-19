@@ -45,6 +45,12 @@ exports.handler = async (event, context, callback) => {
           "https://via.placeholder.com/820x412.png",
         price: costume.fields.Price || null,
         class: costume.fields["Assigned Style"],
+        hair: costume.fields.Hair,
+        makeup: costume.fields.Makeup,
+        shoes: costume.fields.Shoes,
+        tights: costume.fields.Tights,
+        earrings: costume.fields.Earrings,
+        others: costume.fields.Others,
       }
     })
 
@@ -53,6 +59,7 @@ exports.handler = async (event, context, callback) => {
       ascId: record.fields["Phone and Student First Name"],
       name: `${record.fields["Student First Name"]} ${record.fields["Student Last Name"]}`,
       email: record.fields.Email,
+      language: record.fields.Language,
       parentF: record.fields["Parent First Name"],
       parentL: record.fields["Parent Last Name"],
       phone: record.fields["Cell Phone"],
