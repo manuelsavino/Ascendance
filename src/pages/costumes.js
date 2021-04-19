@@ -7,10 +7,6 @@ import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
-
 const Costumes = () => {
   const [students, setStudents] = useState([])
   const [loading, setLoading] = useState(null)
@@ -65,8 +61,11 @@ const Costumes = () => {
     <Layout>
       {showModal && (
         <Modal close={() => setShowModal(false)}>
-          <div className="p-5 flex justify-center">
-            <img className="max-w-md" src={modalImage} />
+          <div className="p-5 flex justify-center items-start">
+            <img
+              className="max-w-sm max-h-screen object-contain"
+              src={modalImage}
+            />
           </div>
         </Modal>
       )}
