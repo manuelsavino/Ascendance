@@ -84,7 +84,7 @@ const Costumes = () => {
                   className="flex flex-col  md:flex-col my-4"
                   onSubmit={handleSubmit(onSubmit)}
                 >
-                  <p class="text-sm text-ascendance pb-1 md:pb-2">
+                  <p className="text-sm text-ascendance pb-1 md:pb-2">
                     Please enter the phone number you have registered at the
                     studio
                   </p>
@@ -167,7 +167,7 @@ const Costumes = () => {
               <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-3">
                 <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
                   <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
-                    <h4 class="text-ascendance font-semibold">
+                    <h4 className="text-ascendance font-semibold">
                       Payment Deadline
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -177,7 +177,7 @@ const Costumes = () => {
                 </li>
                 <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
                   <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
-                    <h4 class="text-ascendance font-semibold">
+                    <h4 className="text-ascendance font-semibold">
                       Pictures (at the studio)
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -190,7 +190,7 @@ const Costumes = () => {
                 </li>
                 <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
                   <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
-                    <h4 class="text-ascendance font-semibold">
+                    <h4 className="text-ascendance font-semibold">
                       Dress Rehearsal (at the studio)
                     </h4>
                     <p className="text-sm text-gray-600">
@@ -200,7 +200,9 @@ const Costumes = () => {
                 </li>
                 <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
                   <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
-                    <h4 class="text-ascendance font-semibold">Recital Shows</h4>
+                    <h4 className="text-ascendance font-semibold">
+                      Recital Shows
+                    </h4>
                     <p className="text-sm text-gray-600">
                       Sunday June 6th,2021
                     </p>
