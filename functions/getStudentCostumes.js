@@ -29,10 +29,7 @@ exports.handler = async (event, context, callback) => {
     .firstPage()
 
   const studentsDetails = []
-
   students.forEach(function (record) {
-    console.log("Retrieved", record.fields)
-
     const allDatacostumes = allCostumes.filter(costume =>
       record.fields.Costumes.includes(costume.id)
     )

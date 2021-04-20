@@ -6,6 +6,7 @@ import CostumeCard from "../components/CostumeCard/CostumeCard"
 import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
+import { StaticQuery, graphql } from "gatsby"
 
 const Costumes = () => {
   const [students, setStudents] = useState([])
@@ -72,44 +73,43 @@ const Costumes = () => {
 
       <SEO title="Costumes" />
       <div className="container py-2 px-5 mx-auto min-h-full">
-        <h1 className="text-3xl md:text-6xl text-gray-800 font-bold mt-8 md:my-4">
+        <h1 className="text-3xl md:text-6xl text-gray-800 font-bold mt-8 md:my-2">
           Recital Costumes
         </h1>
         {!makePayment && (
           <div className="min-h-screen">
-            <p className="text-sm md:text-base text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              quis delectus nemo quam culpa laudantium cupiditate, architecto
-              consequatur dolore impedit est repudiandae. Possimus voluptas
-              quisquam corrupti nostrum cumque odit ipsam?
-            </p>
             <div className="flex flex-col md:flex-row justify-between md:items-center">
               {!loading && students.length === 0 && (
                 <form
-                  className="flex flex-col  md:flex-row my-4"
+                  className="flex flex-col  md:flex-col my-4"
                   onSubmit={handleSubmit(onSubmit)}
                 >
-                  <label className="flex md:items-center flex-col md:flex-row text-base md:text-lg text-gray-600">
-                    Phone Number
-                    <span>
-                      <input
-                        type="tel"
-                        className="pl-2 mb-2 md:mb-0 md:ml-2 h-10 rounded-md"
-                        name="phone"
-                        maxLength="10"
-                        placeholder="7862221111"
-                        {...register("phone", { required: true })}
-                      />
-                      {/* {errors.phone && <span>This field is required</span>} */}
-                    </span>
-                  </label>
+                  <p class="text-sm text-ascendance pb-1 md:pb-2">
+                    Please enter the phone number you have registered at the
+                    studio
+                  </p>
+                  <div className="flex flex-col md:flex-row items-start">
+                    <label className="flex md:items-center flex-col md:flex-row text-sm md:text-lg text-gray-600">
+                      Phone Number
+                      <span>
+                        <input
+                          type="tel"
+                          className="pl-2 mb-2 md:mb-0 md:ml-2 h-10 rounded-md"
+                          name="phone"
+                          maxLength="10"
+                          placeholder="7862221111"
+                          {...register("phone", { required: true })}
+                        />
+                      </span>
+                    </label>
 
-                  <button
-                    className="md:ml-3 bg-ascendance text-white px-2 md:px-4 py-2 rounded-md"
-                    type="submit"
-                  >
-                    Search
-                  </button>
+                    <button
+                      className="md:ml-3 bg-ascendance text-white px-2 md:px-4 py-2 rounded-md"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </div>
                 </form>
               )}
               {!loading && students.length > 0 && (
@@ -158,6 +158,60 @@ const Costumes = () => {
                   setShowModal={setShowModal}
                 />
               ))}
+            <div className="bg-white rounded-lg shadow mb-5">
+              <div className="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 rounded-tr-lg rounded-tl-lg ">
+                <h3 className="text-lg leading-6 font-medium text-gray-900">
+                  Important Dates
+                </h3>
+              </div>
+              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-3">
+                <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                  <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                    <h4 class="text-ascendance font-semibold">
+                      Payment Deadline
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Saturday April 24th, 2021
+                    </p>
+                  </div>
+                </li>
+                <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                  <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                    <h4 class="text-ascendance font-semibold">
+                      Pictures (at the studio)
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Thursday May 20th, 2021
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Friday May 21st, 2021
+                    </p>
+                  </div>
+                </li>
+                <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                  <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                    <h4 class="text-ascendance font-semibold">
+                      Dress Rehearsal (at the studio)
+                    </h4>
+                    <p className="text-sm text-gray-600">
+                      Saturday June 5th, 2021
+                    </p>
+                  </div>
+                </li>
+                <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                  <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                    <h4 class="text-ascendance font-semibold">Recital Shows</h4>
+                    <p className="text-sm text-gray-600">
+                      Sunday June 6th,2021
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <p className="p-3 text-sm text-gray-600">
+                Note: We already measured all students to determine their
+                costume sizes.
+              </p>
+            </div>
           </div>
         )}
         {makePayment && students.length > 0 && (
