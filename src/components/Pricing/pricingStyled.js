@@ -26,7 +26,7 @@ export const CardContainer = styled.div`
 
 export const PriceCard = styled.div`
   min-width: 300px;
-  height: 160px;
+  height: 170px;
   padding-bottom: 20px;
   background: #fff;
   display: flex;
@@ -89,7 +89,7 @@ export const Strike = styled.p`
   &::after {
     content: "";
     position: absolute;
-    bottom: 15px;
+    bottom: 22px;
     transform: rotate(-15deg);
     left: 0;
     width: 2.1em;
