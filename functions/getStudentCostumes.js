@@ -29,39 +29,42 @@ exports.handler = async (event, context, callback) => {
     .firstPage()
 
   const studentsDetails = []
+
   students.forEach(function (record) {
-    const allDatacostumes = allCostumes.filter(costume =>
-      record.fields.Costumes.includes(costume.id)
-    )
+    if (record.fields.Costumes) {
+      const allDatacostumes = allCostumes.filter(costume =>
+        record.fields.Costumes.includes(costume.id)
+      )
 
-    const costumes = allDatacostumes.map(costume => {
-      return {
-        id: costume.id,
-        images:
-          costume.fields["Costume Picture"] ||
-          "https://via.placeholder.com/820x412.png",
-        price: costume.fields.Price || null,
-        class: costume.fields["Assigned Style"],
-        hair: costume.fields.Hair,
-        makeup: costume.fields.Makeup,
-        shoes: costume.fields.Shoes,
-        tights: costume.fields.Tights,
-        earrings: costume.fields.Earrings,
-        others: costume.fields.Others,
-      }
-    })
+      const costumes = allDatacostumes.map(costume => {
+        return {
+          id: costume.id,
+          images:
+            costume.fields["Costume Picture"] ||
+            "https://via.placeholder.com/820x412.png",
+          price: costume.fields.Price || null,
+          class: costume.fields["Assigned Style"],
+          hair: costume.fields.Hair,
+          makeup: costume.fields.Makeup,
+          shoes: costume.fields.Shoes,
+          tights: costume.fields.Tights,
+          earrings: costume.fields.Earrings,
+          others: costume.fields.Others,
+        }
+      })
 
-    studentsDetails.push({
-      id: record.id,
-      ascId: record.fields["Phone and Student First Name"],
-      name: `${record.fields["Student First Name"]} ${record.fields["Student Last Name"]}`,
-      email: record.fields.Email,
-      language: record.fields.Language,
-      parentF: record.fields["Parent First Name"],
-      parentL: record.fields["Parent Last Name"],
-      phone: record.fields["Cell Phone"],
-      costumes,
-    })
+      studentsDetails.push({
+        id: record.id,
+        ascId: record.fields["Phone and Student First Name"],
+        name: `${record.fields["Student First Name"]} ${record.fields["Student Last Name"]}`,
+        email: record.fields.Email,
+        language: record.fields.Language,
+        parentF: record.fields["Parent First Name"],
+        parentL: record.fields["Parent Last Name"],
+        phone: record.fields["Cell Phone"],
+        costumes,
+      })
+    }
   })
 
   return {
