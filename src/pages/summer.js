@@ -170,8 +170,8 @@ const Authorization = () => {
                 <h4 className="pb-2 font-semibold">
                   All students ages 5+ are invited!
                 </h4>
-                <p>Junior Group (Ages 5 to 8)</p>
-                <p>Teens Group (Ages 9+)</p>
+                <p>Junior Group (Ages 5 to 9)</p>
+                <p>Teens Group (Ages 10+)</p>
               </div>
             </div>
             <div className="flex mt-4 md:mt-6">
