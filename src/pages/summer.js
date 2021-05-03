@@ -96,7 +96,7 @@ const Authorization = () => {
           <div className="bg-ascendance py-2 flex justify-center items-center text-white text-lg">
             <p>Starting From</p>
           </div>
-          <div className="flex justify-center items-center flex-col">
+          <div className="flex justify-center items-center flex-col bg-white">
             <p className="text-4xl relative mt-5">
               <sup
                 className="absolute top-1 text-base"
@@ -114,7 +114,7 @@ const Authorization = () => {
             </p>
             <p className="text-2xl mb-2">Per Week</p>
           </div>
-          <div className="text-ascendance flex justify-start items-center  text-xs px-2 py-1">
+          <div className="text-ascendance flex justify-start items-center bg-white text-xs px-2 py-1">
             <p>*Pricing for 9 Week Pacakge</p>
           </div>
         </div>
