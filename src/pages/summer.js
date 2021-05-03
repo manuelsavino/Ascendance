@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import LandingLayout from "../components/LandingLayout"
-import SummerPricing from "../components/Pricing/SummerPricing"
 import SEO from "../components/seo"
 import "swiper/swiper-bundle.css"
 import Parent from "../images/parents.jpeg"
