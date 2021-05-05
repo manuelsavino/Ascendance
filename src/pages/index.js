@@ -37,8 +37,8 @@ const Index = () => {
       <SEO title="Dance Classes in Doral,Florida" />
       <Hero parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
-        <Button to="/schedule" style={{ marginRight: "10px" }}>
-          See Our Schedule
+        <Button to="/summer-camp" style={{ marginRight: "10px" }}>
+          Get Summer Camp Info
         </Button>
         <Button to="/free">Click Here to Try a Free Class</Button>
         <LiveButton to="/live">Live Stream</LiveButton>

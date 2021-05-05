@@ -176,7 +176,7 @@ export default function Footer({ children, hidefreeflass }) {
             </ListItemTitlet>
             <FooterArea active={mobileExpand.studio}>
               <li>
-                <ListLink to="/">About</ListLink>
+                <ListLink to="/press">About</ListLink>
               </li>
               <li>
                 <ListLink to="/facility">Facility</ListLink>
@@ -191,7 +191,7 @@ export default function Footer({ children, hidefreeflass }) {
                 <ListLink to="/">Ascendance Studio Company</ListLink>
               </li>
               <li>
-                <ListLink to="/">Summer Camp</ListLink>
+                <ListLink to="/summer-camp">Summer Camp</ListLink>
               </li>
             </FooterArea>
           </div>
