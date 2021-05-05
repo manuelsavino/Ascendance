@@ -36,7 +36,7 @@ const BackgroundSection = ({ className }) => (
           <Button to="/schedule" style={{ marginRight: "10px" }}>
             See Our Schedule
           </Button>
-          <Button to="/free">Click Here to Try a Free Class</Button>
+          <Button to="/summer-camp">Get Summer Camp Info</Button>
           <LiveButton to="/live">Live Stream</LiveButton>
         </BackgroundImage>
       )
