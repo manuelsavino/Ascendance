@@ -104,7 +104,7 @@ const Authorization = () => {
               >
                 $
               </sup>
-              117
+              127
               <sup
                 className="absolute top-1 text-base"
                 style={{ right: "-10px" }}
@@ -263,7 +263,7 @@ const Authorization = () => {
               </div>
               <div className="pl-4 text-gray-600 w-56 md:w-auto">
                 <h3 className="text-3xl ">Starting From</h3>
-                <p>$117 Per Week for 9 Week Package</p>
+                <p>$127 Per Week for 9 Week Package</p>
               </div>
             </div>
           </div>
