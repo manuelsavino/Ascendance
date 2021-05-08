@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fix for press page anchor tags fixed header */
+html {
+  scroll-padding-top: 120px;
+}
