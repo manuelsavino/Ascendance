@@ -49,6 +49,30 @@ export const Button = styled(Link)`
   }
 `
 
+export const RegButton = styled.button`
+  background-color: ${colors.primary};
+  background-image: linear-gradient(
+    150deg,
+    ${colors.secondary} 50%,
+    transparent 50%
+  );
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 500ms ease-in-out;
+  position: relative;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+  font-size: 1rem;
+  text-decoration: none;
+  &:hover {
+    background-position: 0;
+    cursor: pointer;
+  }
+`
+
 export const VideoContainer = styled.div`
   margin: auto;
   width: 75%;
