@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { ZoomInIcon } from "@heroicons/react/solid"
+import Moment from "react-moment"
 
 export default function CostumeCard({ student, setModalImage, setShowModal }) {
   return (
@@ -17,6 +18,11 @@ export default function CostumeCard({ student, setModalImage, setShowModal }) {
               className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200"
             >
               <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-8">
+                <p>
+                  <Moment format="MMM DD, YYYY h:MM A">
+                    {costume.pictureDay}
+                  </Moment>
+                </p>
                 <div
                   className="relative w-48 h-48 mx-auto bg-cover rounded-lg cursor-pointer"
                   style={{
@@ -35,9 +41,7 @@ export default function CostumeCard({ student, setModalImage, setShowModal }) {
                 <h3 className="mt-4 text-gray-900 text-lg font-medium">
                   {costume.class}
                 </h3>
-                <dl className="mt-1  flex flex-col justify-between">
-                  <dd className="text-gray-500 text-sm">${costume.price}</dd>
-                </dl>
+                <dl className="mt-1  flex flex-col justify-between"></dl>
                 <div className="mt-2 flex justify-center flex-col">
                   <div className="text-xs mt-3 text-left">
                     <p>
