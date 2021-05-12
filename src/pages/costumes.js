@@ -6,7 +6,6 @@ import CostumeCard from "../components/CostumeCard/CostumeCard"
 import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
-import { StaticQuery, graphql } from "gatsby"
 
 const Costumes = () => {
   const [students, setStudents] = useState([])
