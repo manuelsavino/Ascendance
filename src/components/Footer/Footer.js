@@ -204,6 +204,9 @@ export default function Footer({ children, hidefreeflass }) {
             </ListItemTitlet>
             <FooterArea active={mobileExpand.resources}>
               <li>
+                <ListLink to="/pictures">Picture Day</ListLink>
+              </li>
+              <li>
                 <ListLink to="/costumes">Costumes</ListLink>
               </li>
               <li>
