@@ -69,7 +69,7 @@ const Costumes = () => {
       <SEO title="Pictures" />
       <div className="container py-2 px-5 mx-auto min-h-full">
         <h1 className="text-3xl md:text-5xl text-gray-600 font-bold mt-8 md:my-5">
-          Picture Day
+          Picture Day Schedule
         </h1>
         <div className="min-h-screen">
           <div className="flex flex-col md:flex-row justify-between md:items-center">
