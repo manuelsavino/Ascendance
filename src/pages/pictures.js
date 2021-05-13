@@ -16,19 +16,8 @@ const Costumes = () => {
   const [loading, setLoading] = useState(null)
   const [showModal, setShowModal] = useState(false)
   const [showVModal, setShowVModal] = useState(false)
-  const [makePayment, setMakePayment] = useState(false)
   const [modalImage, setModalImage] = useState("")
   const [video, setVideo] = useState("")
-  const addScript = url => {
-    const script = document.createElement("script")
-    script.src = url
-    script.async = true
-    document.body.appendChild(script)
-  }
-
-  useEffect(() => {
-    addScript("https://paperform.co/__embed")
-  }, [])
 
   const {
     register,
@@ -79,7 +68,7 @@ const Costumes = () => {
 
       <SEO title="Pictures" />
       <div className="container py-2 px-5 mx-auto min-h-full">
-        <h1 className="text-3xl md:text-6xl text-gray-800 font-bold mt-8 md:my-2">
+        <h1 className="text-3xl md:text-5xl text-gray-600 font-bold mt-8 md:my-5">
           Picture Day
         </h1>
         <div className="min-h-screen">
@@ -149,6 +138,44 @@ const Costumes = () => {
                 setVideo={setVideo}
               />
             ))}
+          <div className="bg-white rounded-lg shadow mb-5">
+            <div className="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 rounded-tr-lg rounded-tl-lg ">
+              <h3 className="text-lg leading-6 font-medium text-gray-900">
+                Important Dates
+              </h3>
+            </div>
+            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-3">
+              <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                  <h4 className="text-ascendance font-semibold">
+                    Pictures (at the studio)
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Thursday May 20th, 2021
+                  </p>
+                  <p className="text-sm text-gray-600">Friday May 21st, 2021</p>
+                </div>
+              </li>
+              <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                  <h4 className="text-ascendance font-semibold">
+                    Dress Rehearsal (at the studio)
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Saturday June 5th, 2021
+                  </p>
+                </div>
+              </li>
+              <li className="col-span-1 flex flex-col justify-start text-center bg-white rounded-lg md:border md:border-gray-50 shadow-sm divide-y divide-gray-200">
+                <div className="flex-1 flex flex-col p-3 md:p-3 lg:p-2">
+                  <h4 className="text-ascendance font-semibold">
+                    Recital Shows
+                  </h4>
+                  <p className="text-sm text-gray-600">Sunday June 6th,2021</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </Layout>

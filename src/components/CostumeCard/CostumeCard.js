@@ -26,7 +26,7 @@ export default function CostumeCard({
               <div className="flex-1 flex flex-col px-3 pb-3 md:p-3 lg:px-8 lg:pb-8">
                 <h2 className="text-4xl font-bold text-ascendance">{i + 1}</h2>
                 <p className="text-ascendance text-xl">
-                  <Moment format="MMM DD, YYYY h:mm A">
+                  <Moment format="dddd, MMM DD, YYYY h:mm A">
                     {costume.pictureDay}
                   </Moment>
                 </p>
