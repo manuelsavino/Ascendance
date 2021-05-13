@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import {
   Container,
   VideoContainer,
@@ -102,7 +102,7 @@ const LiveStream = () => {
   if (possiblePw.indexOf(cheetoPw) < 0) {
     return (
       <Layout hidefreeflass>
-        <SEO title="Live Stream" />
+        <Seo title="Live Stream" />
         <Container column flex height="40vh" pb="0">
           <LiveSubHeading>
             For the safety of our dancers, this section of our website is
@@ -125,7 +125,7 @@ const LiveStream = () => {
 
   return (
     <Layout hidefreeflass>
-      <SEO title="Live Stream" />
+      <Seo title="Live Stream" />
       <Container column flex height="30vh" pb="0">
         {room ? <Video room={room} /> : <ChooseRoom selectRoom={setRoom} />}
       </Container>

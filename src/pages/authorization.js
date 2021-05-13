@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -18,7 +18,7 @@ const Authorization = () => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <SEO title="Authorization" />
+        <Seo title="Authorization" />
 
         <div
           style={{ marginTop: "30px" }}

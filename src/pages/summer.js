@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import LandingLayout from "../components/LandingLayout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "swiper/swiper-bundle.css"
 import Parent from "../images/parents.jpeg"
 import Studio from "../images/studio.jpeg"
@@ -63,7 +63,7 @@ const Authorization = () => {
 
   return (
     <LandingLayout>
-      <SEO title="Summer Camp" />
+      <Seo title="Summer Camp" />
       <Container style={{ margin: "50px auto 0" }}>
         <TrialSubHeading color="primary">
           Dance through the summer

@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Container } from "../components/common/layout"
 
 const Index = () => {
   return (
     <Layout>
-      <SEO title="Contact Us" />
+      <Seo title="Contact Us" />
       <Container></Container>
     </Layout>
   )

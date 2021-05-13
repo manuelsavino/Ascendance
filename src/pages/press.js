@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 // import { Link } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import {
   Container,
   VideoContainer,
@@ -42,7 +42,7 @@ const Media = () => {
       `}
       render={({ allSanityMediaCard }) => (
         <Layout>
-          <SEO title="Press" />
+          <Seo title="Press" />
           {showModal && (
             <Modal close={() => setShowModal(false)}>
               <VideoContainer>

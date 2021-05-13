@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -20,7 +20,7 @@ const PaperForm = () => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <SEO title="Auditions" />
+        <Seo title="Auditions" />
         <div style={{ marginTop: "60px" }} data-paperform-id="eecqfdn4"></div>
       </Layout>
     </>
