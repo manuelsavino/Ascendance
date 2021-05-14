@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import styled from "styled-components"
 import DanceStyles from "../components/DanceStyles/"
 import { Hero } from "../components/Hero"
@@ -34,7 +34,7 @@ const Index = () => {
           },
         ]}
       />
-      <SEO title="Dance Classes in Doral,Florida" />
+      <Seo title="Dance Classes in Doral,Florida" />
       <Hero parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
         <Button to="/summer-camp" style={{ marginRight: "10px" }}>

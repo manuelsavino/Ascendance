@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Modal from "../components/Modal/Modal"
 import CostumeCard from "../components/CostumeCard/CostumeCard"
 import { useForm } from "react-hook-form"
@@ -70,7 +70,7 @@ const Costumes = () => {
         </Modal>
       )}
 
-      <SEO title="Costumes" />
+      <Seo title="Costumes" />
       <div className="container py-2 px-5 mx-auto min-h-full">
         <h1 className="text-3xl md:text-6xl text-gray-800 font-bold mt-8 md:my-2">
           Recital Costumes

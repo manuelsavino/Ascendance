@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import {
   Container,
   VideoContainer,
@@ -22,7 +22,7 @@ const classLabel = "Hip Hop"
 const HipHop = () => {
   return (
     <Layout>
-      <SEO title="Hip Hop Classes - Dance Classes in Doral, FL" />
+      <Seo title="Hip Hop Classes - Dance Classes in Doral, FL" />
       <Container>
         <Heading>{classLabel} Classes</Heading>
         <Paragraph>

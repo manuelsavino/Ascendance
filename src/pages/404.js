@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import NotFound from "../images/404.svg"
 import { Container, Button } from "../components/common/layout"
 import { Heading } from "../components/common/copy"
@@ -28,7 +28,7 @@ const NotFoundCopy = styled(Heading)`
 
 const NotFoundPage = () => (
   <Layout hidefreeflass>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <Container
       style={{
         paddingTop: "10px",

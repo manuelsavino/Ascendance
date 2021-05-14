@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import { Hero } from "../../components/Hero"
 import { Container } from "../../components/common/layout"
 import ScheduleViewer from "../../components/Schedule"
@@ -17,7 +17,7 @@ const classLabel = "Flamenco"
 const Flamenco = () => {
   return (
     <Layout>
-      <SEO title="Flamenco Classes - Dance Classes in Doral, FL" />
+      <Seo title="Flamenco Classes - Dance Classes in Doral, FL" />
       <Container>
         <Heading>{classLabel} Classes</Heading>
         <Paragraph>
