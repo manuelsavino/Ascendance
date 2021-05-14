@@ -154,7 +154,7 @@ export default function NavBar({ hero, user, logout }) {
               <Link to="/free">Free Class</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
-              <Link to="/ages">Ages</Link>
+              <Link to="/registration">Registration</Link>
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/press">About Us</Link>
