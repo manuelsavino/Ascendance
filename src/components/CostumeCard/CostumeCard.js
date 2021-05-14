@@ -37,12 +37,15 @@ export default function CostumeCard({
                     name: `${student.name} ${costume.class} Pictures`,
                     details: "",
                     location: "10466 NW 31st Terrace, Doral, FL 33172",
-                    startsAt: costume.pictureDay,
+                    startsAt: moment(costume.pictureDay)
+                      .subtract(30, "minutes")
+                      .format("YYYY-MM-DDTHH:mm:ssZ"),
                     endsAt: moment(costume.pictureDay)
                       .add(20, "minutes")
                       .format("YYYY-MM-DDTHH:mm:ssZ"),
                   }}
                 />
+                <p>Arrive 30 MINUTES BEFORE your scheduled time.</p>
                 <div
                   className="relative w-48 h-48 mx-auto bg-cover rounded-lg cursor-pointer"
                   style={{
