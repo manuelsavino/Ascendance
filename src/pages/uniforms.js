@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -30,7 +30,7 @@ const Uniforms = ({ search }) => {
     return (
       <>
         <Layout hero={false}>
-          <SEO title="Uniforms" />
+          <Seo title="Uniforms" />
         </Layout>
       </>
     )
@@ -38,7 +38,7 @@ const Uniforms = ({ search }) => {
   return (
     <>
       <Layout hero={false}>
-        <SEO title="Free Class" />
+        <Seo title="Free Class" />
         {console.log(search)}
         <div
           style={{ paddingTop: "30px" }}

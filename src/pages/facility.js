@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import {
   Container,
   VideoContainer,
@@ -10,7 +10,7 @@ import {
 export default function Facility() {
   return (
     <Layout>
-      <SEO title="Facility" />
+      <Seo title="Facility" />
       <Container>
         <VideoContainer>
           <SingleVideoCotnainer>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import withLocation from "../components/withLocation"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const addScript = url => {
   const script = document.createElement("script")
@@ -20,7 +20,7 @@ const PaperForm = ({ search }) => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <SEO title="Free Class" />
+        <Seo title="Free Class" />
         <div
           style={{ marginTop: "30px" }}
           data-prefill={`${search.prefill}=${search.class}`}

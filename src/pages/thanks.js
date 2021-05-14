@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import {
   Container,
   VideoContainer,
@@ -40,7 +40,7 @@ const Index = () => {
   }, [])
   return (
     <Layout>
-      <SEO title="Thanks" />
+      <Seo title="Thanks" />
       <Container>
         <Heading center color="primary">
           Thank You!

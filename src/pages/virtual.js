@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ScheduleViewer from "../components/Schedule"
 import { Heading } from "../components/common/copy"
 import { Container } from "../components/common/layout"
@@ -8,7 +8,7 @@ import { Container } from "../components/common/layout"
 const Virtual = () => {
   return (
     <Layout>
-      <SEO title="Schedule" />
+      <Seo title="Schedule" />
       <Container>
         <Heading>Virtual Schedule</Heading>
         <ScheduleViewer virtual />

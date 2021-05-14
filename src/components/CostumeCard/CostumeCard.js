@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { ZoomInIcon } from "@heroicons/react/solid"
 import Moment from "react-moment"
+import moment from "moment"
+import AddToCalendar from "@culturehq/add-to-calendar"
 
 export default function CostumeCard({
   student,
@@ -30,6 +32,17 @@ export default function CostumeCard({
                     {costume.pictureDay}
                   </Moment>
                 </p>
+                <AddToCalendar
+                  event={{
+                    name: `${student.name} ${costume.class} Pictures`,
+                    details: "",
+                    location: "10466 NW 31st Terrace, Doral, FL 33172",
+                    startsAt: costume.pictureDay,
+                    endsAt: moment(costume.pictureDay)
+                      .add(20, "minutes")
+                      .format("YYYY-MM-DDTHH:mm:ssZ"),
+                  }}
+                />
                 <div
                   className="relative w-48 h-48 mx-auto bg-cover rounded-lg cursor-pointer"
                   style={{
@@ -89,7 +102,7 @@ export default function CostumeCard({
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 24 24"
                           height="2em"
                           width="2em"
@@ -111,7 +124,7 @@ export default function CostumeCard({
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 24 24"
                           height="2em"
                           width="2em"

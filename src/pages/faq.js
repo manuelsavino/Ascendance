@@ -1,7 +1,7 @@
 import React from "react"
 // import { Link } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Container } from "../components/common/layout"
 import { Heading } from "../components/common/copy"
 import Faqs from "../components/faqComponent"
@@ -9,7 +9,7 @@ import Faqs from "../components/faqComponent"
 const Faq = () => {
   return (
     <Layout>
-      <SEO title="FAQ" />
+      <Seo title="FAQ" />
       <Container>
         <Heading center>Frequently Asked Questions</Heading>
         <Faqs />

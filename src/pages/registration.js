@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import { RegButton } from "../components/common/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const FormDiv = styled.div`
   & > iframe {
@@ -26,7 +26,7 @@ const Authorization = () => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <SEO title="Registration" />
+        <Seo title="Registration" />
         {registration === null && (
           <div className="container mx-auto flex flex-col md:flex-row justify-center items-center pt-20 md:space-x-2">
             <RegButton onClick={() => setRegistration("summer")}>

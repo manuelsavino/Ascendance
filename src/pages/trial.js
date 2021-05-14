@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 
 import LandingLayout from "../components/LandingLayout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Schedule from "../components/Schedule"
 import {
   Container,
@@ -93,7 +93,7 @@ const Authorization = () => {
 
   return (
     <LandingLayout>
-      <SEO title="Trial" />
+      <Seo title="Trial" />
       <Container style={{ margin: "50px auto 0" }}>
         <TrialSubHeading color="primary">
           Start the New Year dancing!
