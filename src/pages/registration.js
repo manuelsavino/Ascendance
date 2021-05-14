@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import { RegButton } from "../components/common/layout"
+import PropTypes from "prop-types"
+import withLocation from "../components/withLocation"
 import Seo from "../components/seo"
 
 const FormDiv = styled.div`
@@ -17,8 +19,8 @@ const addScript = url => {
   document.body.appendChild(script)
 }
 
-const Authorization = () => {
-  const [registration, setRegistration] = useState(null)
+const Authorization = ({ search }) => {
+  const [registration, setRegistration] = useState(search.type || null)
   useEffect(() => {
     addScript("https://paperform.co/__embed")
   }, [])
@@ -57,4 +59,7 @@ const Authorization = () => {
   )
 }
 
-export default Authorization
+Authorization.propTypes = {
+  search: PropTypes.object,
+}
+export default withLocation(Authorization)
