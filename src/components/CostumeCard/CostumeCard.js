@@ -9,6 +9,7 @@ export default function CostumeCard({
   student,
   setModalImage,
   setShowModal,
+  setShowVModal,
   setVideo,
 }) {
   return (
@@ -71,7 +72,7 @@ export default function CostumeCard({
                     <TabArea
                       costume={costume}
                       setVideo={setVideo}
-                      setShowModal={setShowModal}
+                      setShowVModal={setShowVModal}
                     />
                   </div>
                   <div className="flex justify-center space-x-2 mt-3"></div>
