@@ -28,9 +28,9 @@ exports.handler = async (event, context, callback) => {
     })
     .firstPage()
 
-  const studentsDetails = []
   console.log(allCostumes)
 
+  const studentsDetails = []
   students.forEach(function (record) {
     if (record.fields.Costumes) {
       const allDatacostumes = allCostumes.filter(costume =>
@@ -70,6 +70,12 @@ exports.handler = async (event, context, callback) => {
       })
     }
   })
+
+  console.log(
+    JSON.stringify({
+      student: studentsDetails,
+    })
+  )
 
   return {
     statusCode: 200,
