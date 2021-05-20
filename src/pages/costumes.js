@@ -6,6 +6,7 @@ import CostumeCard from "../components/CostumeCard/CostumeCard"
 import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
+import { navigate } from "gatsby"
 
 const Costumes = () => {
   const [students, setStudents] = useState([])
@@ -20,8 +21,12 @@ const Costumes = () => {
     document.body.appendChild(script)
   }
 
+  // useEffect(() => {
+  //   // addScript("https://paperform.co/__embed")
+  // }, [])
+
   useEffect(() => {
-    addScript("https://paperform.co/__embed")
+    navigate("/pictures")
   }, [])
 
   const {
