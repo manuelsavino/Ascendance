@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Modal from "../components/Modal/Modal"
-import CostumeCard from "../components/CostumeCard/CostumeCard"
+import CostumeCard from "../components/CostumeCard/CostumeCardNoSchedule"
 import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
@@ -21,12 +21,9 @@ const Costumes = () => {
     document.body.appendChild(script)
   }
 
-  // useEffect(() => {
-  //   // addScript("https://paperform.co/__embed")
-  // }, [])
-
   useEffect(() => {
     navigate("/pictures")
+    // addScript("https://paperform.co/__embed")
   }, [])
 
   const {
