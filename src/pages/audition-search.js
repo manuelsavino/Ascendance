@@ -69,7 +69,7 @@ const Index = () => {
                 Audition Number
                 <span>
                   <input
-                    type="tel"
+                    type="text"
                     className="pl-2 mb-2 md:mb-0 md:ml-2 h-12 rounded-md w-full"
                     name="audNum"
                     maxLength="2"
