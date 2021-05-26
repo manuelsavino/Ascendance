@@ -74,9 +74,9 @@ const Index = ({ search }) => {
         <div className="flex justify-center align-center flex-col md:w-1/2 mx-5 md:mx-auto  bg-ascendance p-5 md:p-10 rounded-lg">
           <img src={congrats} />
           <h1 className="mt-1 text-3xl text-center text-white font-bold">
-            {search.name}
+            {search.name},
             <br />
-            You made the team!
+            you made the team!
           </h1>
           <img
             className="rounded-full h-72 w-72 object-cover object-top mx-auto md:mt-3"
