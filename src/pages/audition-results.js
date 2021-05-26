@@ -3,13 +3,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container } from "../components/common/layout"
 import ReactCanvasConfetti from "react-canvas-confetti"
+import withLocation from "../components/withLocation"
+import congrats from "../images/congrats.png"
+import { Link } from "@reach/router"
 
-const Index = () => {
+const Index = ({ search }) => {
   const [isAnimationEnabled, setIsAnimationEnabled] = useState(false)
-
   useEffect(() => {
     startAnimation()
-  }, [])
+  })
 
   const getInstance = instance => {
     animationInstance = instance
@@ -65,27 +67,32 @@ const Index = () => {
     }
   }
 
-  const handleFire = () => {
-    startAnimation()
-  }
-
   return (
     <Layout>
-      <SEO title="Classes" />
-      <Container>
-        <div className="pt-36">
-          <h1 className="pl-5 text-8xl font-black text-ascendance leading-none">
-            YOU
+      <SEO title="Audition Results" />
+      <div className=" container mx-auto pt-10 md:pt-6">
+        <div className="flex justify-center align-center flex-col md:w-1/2 mx-5 md:mx-auto  bg-ascendance p-5 md:p-10 rounded-lg">
+          <img src={congrats} />
+          <h1 className="mt-1 text-3xl text-center text-white font-bold">
+            {search.name}
             <br />
-            MADE
-            <br />
-            IT
+            You made the team!
           </h1>
+          <img
+            className="rounded-full h-72 w-72 object-cover object-top mx-auto md:mt-3"
+            src={search.img}
+          />
+          <Link
+            to="/audition-search"
+            className="bg-white text-ascendance rounded py-2 mt-4 text-center"
+          >
+            Search Again
+          </Link>
         </div>
         <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
-      </Container>
+      </div>
     </Layout>
   )
 }
 
-export default Index
+export default withLocation(Index)
