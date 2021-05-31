@@ -82,8 +82,12 @@ const Index = ({ search }) => {
             className="rounded-full h-72 w-72 object-cover object-top mx-auto md:mt-3"
             src={search.img}
           />
+          <p className="text-sm text-white text-center pt-2">
+            *Specific styles and level placements will be announce Tuesday, July
+            6th at 10PM
+          </p>
           <Link
-            to="/audition-search"
+            to="/auditionresults"
             className="bg-white text-ascendance rounded py-2 mt-4 text-center"
           >
             Search Again
