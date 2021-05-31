@@ -83,8 +83,8 @@ const Index = ({ search }) => {
             src={search.img}
           />
           <p className="text-sm text-white text-center pt-2">
-            *Specific styles and level placements will be announce Tuesday, July
-            6th at 10PM
+            *Specific styles and level placements will be announced Tuesday,
+            July 6th at 10PM
           </p>
           <Link
             to="/auditionresults"
