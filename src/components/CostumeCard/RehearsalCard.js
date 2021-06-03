@@ -26,8 +26,11 @@ export default function RehearsalCard({
                   {student.name}
                 </h3>
                 <h4>{student.time}</h4>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-600 my-1">
                   10466 NW 31st Terrace Doral, FL 33172
+                </p>
+                <p className="text-sm text-ascendance mb-4">
+                  Please arrive wearing the costume in the picture below
                 </p>
                 <div
                   className="relative w-48 h-48 mx-auto bg-cover rounded-lg cursor-pointer"
