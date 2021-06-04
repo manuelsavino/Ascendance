@@ -22,7 +22,7 @@ const Costumes = () => {
   }
 
   useEffect(() => {
-    navigate("/pictures")
+    navigate("/rehearsal")
     // addScript("https://paperform.co/__embed")
   }, [])
 

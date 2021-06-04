@@ -10,6 +10,7 @@ import {
   VideoContainer,
   SingleVideoCotnainer,
 } from "../components/common/layout"
+import { navigate } from "gatsby"
 
 const Costumes = () => {
   const [students, setStudents] = useState([])
@@ -18,6 +19,11 @@ const Costumes = () => {
   const [showVModal, setShowVModal] = useState(false)
   const [modalImage, setModalImage] = useState("")
   const [video, setVideo] = useState("")
+
+  useEffect(() => {
+    navigate("/rehearsal")
+    // addScript("https://paperform.co/__embed")
+  }, [])
 
   const {
     register,
