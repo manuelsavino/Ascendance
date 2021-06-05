@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 import LoadingImage from "../images/loading.svg"
 import NoResults from "../images/noResults.svg"
 
-const Costumes = () => {
+const Rehearsal = () => {
   const [students, setStudents] = useState([])
   const [loading, setLoading] = useState(null)
   const [showModal, setShowModal] = useState(false)
@@ -42,7 +42,7 @@ const Costumes = () => {
         </Modal>
       )}
 
-      <Seo title="Pictures" />
+      <Seo title="Rehearsal" />
       <div className="container py-2 px-5 mx-auto min-h-full">
         <h1 className="text-3xl md:text-5xl text-gray-600 font-bold mt-8 md:my-5">
           Rehearsal Day
