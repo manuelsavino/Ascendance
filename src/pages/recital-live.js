@@ -7,7 +7,7 @@ const RecitalLive = () => {
   return (
     <>
       <Layout hidefreeflass hero={false}>
-        <Seo title="Registration" />
+        <Seo title="Recital Live" />
         <div className="pt-28 md:pt-10">
           <div className="pt-48 md:pt-96" style={{ position: "relative" }}>
             <iframe
