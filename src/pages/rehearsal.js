@@ -130,4 +130,4 @@ const Rehearsal = () => {
   )
 }
 
-export default Costumes
+export default Rehearsal
