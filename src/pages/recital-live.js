@@ -8,19 +8,20 @@ const RecitalLive = () => {
     <>
       <Layout hidefreeflass hero={false}>
         <Seo title="Recital Live" />
-        <div className="pt-5 md:pt-10">
-          <div
-            className="flex justify-center flex-column
-          "
-            style={{ position: "relative" }}
-          >
+        <div className="pt-20 md:pt-10">
+          <div className="pt-48 md:pt-96" style={{ position: "relative" }}>
             <iframe
-              src="https://player.vimeo.com/video/559705213?title=0"
-              width="640"
-              height="360"
-              frameborder="0"
+              src="https://vimeo.com/event/1054596/embed"
+              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+              }}
             ></iframe>
           </div>
         </div>
