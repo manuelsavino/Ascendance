@@ -37,11 +37,11 @@ const Index = () => {
       <Seo title="Dance Classes in Doral,Florida" />
       <Hero parallax gradient>
         {/* <h1>Try a class for Free</h1> */}
-        <Button to="/summer-camp" style={{ marginRight: "10px" }}>
+        {/* <Button to="/summer-camp" style={{ marginRight: "10px" }}>
           Get Summer Camp Info
-        </Button>
-        <Button to="/free">Click Here to Try a Free Class</Button>
-        <LiveButton to="/live">Live Stream</LiveButton>
+        </Button> */}
+        <Button to="/recital-live">Recital Live Stream</Button>
+        {/* <LiveButton to="/recital-live">Recital Live Stream</LiveButton> */}
       </Hero>
       <Container fullWidth>
         <DanceStyles type="ages" headline="Dance Classes for Any Age" />
