@@ -22,14 +22,6 @@ const RecitalLive = () => {
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen
             ></iframe>
-            {/* <p>
-              <a href="https://vimeo.com/559705213">
-                Ascendance Studio 7th Annual Recital - Hope Over Fear
-              </a>{" "}
-              from <a href="https://vimeo.com/user5537201">PicBar</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p> */}
-            ᐧ
           </div>
         </div>
       </Layout>
