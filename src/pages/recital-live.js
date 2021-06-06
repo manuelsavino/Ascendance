@@ -8,21 +8,28 @@ const RecitalLive = () => {
     <>
       <Layout hidefreeflass hero={false}>
         <Seo title="Recital Live" />
-        <div className="pt-28 md:pt-10">
-          <div className="pt-48 md:pt-96" style={{ position: "relative" }}>
+        <div className="pt-5 md:pt-10">
+          <div
+            className="flex justify-center flex-column
+          "
+            style={{ position: "relative" }}
+          >
             <iframe
-              src="https://vimeo.com/event/1054596/embed"
-              frameBorder="0"
+              src="https://player.vimeo.com/video/559705213?title=0"
+              width="640"
+              height="360"
+              frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              style={{
-                position: "absolute",
-                top: "0",
-                left: "0",
-                width: "100%",
-                height: "100%",
-              }}
+              allowfullscreen
             ></iframe>
+            {/* <p>
+              <a href="https://vimeo.com/559705213">
+                Ascendance Studio 7th Annual Recital - Hope Over Fear
+              </a>{" "}
+              from <a href="https://vimeo.com/user5537201">PicBar</a> on{" "}
+              <a href="https://vimeo.com">Vimeo</a>.
+            </p> */}
+            ᐧ
           </div>
         </div>
       </Layout>
