@@ -8,7 +8,7 @@ const RecitalLive = () => {
     <>
       <Layout hidefreeflass hero={false}>
         <Seo title="Recital Live" />
-        <div className="pt-20 md:pt-10">
+        <div className="pt-20 md:pt-10 container mx-auto bg-ascendance">
           <div className="pt-48 md:pt-96" style={{ position: "relative" }}>
             <iframe
               src="https://vimeo.com/event/1054596/embed"
@@ -19,8 +19,8 @@ const RecitalLive = () => {
                 position: "absolute",
                 top: "0",
                 left: "0",
-                width: "100%",
-                height: "100%",
+                width: "75%",
+                height: "75%",
               }}
             ></iframe>
           </div>
