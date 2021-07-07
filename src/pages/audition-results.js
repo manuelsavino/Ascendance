@@ -70,8 +70,9 @@ const Index = ({ search }) => {
   return (
     <Layout>
       <SEO title="Audition Results" />
+      {/* {console.log(search.classes)}  */}
       <div className=" container mx-auto pt-10 md:pt-6">
-        <div className="flex justify-center align-center flex-col md:w-1/2 mx-5 md:mx-auto  bg-ascendance p-5 md:p-10 rounded-lg">
+        <div className="flex justify-center align-center flex-col md:w-1/3 mx-5 md:mx-auto  bg-ascendance p-5 md:p-10 rounded-lg">
           <img src={congrats} />
           <h1 className="mt-1 text-3xl text-center text-white font-bold">
             {search.name},
@@ -82,10 +83,64 @@ const Index = ({ search }) => {
             className="rounded-full h-72 w-72 object-cover object-top mx-auto md:mt-3"
             src={search.img}
           />
-          <p className="text-sm text-white text-center pt-2">
-            *Specific styles and level placements will be announced Tuesday,
-            July 6th at 10PM
-          </p>
+
+          <h4 className="text-white text-2xl mt-4">Competitive Classes:</h4>
+          <div className="flex flex-wrap my-1">
+            {search.competitive &&
+              search.competitive
+                .split(",")
+                .filter(danceClass => danceClass != "")
+                .map(danceClass => {
+                  return (
+                    <p
+                      key={danceClass}
+                      className="text-ascendance bg-white rounded-xl px-2 mt-1 mr-2"
+                    >
+                      {danceClass}
+                    </p>
+                  )
+                })}
+          </div>
+          <h4 className="text-white text-2xl mt-4">Special Numbers:</h4>
+          <div className="flex flex-wrap my-1">
+            {search.specials &&
+              search.specials
+                .split(",")
+                .filter(danceClass => danceClass != "")
+                .map(danceClass => {
+                  return (
+                    <p
+                      key={danceClass}
+                      className="text-ascendance bg-white rounded-xl px-2 mt-1 mr-2"
+                    >
+                      {danceClass}
+                    </p>
+                  )
+                })}
+          </div>
+          <h4 className="text-white text-2xl mt-4">Required Classes:</h4>
+          <div className="flex flex-wrap mt-1 mb-3">
+            {search.rclasses &&
+              search.rclasses
+                .split(",")
+                .filter(danceClass => danceClass != "")
+                .map(danceClass => {
+                  return (
+                    <p
+                      key={danceClass}
+                      className="text-ascendance bg-white rounded-xl px-2 mt-1 mr-2"
+                    >
+                      {danceClass}
+                    </p>
+                  )
+                })}
+          </div>
+          {search.disclaimer && (
+            <p
+              dangerouslySetInnerHTML={{ __html: decodeURI(search.disclaimer) }}
+              className="text-white text-sm"
+            ></p>
+          )}
           <Link
             to="/auditionresults"
             className="bg-white text-ascendance rounded py-2 mt-4 text-center"
