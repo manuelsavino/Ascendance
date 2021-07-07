@@ -27,9 +27,15 @@ const Index = () => {
     )
     const data = await res.json()
     if (data.student.length > 0) {
-      const name = data.student[0].fields["Student First Name"]
+      const name = data.student[0].fields["first-name"]
       const img = data.student[0].fields.Picture[0].thumbnails.large.url
-      navigate(`/audition-results?name=${name}&img=${img}`)
+      const rclasses = data.student[0].fields.required
+      const competitive = data.student[0].fields.competitive
+      const specials = data.student[0].fields.specials.join(",")
+      const disclaimer = data.student[0].fields.Disclaimer
+      navigate(
+        `/audition-results?name=${name}&img=${img}&rclasses=${rclasses}&competitive=${competitive}&specials=${specials}&disclaimer=${disclaimer}`
+      )
     } else {
       setLoading(false)
       setNoResults(true)
