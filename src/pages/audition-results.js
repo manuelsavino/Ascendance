@@ -86,7 +86,7 @@ const Index = ({ search }) => {
 
           <h4 className="text-white text-2xl mt-4">Competitive Classes:</h4>
           <div className="flex flex-wrap my-1">
-            {search.competitive.length &&
+            {search.competitive?.length &&
               search.competitive
                 .split(",")
                 .filter(danceClass => danceClass != "")
@@ -103,7 +103,7 @@ const Index = ({ search }) => {
           </div>
           <h4 className="text-white text-2xl mt-4">Special Numbers:</h4>
           <div className="flex flex-wrap my-1">
-            {search.specials.length &&
+            {search.specials?.length &&
               search.specials
                 .split(",")
                 .filter(danceClass => danceClass != "")
@@ -120,7 +120,7 @@ const Index = ({ search }) => {
           </div>
           <h4 className="text-white text-2xl mt-4">Required Classes:</h4>
           <div className="flex flex-wrap mt-1 mb-3">
-            {search.rclasses.length &&
+            {search.rclasses?.length &&
               search.rclasses
                 .split(",")
                 .filter(danceClass => danceClass != "")
