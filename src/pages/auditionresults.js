@@ -31,7 +31,7 @@ const Index = () => {
       const img = data.student[0].fields.Picture[0].thumbnails.large.url
       const rclasses = data.student[0].fields.required
       const competitive = data.student[0].fields.competitive
-      const specials = data.student[0].fields.specials.join(",")
+      const specials = data.student[0].fields.specials
       const disclaimer = data.student[0].fields.Disclaimer
       navigate(
         `/audition-results?name=${name}&img=${img}&rclasses=${rclasses}&competitive=${competitive}&specials=${specials}&disclaimer=${disclaimer}`
